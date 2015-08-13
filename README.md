@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/joanaz/HireDot2.png?label=ready&title=Ready)](https://waffle.io/joanaz/HireDot2)
 
 # Hiredot
 
