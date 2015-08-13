@@ -4,11 +4,3 @@ app.config(function($stateProvider) {
     templateUrl: 'js/docs/docs.html'
   });
 });
-
-app.factory('UserFactory', function() {
-  return {
-    function getUsers() {
-
-    }
-  }
-})

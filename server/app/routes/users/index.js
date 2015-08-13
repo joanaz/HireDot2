@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
 router.get('/', function(req, res, next) {
+  console.log(req.query)
   User.find(req.query).exec()
     .then(function(users) {
       res.json(users);
