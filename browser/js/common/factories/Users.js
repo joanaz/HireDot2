@@ -1,21 +1,15 @@
 app.factory('UsersFactory', $http => {
-  function getHelperFunction(role) {
+  var getHelperFunction = (role) =>
     $http.get('/api/users?role=' + role)
-      .then(res => {
-        console.log(res)
-        return res.data
-      })
-  }
+    .then(res => res.data)
 
   return {
-    getStudents() {
-        getHelperFunction('student')
-      },
-      getStaff() {
-        getHelperFunction('staff')
-      },
-      getCompanies() {
-        getHelperFunction('company')
-      }
+    getStudents: () =>
+      getHelperFunction('student'),
+    getStaff: () =>
+      getHelperFunction('staff'),
+    getCompanies: () =>
+      getHelperFunction('company')
+
   }
 });

@@ -4,8 +4,8 @@ var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
     name: {
-
-    }
+        type: String
+    },
     email: {
         type: String
     },
@@ -26,6 +26,16 @@ var schema = new mongoose.Schema({
     },
     google: {
         id: String
+    },
+    role: {
+        type: String,
+        enum: ['student', 'staff', 'company']
+    },
+    candidates: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        }]
     }
 });
 
