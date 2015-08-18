@@ -1,17 +1,49 @@
-<nav class="navbar navbar-static-top">
+<nav class="navbar navbar-default navbar-fixed-top header" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a rel="home" ui-sref="home" title="Hiredot" class="navbar-brand header--logo">
+                <fullstack-logo></fullstack-logo>
+            </a>
         </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-            </li>
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
+        <div class="collapse navbar-collapse pull-right" id="navbar-collapse">
+            <ul class="nav navbar-nav initialFontSize">
+                <li>
+                    <a ui-sref="students">
+                        <i class="fa fa-users"></i> Students
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="projects">
+                        <i class="fa fa-object-group"></i> Projects
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="companies">
+                        <i class="fa fa-building"></i> Companies
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="hackathons">
+                        <i class="fa fa-trophy"></i> Hackathons
+                    </a>
+                </li>
+                <li ng-show="!user">
+                    <a ui-sref="signup" target="_self">Sign Up
+                    </a>
+                </li>
+                <li ng-show="!user">
+                    <a href="/auth/twitter">Login</a>
+                </li>
+                <li ng-show="user">
+                    <a ng-click="logout()">Logout</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
