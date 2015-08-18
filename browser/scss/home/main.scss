@@ -1,12 +1,129 @@
-#home {
-  fullstack-logo {
-    padding-top: 30px;
-    width: 150px;
-    margin: 0 auto;
-  }
-  h1 {
-    margin-top: 40px;
-    text-align: center;
-  }
+@font-face {
+    font-family: FFTisa;
+    src: url("/fonts/FFTisa/TisaPro-Regular.otf");
 }
 
+@font-face {
+    font-family: FFTisaItalics;
+    src: url("/fonts/FFTisa/TisaPro-Ita.otf");
+}
+
+@font-face {
+    font-family: FFTisaBoldItalics;
+    src: url("/fonts/FFTisa/TisaPro-BoldIta.otf");
+}
+
+@font-face {
+    font-family: FFTisaBold;
+    src: url("/fonts/FFTisa/TisaPro-Bold.otf");
+}
+
+@font-face {
+    font-family: FFTisaMedium;
+    src: url("/fonts/FFTisa/TisaPro-Medi.otf");
+}
+
+@font-face {
+    font-family: FFTisaMediumItalics;
+    src: url("/fonts/FFTisa/TisaPro-MediIta.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-family: "FFTisa";
+    font-weight: 400;
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+#main {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-head-row {
+    background: #fbfbfb;
+    margin-bottom: 25px;
+    border-bottom: none;
+    font-family: "FFTisaItalics";
+    padding: 1%;
+    box-shadow: 0px 0px 15px -5px #444;
+}
+
+.welcomeOptions {
+    font-family: "FFTisaBold";
+    text-align: center;
+    min-height: 100px;
+    a {
+      color: #444;
+    }
+    a:hover {
+      color: #DB2856;
+      text-decoration: none;
+    }
+}
+
+.mdl-card {
+    width: initial;
+    z-index: 0;
+    margin: 5%;
+}
+
+.valign-middle {
+    display: table;
+}
+
+.valign-middle .columns {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.valign-middle .columns,
+.valign-middle [class*="column"] + [class*="column"]:last-child {
+    float: none;
+}
+
+.marginTopBottom {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.welcomeMessage {
+    margin-left: 20px;
+}
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fa-trophy {
+    margin-left: 5px;
+    margin-right: 5px;
+}

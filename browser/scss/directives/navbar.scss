@@ -1,9 +1,10 @@
 navbar {
 
   display: block;
-  background: white;
-  border-bottom: 1px solid black;
+  background: #DB2856;
+  border-bottom: 1px solid #DB2856;
   box-shadow: 1px 1px 14px -3px black;
+  font-family: "FFTisaMedium";
 
   .container {
     width: 91%;
@@ -12,13 +13,14 @@ navbar {
   }
 
   fullstack-logo {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-right: 20px;
-    width: 40px;
+    margin-left: 85px;
+    width: 150px;
   }
 
   a {
-    color: black;
+    color: white;
     font-size: 16px;
   }
 
@@ -26,11 +28,11 @@ navbar {
     cursor: pointer;
     transition: color 0.2s;
     &.active {
-      color: darken(#f31214, 10%);
+      text-decoration: underline;
     }
     &:hover {
       background: none;
-      color: #f31214;
+      color: #444;
     }
     &:focus {
       background: none;
@@ -39,10 +41,11 @@ navbar {
 
   .login-button {
     float: right;
-    border: 1px solid black;
     margin-top: 10px;
-    background: none;
+    background: white;
     outline: none !important;
+    color: #DB2856;
+    margin-right: 150px;
   }
 
   .welcome {
@@ -52,7 +55,7 @@ navbar {
       color: white;
     }
     a {
-      color: #f30046;
+      color: white;
       cursor: pointer;
     }
   }
