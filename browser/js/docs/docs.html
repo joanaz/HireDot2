@@ -10,6 +10,9 @@
       <td ng-repeat="candidate in student.candidates">
         {{candidate}}
       </td>
+      <td ng-repeat="candidate in student.backupCandidates">
+        {{candidate}}
+      </td>
     </tr>
 
   </table>
@@ -22,7 +25,7 @@
     </tr>
     <tr ng-repeat="company in companies">
       <td>{{company.name}}</td>
-      <td ng-repeat="candidate in company.candidates">
+      <td ng-repeat="candidate in company.candidates track by $index">
         {{candidate}}
       </td>
     </tr>
@@ -40,9 +43,26 @@
     
     <tr ng-repeat="company in companies">
       <td>{{company.name}}</td>
-      <td ng-repeat="timeslot in company.timeslots">
+      <td ng-repeat="timeslot in company.timeslots track by $index">
         {{timeslot}}
       </td>
     </tr>
   </table>
 
+
+<table>
+    <caption>time slots</caption>
+    <tr>
+      <th>student name</th>
+      <th colspan="9">time slots</th>
+      <th>num of slots</th>
+    </tr>
+    
+    <tr ng-repeat="student in students">
+      <td>{{student.name}}</td>
+      <td ng-repeat="timeslot in student.timeslots track by $index">
+        {{timeslot}}
+      </td>
+      <td>{{student.numOfTimeSlots}}</td>
+    </tr>
+  </table>
