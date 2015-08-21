@@ -34,14 +34,6 @@ form.searchBar {
     text-align: -webkit-center;
 }
 
-.btn.btn-view {
-    border-radius: 20px;
-    border: 2px solid #444;
-    background: white;
-}
-
-.btn.btn-view:hover {
-    border: 2px solid #DB2856;
-    background: #DB2856;
-    color: white;
+.profileCard {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
