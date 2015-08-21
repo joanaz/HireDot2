@@ -1,10 +1,5 @@
-.cohortNumber {
-    margin-top: 30px;
-}
-
 form.searchBar {
     margin-top: 25px;
-    min-width: 300px;
 }
 
 .input-group .form-control:last-child {
@@ -15,42 +10,38 @@ form.searchBar {
 }
 
 .img-circle {
-    border: 3px solid #444;
+    border: 5px solid #444;
 }
 
 .studentCard {
-  padding: 5%;
+    padding: 5%;
 }
 
 .moreMargin {
-  margin-top: 5%;
+    margin-top: 5%;
 }
 
 .title {
-  a {
-    text-decoration: underline;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .centerText {
-  text-align: center;
+    text-align: -webkit-center;
 }
 
 .btn.btn-view {
-  border-radius: 20px;
-  border: 2px solid #444;
-  background: white;
+    border-radius: 20px;
+    border: 2px solid #444;
+    background: white;
 }
 
 .btn.btn-view:hover {
-  border: 2px solid #DB2856;
-  background: #DB2856;
-  color: white;
-}
-
-button {
-  cursor: pointer;
+    border: 2px solid #DB2856;
+    background: #DB2856;
+    color: white;
 }

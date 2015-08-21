@@ -3,28 +3,69 @@
 
 <head>
     <base href="/" />
+    <meta charset="utf-8">
+    <meta name="keywords" content="hiring, fullstack academy, hiredot">
+    <meta name="description" content="The ideal hiring resource for Fullstack Academy.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Hiredot</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Material Design -->
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
+    <!-- Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+    <!-- Our compiled CSS -->
     <link rel="stylesheet" type="text/css" href="/style.css" />
-    <script src="/lodash/index.js"></script>
-    <script src="/angular/angular.js"></script>
-    <script src="/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src="/socket.io-client/socket.io.js"></script>
-    <script src="/main.js"></script>
+    <!-- jQuery -->
+    <!-- <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script> -->
+    <!-- jQuery UI Main -->
+    <!-- <script type="text/javascript" src="/jquery-ui/jquery-ui.js"></script> -->
+    <!-- jQuery UI Core -->
+    <!-- <script type="text/javascript" src="/jquery-ui/core.js"></script> -->
+    <!-- jQuery UI Widget -->
+    <!-- <script type="text/javascript" src="/jquery-ui/widget.js"></script> -->
+    <!-- jQuery UI Mouse -->
+    <!-- <script type="text/javascript" src="/jquery-ui/mouse.js"></script> -->
+    <!-- jQuery UI Sortable -->
+    <!-- <script type="text/javascript" src="/jquery-ui/sortable.js"></script> -->
+    <!-- Using CDN to install commented out code above -->
+    <script src="http://cdn.jsdelivr.net/g/jquery@1,jquery.ui@1.10%28jquery.ui.core.min.js+jquery.ui.widget.min.js+jquery.ui.mouse.min.js+jquery.ui.sortable.min.js%29,angularjs@1.2,angular.ui-sortable"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.4/interact.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.1/ui-bootstrap-tpls.min.js"></script>
+    <script src="/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script text="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Material Design JS -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+    <!-- lodash -->
+    <script type="text/javascript" src="/lodash/index.js"></script>
+    <!-- angular -->
+    <!-- <script type="text/javascript" src="/angular/angular.js"></script> -->
+    <!-- angular ui router -->
+    <script type="text/javascript" src="/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- angular ui sortable -->
+    <!-- <script type="text/javascript" src="/angular-ui-sortable/dist/sortable.min.js"></script> -->
+    <!-- ui bootstrap -->
+    <script type="text/javascript" src="/angular-bootstrap/ui-bootstrap.js"></script>
+    <!-- socket io -->
+    <script type="text/javascript" src="/socket.io-client/socket.io.js"></script>
+    <!-- our compiled js -->
+    <script type="text/javascript" src="/main.js"></script>
 </head>
 
 <body ng-app="FullstackGeneratedApp">
     <navbar></navbar>
-    <div id="main" ui-view></div>
-    <the-footer></the-footer>
+    <header-message></header-message>
+    <div class="container mainContainer">
+        <div ui-view></div>
+        <the-footer></the-footer>
+    </div>
 </body>
 
 </html>

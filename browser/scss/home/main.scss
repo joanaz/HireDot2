@@ -28,23 +28,24 @@
     src: url("/fonts/FFTisa/TisaPro-MediIta.otf");
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body,
 html {
-    height: 100%;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
-    background-color: #fff;
+    background: #fff;
     font-family: "FFTisa";
     font-weight: 400;
     font-size: 16px;
     color: #444;
     margin: 0;
-    line-height: 1.6;
+    position: relative;
+}
+
+.initialFontSize {
+    font-size: initial;
 }
 
 @mixin clearfix {
@@ -55,44 +56,32 @@ body {
     }
 }
 
-#main {
-    min-height: 100%;
-    margin-bottom: -50px;
+.container.mainContainer {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    position: relative;
 }
 
-.main-head-row {
-    background: #fbfbfb;
-    margin-bottom: 25px;
-    border-bottom: none;
-    font-family: "FFTisaItalics";
-    padding: 1%;
-    box-shadow: 0px 0px 15px -5px #444;
-}
-
-.welcomeOptions {
+.options {
     font-family: "FFTisaBold";
     text-align: center;
     min-height: 100px;
     a {
-      color: #444;
+        color: #444;
     }
     a:hover {
-      color: #DB2856;
-      text-decoration: none;
+        color: #DB2856;
+        text-decoration: none;
     }
 }
 
 .mdl-card {
     width: initial;
     z-index: 0;
-    margin: 5%;
+    margin: 15px;
 }
 
 .valign-middle {
@@ -114,8 +103,9 @@ body {
     margin-bottom: auto;
 }
 
-.welcomeMessage {
-    margin-left: 20px;
+.topBottom {
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .row {
@@ -126,4 +116,8 @@ body {
 .fa-trophy {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+::selection {
+    background: lightgrey
 }

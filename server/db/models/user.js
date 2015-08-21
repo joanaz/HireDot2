@@ -4,42 +4,89 @@ var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
     email: {
-        type: String
+        type: String,
+        required: true,
+        unique: true
     },
     password: {
-        type: String
+        type: String,
+        required: true
     },
     salt: {
         type: String
     },
-    twitter: {
-        id: String,
-        username: String,
-        token: String,
-        tokenSecret: String
+    name: {
+        first: {
+            type: String
+        },
+        last: {
+            type: String
+        }
     },
-    facebook: {
-        id: String
+    title: {
+        type: String
     },
-    google: {
-        id: String
-    }
+    role: [{
+        type: String,
+        enum: ['Admin', 'Student', 'Company'],
+        default: 'Student',
+        required: true
+    }],
+    photo: {
+        type: String,
+        default: "https://lh3.googleusercontent.com/-nW_UEE8QEN4/AAAAAAAAAAI/AAAAAAAAAAA/_AVZs4E6WjQ/photo.jpg",
+        unique: true
+    },
+    cohort: {
+        type: Number
+    },
+    fellow: {
+        type: Boolean
+    },
+    preferences: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    }],
+    currentCompany: {
+        type: String,
+    },
+    socialLinks: {
+        linkedin: {
+            type: String,
+            unique: true
+        },
+        github: {
+            type: String,
+            unique: true
+        },
+        website: {
+            type: String
+        },
+        angellist: {
+            type: String,
+            unique: true
+        }
+    },
+    resume: {
+        type: String,
+        unique: true
+    },
 });
 
 // generateSalt, encryptPassword and the pre 'save' and 'correctPassword' operations
 // are all used for local authentication security.
-var generateSalt = function () {
+var generateSalt = function() {
     return crypto.randomBytes(16).toString('base64');
 };
 
-var encryptPassword = function (plainText, salt) {
+var encryptPassword = function(plainText, salt) {
     var hash = crypto.createHash('sha1');
     hash.update(plainText);
     hash.update(salt);
     return hash.digest('hex');
 };
 
-schema.pre('save', function (next) {
+schema.pre('save', function(next) {
 
     if (this.isModified('password')) {
         this.salt = this.constructor.generateSalt();
@@ -53,7 +100,7 @@ schema.pre('save', function (next) {
 schema.statics.generateSalt = generateSalt;
 schema.statics.encryptPassword = encryptPassword;
 
-schema.method('correctPassword', function (candidatePassword) {
+schema.method('correctPassword', function(candidatePassword) {
     return encryptPassword(candidatePassword, this.salt) === this.password;
 });
 
