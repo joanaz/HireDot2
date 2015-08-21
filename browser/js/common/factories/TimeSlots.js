@@ -1,21 +1,21 @@
 app.factory('TimeSlots', function() {
   return {
     generateStudents: () => {
-      var students = []
+      var students = [];
       let initTimeSlots = [];
       for (let j = 0; j < 9; j++) {
-        initTimeSlots.push('')
+        initTimeSlots.push('');
       }
 
       for (let i = 0; i < 15; i++) {
-        let candidates = []
-        let length = Math.floor(Math.random() * 5) + 6
+        let candidates = [];
+        let length = Math.floor(Math.random() * 5) + 6;
         for (var j = 0; j < length; j++) {
           function gen() {
-            var num = Math.floor(Math.random() * 10)
+            var num = Math.floor(Math.random() * 10);
             if (candidates.indexOf(num) === -1 || candidates === []) {
               // console.log("here")
-              candidates.push(num)
+              candidates.push(num);
             } else gen();
           }
           gen();
@@ -24,32 +24,32 @@ app.factory('TimeSlots', function() {
           'name': i,
           'candidates': candidates,
           'timeslots': initTimeSlots.slice()
-        })
+        });
       }
       return students;
     },
     seperateStudentsCandidates: (students) => {
       students.forEach(student => {
-        student.backupCandidates = student.candidates.splice(6, Number.MAX_VALUE)
-      })
+        student.backupCandidates = student.candidates.splice(6, Number.MAX_VALUE);
+      });
     },
     generateCompanies: (students) => {
-      var companies = []
+      var companies = [];
 
       for (let i = 0; i < 10; i++) {
-        var candidates = []
+        var candidates = [];
         let rank = 0,
           maxRank = 0;
 
         for (let j = 0, len = students.length; j < len; j++) {
-          let length = students[j].candidates.length
-          maxRank = length > maxRank ? length : maxRank
+          let length = students[j].candidates.length;
+          maxRank = length > maxRank ? length : maxRank;
         }
 
         while (rank < maxRank) {
           for (let j = 0, len = students.length; j < len; j++) {
             if (students[j].candidates[rank] !== undefined && students[j].candidates[rank] === i) {
-              candidates.push(j)
+              candidates.push(j);
             }
           }
           rank++;
@@ -58,19 +58,19 @@ app.factory('TimeSlots', function() {
         companies.push({
           'name': i,
           'candidates': candidates
-        })
+        });
       }
       return companies;
     },
     removeExcessCandidates: (companies) => {
       // var studentsRemoved = []
       companies.forEach(company => {
-        company.timeslots = company.candidates.slice(0, 9)
+        company.timeslots = company.candidates.slice(0, 9);
           // if (company.timeslots.length > 9) {
           //   company.timeslots.splice(9, Number.MAX_VALUE)
           // }
           // console.log(company.timeslots)
-      })
+      });
 
       // studentsRemoved.sort((a, b) => a - b);
       // console.log(studentsRemoved)
@@ -101,5 +101,5 @@ app.factory('TimeSlots', function() {
       // })
       // return studentsRemoved;
     }
-  }
+  };
 });

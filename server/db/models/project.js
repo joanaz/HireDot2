@@ -10,16 +10,21 @@ var schema = new mongoose.Schema({
         trim: true
     },
     team: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "User"
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+        }]
     },
     description: {
         type: String,
         required: true,
         trim: true
     },
-    winnerCategory: {
-        type: String,
+    awards: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "ProjectAward",
+        }]
     },
     github: {
         type: String,
@@ -31,17 +36,22 @@ var schema = new mongoose.Schema({
     tags: {
         type: [{
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Tag",
-            required: true
+            ref: "ProjectTag",
         }]
     },
     photo: {
         type: String,
         default: ["http://wiki.solid-run.com/images/7/75/No_image_available.png"]
+    },
+    category: {
+        type: {
+            type: mongoose.Scheam.Types.ObjectId,
+            ref: "ProjectCategory",
+        }
     }
 });
 
-schema.path('tags').validate(function(value){
+schema.path('tags').validate(function(value) {
     return (value.length !== 0);
 }, 'No tag added');
 
