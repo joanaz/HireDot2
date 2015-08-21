@@ -7,7 +7,6 @@ app.config(function($stateProvider) {
     });
 });
 
-
 app.controller('TimeSlotsCtrl', function($scope, TimeSlots) {
 
     $scope.students = TimeSlots.generateStudents();

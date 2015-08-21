@@ -1,60 +1,85 @@
 <!-- Showing all matches for students and candidates as well as time slots -->
 <div class="container options valign-middle">
-    <table>
-        <caption>students</caption>
-        <tr>
-            <th>student name</th>
-            <th colspan="6">candidates</th>
-        </tr>
-        <tr ng-repeat="student in students">
-            <td>{{student.name}}</td>
-            <td ng-repeat="candidate in student.candidates">
-                {{candidate}}
-            </td>
-            <td ng-repeat="candidate in student.backupCandidates">
-                {{candidate}}
-            </td>
-        </tr>
-    </table>
-    <table>
-        <caption>companies</caption>
-        <tr>
-            <th>company name</th>
-            <th colspan="9">candidates</th>
-        </tr>
-        <tr ng-repeat="company in companies">
-            <td>{{company.name}}</td>
-            <td ng-repeat="candidate in company.candidates track by $index">
-                {{candidate}}
-            </td>
-        </tr>
-    </table>
-    <table>
-        <caption>time slots</caption>
-        <tr>
-            <th>company name</th>
-            <th colspan="9">time slots</th>
-        </tr>
-        <tr ng-repeat="company in companies">
-            <td>{{company.name}}</td>
-            <td ng-repeat="timeslot in company.timeslots track by $index">
-                {{timeslot}}
-            </td>
-        </tr>
-    </table>
-    <table>
-        <caption>time slots</caption>
-        <tr>
-            <th>student name</th>
-            <th colspan="9">time slots</th>
-            <th>num of slots</th>
-        </tr>
-        <tr ng-repeat="student in students">
-            <td>{{student.name}}</td>
-            <td ng-repeat="timeslot in student.timeslots track by $index">
-                {{timeslot}}
-            </td>
-            <td>{{student.numOfTimeSlots}}</td>
-        </tr>
-    </table>
+    <div class="marginTopBottom">
+        <h3 class="topBottom">Student Preferences</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th colspan="6">Company Preferences</th>
+                    <th colspan="100%">Backup Preferences</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td>{{student.name}}</td>
+                    <td ng-repeat="candidate in student.candidates">
+                        {{candidate}}
+                    </td>
+                    <td ng-repeat="candidate in student.backupCandidates">
+                        {{candidate}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="marginTopBottom">
+        <h3>Company Preferences</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th colspan="9">Preferred Students</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="company in companies">
+                    <td>{{company.name}}</td>
+                    <td ng-repeat="candidate in company.candidates track by $index">
+                        {{candidate}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="marginTopBottom">
+        <h3>Time Slots for Companies</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th colspan="9">Time Slots</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="company in companies">
+                    <td>{{company.name}}</td>
+                    <td ng-repeat="timeslot in company.timeslots track by $index">
+                        {{timeslot}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="marginTopBottom">
+        <h3>Time Slots for Students</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th colspan="9">Time Slots</th>
+                    <th>Number of Slots</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td>{{student.name}}</td>
+                    <td ng-repeat="timeslot in student.timeslots track by $index">
+                        {{timeslot}}
+                    </td>
+                    <td>{{student.numOfTimeSlots}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
