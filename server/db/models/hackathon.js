@@ -17,6 +17,10 @@ var schema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    projects: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "Project",
+    },
     website: {
         type: String,
     },

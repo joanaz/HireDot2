@@ -41,9 +41,9 @@ var schema = new mongoose.Schema({
     }
 });
 
-schema.path('category').validate(function(value){
+schema.path('tags').validate(function(value){
     return (value.length !== 0);
-}, 'No category added');
+}, 'No tag added');
 
 schema.plugin(searchPlugin, {
     fields: ["title", "description"]

@@ -5,7 +5,7 @@ module.exports = [{
         first: "Billy",
         last: "Pilgrim"
     },
-    roles: ["Admin"],
+    role: ["Admin"],
 }, {
     email: "jimmy@jimmy.com",
     password: "jimmyrocks",
@@ -13,7 +13,7 @@ module.exports = [{
         first: "Jimmy",
         last: "Farrell"
     },
-    roles: ["Student"],
+    role: ["Student"],
     cohort: "1503",
     fellow: true,
     photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
@@ -31,7 +31,7 @@ module.exports = [{
         first: "Jimmy",
         last: "Farrell"
     },
-    roles: ["Student"],
+    role: ["Student"],
     cohort: "1503",
     fellow: true,
     photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
@@ -49,7 +49,7 @@ module.exports = [{
         first: "Jimmy",
         last: "Farrell"
     },
-    roles: ["Student"],
+    role: ["Student"],
     cohort: "1503",
     fellow: true,
     photo: "http://www.fullstackacademy.com/img/team/JF.jpg",

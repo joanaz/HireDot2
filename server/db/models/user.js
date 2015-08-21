@@ -15,7 +15,7 @@ var schema = new mongoose.Schema({
     salt: {
         type: String
     },
-    roles: [{
+    role: [{
         type: String,
         enum: ['Admin', 'Student', 'Company'],
         default: 'Student',
@@ -32,9 +32,10 @@ var schema = new mongoose.Schema({
     fellow: {
         type: Boolean
     },
-    preferences: {
-        type: Array
-    },
+    preferences: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    }],
     currentCompany: {
         type: String,
     },
