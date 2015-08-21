@@ -108,6 +108,10 @@ body {
     margin-bottom: 1%;
 }
 
+.bottom {
+    margin-bottom: 3%;
+}
+
 .row {
     margin-right: auto;
     margin-left: auto;
@@ -120,4 +124,20 @@ body {
 
 ::selection {
     background: lightgrey
+}
+
+.moreMarginTop {
+    margin-top: 5%;
+}
+
+.centerText {
+    text-align: -webkit-center;
+}
+
+.marginTop {
+    margin-top: 3%;
+}
+
+.twentyPixelsMarginRight {
+    margin-right: 20px;
 }

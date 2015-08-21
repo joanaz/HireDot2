@@ -25,6 +25,8 @@ var User = Promise.promisifyAll(mongoose.model('User'));
 
 var seedUsers = function() {
 
+    // var users = require("./seeds/user");
+
     var users = [{
         name: 'Frances',
         email: 'testing@fsa.com',
