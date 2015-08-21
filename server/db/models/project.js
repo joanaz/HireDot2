@@ -45,7 +45,7 @@ var schema = new mongoose.Schema({
     },
     category: {
         type: {
-            type: mongoose.Scheam.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "ProjectCategory",
         }
     }

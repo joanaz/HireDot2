@@ -15,6 +15,17 @@ var schema = new mongoose.Schema({
     salt: {
         type: String
     },
+    name: {
+        first: {
+            type: String
+        },
+        last: {
+            type: String
+        }
+    },
+    title: {
+        type: String
+    },
     role: [{
         type: String,
         enum: ['Admin', 'Student', 'Company'],

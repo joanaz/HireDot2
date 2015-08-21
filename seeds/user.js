@@ -6,24 +6,25 @@ module.exports = [{
         last: "Pilgrim"
     },
     role: ["Admin"],
+    photo: "https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg",
 }, {
-    email: "jimmy@jimmy.com",
-    password: "jimmyrocks",
+    email: "violet@gmail.com",
+    password: "violetrocks",
     name: {
-        first: "Jimmy",
-        last: "Farrell"
+        first: "Violet",
+        last: "Siegius"
     },
     role: ["Student"],
-    cohort: "1503",
-    fellow: true,
-    photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
+    photo: "https://s3.amazonaws.com/uifaces/faces/twitter/vista/128.jpg",
+    cohort: "1506",
+    fellow: false,
     preferences: ["Google", "Facebook", "Dropbox"],
-    currentCompany: "Fullstack",
+    currentCompany: "FVCproductions",
     socialLinks: {
-        linkedin: "http://linkedin.com/in/jimmy",
-        github: "http://github.com/jimmy"
+        linkedin: "http://linkedin.com/in/fvcproductions",
+        github: "http://github.com/fvcproductions"
     },
-    resume: "http://www.highpoint.edu/theatre/files/2014/08/Sample-Resumes.pdf"
+    resume: "http://www.highpoint.edu/theatre/files/2014/08/Hello.pdf"
 }, {
     email: "jimmy@jimmy.com",
     password: "jimmyrocks",
@@ -32,10 +33,10 @@ module.exports = [{
         last: "Farrell"
     },
     role: ["Student"],
+    photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
     cohort: "1503",
     fellow: true,
-    photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
-    preferences: ["Google", "Facebook", "Dropbox"],
+    preferences: ["Facebook", "Google", "Dropbox"],
     currentCompany: "Fullstack",
     socialLinks: {
         linkedin: "http://linkedin.com/in/jimmfy",
@@ -43,21 +44,15 @@ module.exports = [{
     },
     resume: "http://www.highpoint.edu/theatre/files/2014/08/Sample-Resumes.pdf"
 }, {
-    email: "jimmy@jimmy.com",
-    password: "jimmyrocks",
-    name: {
-        first: "Jimmy",
-        last: "Farrell"
-    },
-    role: ["Student"],
-    cohort: "1503",
-    fellow: true,
+    email: "dropbox@gmail.com",
+    password: "dropboxlol",
+    title: "Dropbox",
+    role: ["Company"],
     photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
-    preferences: ["Google", "Facebook", "Dropbox"],
-    currentCompany: "Fullstack",
+    preferences: ["Jimmy Farell", "Violet Siegius"],
     socialLinks: {
-        linkedin: "http://linkedin.com/in/jimdfasmy",
-        github: "http://github.com/jdafsimmy"
+        linkedin: "http://linkedin.com/in/dropbox",
+        website: "http://dropbox.com",
+        angellist: "http://angellist.com/dropbox"
     },
-    resume: "http://www.highpoint.edu/theatre/files/2014/08/Sample-Resumes1.pdf"
 }];

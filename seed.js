@@ -38,12 +38,12 @@ var seedUsers = function() {
     }, {
         name: 'Violet',
         email: 'violet',
-        password: '123',
+        password: '456',
         role: 'Student'
     }, {
         name: 'Theo',
         email: 'violet',
-        password: '123',
+        password: '789',
         role: 'Student'
     }, {
         name: 'Jack',
