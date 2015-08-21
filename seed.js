@@ -29,47 +29,47 @@ var seedUsers = function() {
         name: 'Frances',
         email: 'testing@fsa.com',
         password: 'password',
-        role: 'student'
+        role: 'Student'
     }, {
         name: 'Joanna',
         email: 'joanaz',
         password: '123',
-        role: 'student'
+        role: 'Student'
     }, {
         name: 'Violet',
         email: 'violet',
-        password: '123',
-        role: 'student'
+        password: '456',
+        role: 'Student'
     }, {
         name: 'Theo',
         email: 'violet',
-        password: '123',
-        role: 'student'
+        password: '789',
+        role: 'Student'
     }, {
         name: 'Jack',
         email: 'violet',
         password: '123',
-        role: 'student'
+        role: 'Student'
     }, {
         email: 'obama@gmail.com',
         password: 'potus',
-        role: 'staff'
+        role: 'Admin'
     }, {
         name: 'Google',
         password: 'google',
-        role: 'company'
+        role: 'Company'
     }, {
         name: 'Twitter',
         password: 'twitter',
-        role: 'company'
+        role: 'Company'
     }, {
         name: 'Facebook',
         password: 'facebook',
-        role: 'company'
+        role: 'Company'
     }, {
         name: 'LinkedIn',
         password: 'linkedin',
-        role: 'company'
+        role: 'Company'
     }];
 
     return User.createAsync(users);

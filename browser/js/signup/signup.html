@@ -1,0 +1,85 @@
+<div class="container valign-middle">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 centerText options">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="col-sm-12">
+                <form class="form ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-minlength ng-valid-maxlength ng-valid-pass-match" name="form" ng-submit="register(form)" novalidate="">
+                    <!-- NAME INPUT -->
+                    <div class="form-group" ng-class="{ 'has-success': form.name.$dirty &amp;&amp; form.name.$valid,
+                                            'has-error': form.name.$dirty &amp;&amp; form.name.$invalid }">
+                        <label>Full Name</label>
+                        <input name="name" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" focus-me="true" ng-model="user.firstName" ng-model-options="{ updateOn: 'default blur', debounce: { default: 750, blur: 0 } }" required="">
+                        <!-- NAME ERRORS -->
+                        <div class="has-error">
+                            <p class="help-block ng-hide" ng-show="(form.name.$dirty &amp;&amp; form.name.$error.required)
+                                        || (form.name.$error.required &amp;&amp; form.$submitted)">A name is required</p>
+                        </div>
+                    </div>
+                    <!-- EMAIL INPUT -->
+                    <div class="form-group" ng-class="{ 'has-success': form.email.$dirty &amp;&amp; form.email.$valid,
+                                            'has-error': form.email.$dirty &amp;&amp; form.email.$invalid }">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="user.email" ng-model-options="{ updateOn: 'default blur', debounce: { default: 750, blur: 0 } }" required="" mongoose-error="">
+                        <!-- EMAIL ERRORS -->
+                        <div class="has-error">
+                            <p class="help-block ng-hide" ng-show="form.email.$dirty
+                                        &amp;&amp; form.email.$error.email">Doesn't look like a valid email.</p>
+                            <p class="help-block ng-hide" ng-show="form.email.$dirty
+                                        &amp;&amp; form.email.$error.required">What's your email address?</p>
+                            <p class="help-block ng-binding ng-hide" ng-show="form.email.$dirty
+                                        &amp;&amp; form.email.$error.mongoose">s</p>
+                        </div>
+                    </div>
+                    <!-- PHONE INPUT -->
+                    <div class="form-group" ng-class="{ 'has-success': form.phone.$dirty &amp;&amp; form.phone.$valid,
+                                            'has-error': form.phone.$dirty &amp;&amp; form.phone.$invalid }">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" ng-model="user.phone" placeholder="(10-digit)" ng-model-options="{ updateOn: 'default blur', debounce: { default: 750, blur: 0 } }" ng-minlength="10" ng-maxlength="10" required="" mongoose-error="">
+                        <!-- PHONE ERRORS -->
+                        <div class="has-error">
+                            <p class="help-block ng-hide" ng-show="(form.phone.$dirty &amp;&amp; (form.phone.$error.maxlength
+                                         || form.phone.$error.minlength
+                                         || form.phone.$error.required))">Phone number must be 10 digits with no additional spaces or characters.</p>
+                            <p class="help-block ng-binding ng-hide" ng-show="form.phone.$error.mongoose"></p>
+                        </div>
+                    </div>
+                    <!-- PASSWORD INPUT -->
+                    <div class="form-group" ng-class="{ 'has-success': form.password.$dirty &amp;&amp; form.password.$valid,
+                                            'has-error': form.password.$dirty &amp;&amp; form.password.$invalid }">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength" ng-model="user.password" ng-model-options="{ updateOn: 'default blur', debounce: { default: 750, blur: 0 } }" ng-minlength="3" required="" mongoose-error="">
+                        <!-- PASSWORD ERRORS -->
+                        <div class="has-error">
+                            <p class="help-block ng-hide" ng-show="form.password.$dirty
+                                       &amp;&amp; (form.password.$error.minlength || form.password.$error.required)">Password must be at least 3 characters.</p>
+                            <p class="help-block ng-binding ng-hide" ng-show="form.password.$error.mongoose"></p>
+                        </div>
+                    </div>
+                    <!-- VERIFY PASSWORD INPUT -->
+                    <div class="form-group" ng-class="{ 'has-success': form.verifyPassword.$dirty &amp;&amp; form.verifyPassword.$valid,
+                                            'has-error': form.verifyPassword.$dirty &amp;&amp; form.verifyPassword.$invalid }">
+                        <label>Retype Password</label>
+                        <input type="password" name="verifyPassword" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-pass-match" ng-model="user.verifyPassword" ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }" ng-minlength="3" pass-match="user.password" required="">
+                        <!-- VERIFY PASSWORD ERRORS -->
+                        <!-- show if ($dirty and !empty) and passwords don't match-->
+                        <p class="help-block ng-hide" ng-show="(form.verifyPassword.$dirty &amp;&amp; !form.verifyPassword.$error.required)
+                                         &amp;&amp; form.verifyPassword.$error.passMatch">Passwords must match</p>
+                        <!-- show if empty and ($dirty or form $submitted)-->
+                        <p class="help-block ng-hide" ng-show="(form.verifyPassword.$error.required)
+                                        &amp;&amp; (form.verifyPassword.$dirty || form.$submitted)">Must retype your password</p>
+                    </div>
+                    <!-- SUBMIT BUTTONS -->
+                    <div>
+                        <!-- SIGN UP -->
+                        <button type="submit" class="btn btn-inverse btn-lg btn-login" ng-disabled="form.$invalid" disabled="disabled">Sign up</button>
+                        <!-- LOGIN -->
+                        <a class="btn btn-default btn-lg btn-login" href="/login">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

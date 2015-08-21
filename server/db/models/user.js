@@ -7,35 +7,72 @@ var schema = new mongoose.Schema({
         type: String
     },
     email: {
-        type: String
+        type: String,
+        required: true,
+        unique: true
     },
     password: {
-        type: String
+        type: String,
+        required: true
     },
     salt: {
         type: String
     },
-    twitter: {
-        id: String,
-        username: String,
-        token: String,
-        tokenSecret: String
+    name: {
+        first: {
+            type: String
+        },
+        last: {
+            type: String
+        }
     },
-    facebook: {
-        id: String
+    title: {
+        type: String
     },
-    google: {
-        id: String
-    },
-    role: {
+    role: [{
         type: String,
-        enum: ['student', 'staff', 'company']
+        enum: ['Admin', 'Student', 'Company'],
+        default: 'Student',
+        required: true
+    }],
+    photo: {
+        type: String,
+        default: "https://lh3.googleusercontent.com/-nW_UEE8QEN4/AAAAAAAAAAI/AAAAAAAAAAA/_AVZs4E6WjQ/photo.jpg",
+        unique: true
     },
-    candidates: {
-        type: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User'
-        }]
+    cohort: {
+        type: Number
+    },
+    fellow: {
+        type: Boolean
+    },
+    preferences: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    }],
+    currentCompany: {
+        type: String,
+    },
+    socialLinks: {
+        linkedin: {
+            type: String,
+            unique: true
+        },
+        github: {
+            type: String,
+            unique: true
+        },
+        website: {
+            type: String
+        },
+        angellist: {
+            type: String,
+            unique: true
+        }
+    },
+    resume: {
+        type: String,
+        unique: true
     }
 });
 

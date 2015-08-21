@@ -1,0 +1,16 @@
+#footer {
+    text-align: center;
+    color: #aaa;
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    a {
+        color: #444;
+    }
+    a:focus,
+    a:hover {
+        color: #DB2856;
+        text-decoration: none;
+    }
+}

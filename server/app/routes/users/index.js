@@ -14,13 +14,13 @@ router.get('/', function(req, res, next) {
 
 router.get('/companies', function(req, res, next) {
   User.find({
-      role: 'company'
+      role: 'Company'
     }).exec()
     .then(function(users) {
-      res.json(users)
+      res.json(users);
     })
-    .then(null, next)
-})
+    .then(null, next);
+});
 
 router.post('/', function(req, res, next) {
   User.create(req.body)
@@ -46,22 +46,22 @@ router.param('id', function(req, res, next, id) {
 
 
 router.get('/:id', function(req, res) {
-  res.json(req.user)
+  res.json(req.user);
 });
 
 router.put('/:id', function(req, res, next) {
   _.extend(req.user, req.body);
   req.user.save()
     .then(function(user) {
-      res.json(user)
+      res.json(user);
     })
     .then(null, next);
-})
+});
 
 router.delete('/:id', function(req, res, next) {
   req.user.remove()
     .then(function() {
-      res.status(204).end()
+      res.status(204).end();
     })
     .then(null, next);
-})
+});

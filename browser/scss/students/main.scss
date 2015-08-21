@@ -1,0 +1,47 @@
+form.searchBar {
+    margin-top: 25px;
+}
+
+.input-group .form-control:last-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.img-circle {
+    border: 5px solid #444;
+}
+
+.studentCard {
+    padding: 5%;
+}
+
+.moreMargin {
+    margin-top: 5%;
+}
+
+.title {
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.centerText {
+    text-align: -webkit-center;
+}
+
+.btn.btn-view {
+    border-radius: 20px;
+    border: 2px solid #444;
+    background: white;
+}
+
+.btn.btn-view:hover {
+    border: 2px solid #DB2856;
+    background: #DB2856;
+    color: white;
+}
