@@ -3,6 +3,9 @@ var crypto = require('crypto');
 var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
+    name: {
+        type: String
+    },
     email: {
         type: String,
         required: true,
@@ -70,7 +73,7 @@ var schema = new mongoose.Schema({
     resume: {
         type: String,
         unique: true
-    },
+    }
 });
 
 // generateSalt, encryptPassword and the pre 'save' and 'correctPassword' operations
