@@ -12,11 +12,46 @@
 
 .btn-primary.focus,
 .btn-primary:focus {
-    background-color: #4f88d8;
+    background-color: light(#DB2856, 25%);
+}
+
+.btn.btn-view {
+    border-radius: 20px;
+    border: 2px solid #444;
+    background: white;
+}
+
+.btn.btn-view:hover {
+    border: 2px solid #DB2856;
+    background: #DB2856;
+    color: white;
+}
+
+.btn.btn-login {
+    border-radius: 10px;
+    border: 2px solid #444;
+    background: white;
+}
+
+.btn.btn-login:hover {
+    border: 2px solid #DB2856;
+    background: #DB2856;
+    color: white;
 }
 
 .btn-primary:active:hover {
     color: white;
-    background-color: #9ac1f6;
+    background-color: light(#DB2856, 25%);
     border-color: #DB2856;
+}
+
+.btn-standard:hover {
+    color: white;
+    background-color: light(#DB2856, 25%);
+    border-color: #DB2856;
+}
+
+button.btn.btn-lg.btn-primary.btn-block {
+    margin-top: 1%;
+    margin-bottom: 1%;
 }

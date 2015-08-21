@@ -1,14 +1,36 @@
-<form id="login-form" name="loginForm" ng-submit="loginForm.$valid && sendLogin(login)">
-    <alert type="danger" ng-show="error">
-        {{ error }}
-    </alert>
-    <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="text" ng-model="login.email" class="form-control" id="email" placeholder="Enter email">
+<div class="container valign-middle">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 centerText options">
+                <h1>Login</h1>
+            </div>
+            <div class="col-sm-12">
+                <form accept-charset="UTF-8" class="form ng-pristine ng-valid-email ng-invalid ng-invalid-required" name="form" ng-submit="login(form)" novalidate="">
+                    <!-- EMAIL INPUT -->
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input focus-me="!user.email" type="email" name="email" class="form-control ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-touched" placeholder="Email" ng-model="user.email" required="">
+                    </div>
+                    <!-- PASSWORD INPUT -->
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="Password" ng-model="user.password" required="">
+                    </div>
+                    <!-- VALIDATION ERRORS -->
+                    <div class="form-group has-error">
+                        <p class="help-block ng-hide" ng-show="form.email.$error.required &amp;&amp; form.password.$error.required &amp;&amp; submitted">Please enter your email and password.</p>
+                        <p class="help-block ng-hide" ng-show="form.email.$error.email &amp;&amp; submitted">Please enter a valid email.</p>
+                        <p class="help-block ng-hide" ng-show="invalidLogin">Invalid login credentials.</p>
+                    </div>
+                    <!-- SUBMIT BUTTONS -->
+                    <div>
+                        <!-- LOGIN -->
+                        <a class="btn btn-default btn-lg btn-login" type="submit">Login</a>
+                        <!-- FORGOT PASSWORD -->
+                        <a class="btn btn-default btn-lg btn-login" ui-sref="login">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="login-password">Password</label>
-        <input type="password" ng-model="login.password" class="form-control" id="login-password" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+</div>
