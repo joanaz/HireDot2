@@ -24,6 +24,9 @@ var schema = new mongoose.Schema({
     salt: {
         type: String
     },
+    photo: {
+        type: String
+    },
     preferences: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
@@ -31,26 +34,8 @@ var schema = new mongoose.Schema({
     currentCompany: {
         type: String
     },
-    socialLinks: {
-        linkedin: {
-            type: String,
-            // unique: true
-        },
-        github: {
-            type: String,
-            // unique: true
-        },
-        website: {
-            type: String
-        },
-        angellist: {
-            type: String,
-            // unique: true
-        }
-    },
     resume: {
         type: String,
-        unique: true
     },
     "phone": {
         type: String
@@ -193,6 +178,17 @@ var schema = new mongoose.Schema({
     },
     "campus": {
         type: String
+    },
+    "linkedin": {
+        "url": {
+            type: String,
+        }
+    },
+    "website": {
+        type: String
+    },
+    "angellist": {
+        type: String,
     },
     "slack": {
         "ok": {

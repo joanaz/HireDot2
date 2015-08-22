@@ -1,4 +1,12 @@
 module.exports = [{
+  "fullName": "Dropbox",
+  "email": "dropbox",
+  "password": "123",
+  "photo": "http://icons.iconarchive.com/icons/danleech/simple/1024/dropbox-icon.png",
+  "role": "Company",
+  "website": "https://www.dropbox.com/jobs",
+  "angellist": "https://angel.co/dropbox"
+}, {
   "provider": "local",
   "lastName": "Gregory",
   "firstName": "Shanna",
@@ -174,6 +182,9 @@ module.exports = [{
     }
   },
   "campus": "559edf94984f7f266121567a",
+  "linkedin": {
+    url: ""
+  },
   "slack": {
     "ok": true,
     "url": "https://fullstackacademy.slack.com/",
@@ -1154,6 +1165,9 @@ module.exports = [{
       "collaborators": 0,
       "private_repos": 0
     }
+  },
+  "linkedin": {
+    "url": "https://www.linkedin.com/in/rokim8"
   },
   "currentAction": "54b3dfc06adfdb0b0027d58a",
   "previousAction": "54e369c7f35ce80c009773d1",

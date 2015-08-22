@@ -80,7 +80,8 @@ var seedUsers = function() {
 };
 
 connectToDb.then(function() {
-    User.removeAsync().then(function() {
+    User.removeAsync()
+        .then(function() {
             return seedUsers();
         })
         // User.findAsync({}).then(function(users) {
