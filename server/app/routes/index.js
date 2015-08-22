@@ -3,6 +3,7 @@ var router = require('express').Router();
 module.exports = router;
 
 router.use('/users', require('./users'));
+router.use('/companies', require('./companies'));
 router.use('/search', require('./search'));
 router.use('/projects', require('./projects'));
 

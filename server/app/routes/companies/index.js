@@ -2,30 +2,29 @@ var router = require('express').Router();
 module.exports = router;
 var _ = require('lodash');
 var mongoose = require('mongoose');
-var User = mongoose.model('User');
-var secure = require("../security");
+var Company = mongoose.model('Company');
 
 router.get('/', function(req, res, next) {
-    User.find(req.query).exec()
-        .then(function(users) {
-            res.json(users);
+    Company.find(req.query).exec()
+        .then(function(companies) {
+            res.json(companies);
         })
         .then(null, next);
 });
 
 router.post('/', function(req, res, next) {
-    User.create(req.body)
-        .then(function(user) {
-            res.status(201).json(user);
+    Company.create(req.body)
+        .then(function(company) {
+            res.status(201).json(company);
         })
         .then(null, next);
 });
 
 router.param('id', function(req, res, next, id) {
-    User.findById(id).exec()
-        .then(function(user) {
-            if (!user) throw Error('Not Found');
-            req.user = user;
+    Company.findById(id).exec()
+        .then(function(company) {
+            if (!company) throw Error('Not Found');
+            req.company = company;
             next();
         })
         .then(null, function(e) {
@@ -37,7 +36,7 @@ router.param('id', function(req, res, next, id) {
 
 
 router.get('/:id', function(req, res) {
-    res.json(req.user);
+    res.json(req.company);
 });
 
 // router.put('/:id', function(req, res, next) {
