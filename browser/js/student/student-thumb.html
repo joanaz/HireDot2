@@ -1,24 +1,24 @@
 <div class="col-md-3">
     <div class="panel panel-default bootcards-media studentCard">
-        <img src="http://www.fullstackacademy.com/img/team/JF.jpg" class="img-responsive" />
+        <img src="{{student.github.avatar_url}}" class="img-responsive" />
         <div class="panel-heading">
-            <h3 class="panel-title"><a ui-sref="student-profile">Jimmy Farrell</a></h3>
+            <h3 class="panel-title"><a ui-sref="student-profile">{{student.fullName}}</a></h3>
         </div>
         <div class="panel-footer">
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <a href="https://linkedin.com/in/joshfinnie">
+                <a href="{{student.linkedin.url}}">
                     <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
                 </a>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <a href="https://github.com/joshfinnie">
+                <a href="{{student.github.html_url}}">
                     <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
-                            </span>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+                    </span>
                 </a>
             </div>
         </div>

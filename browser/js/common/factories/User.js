@@ -1,6 +1,7 @@
 app.factory('User', function($http, $rootScope) {
 
-    var getHelperFunction = (role) => $http.get('/api/users?role=' + role)
+    var getHelperFunction = (role) =>
+        $http.get('/api/users?role=' + role)
         .then(res => res.data);
 
     return {
@@ -8,7 +9,6 @@ app.factory('User', function($http, $rootScope) {
             getHelperFunction('Admin'),
         getStudents: () =>
             getHelperFunction('Student'),
-
         getCompanies: () =>
             getHelperFunction('Company'),
 

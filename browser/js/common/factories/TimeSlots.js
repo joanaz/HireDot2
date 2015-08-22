@@ -66,10 +66,10 @@ app.factory('TimeSlots', function() {
       // var studentsRemoved = []
       companies.forEach(company => {
         company.timeslots = company.candidates.slice(0, 9);
-          // if (company.timeslots.length > 9) {
-          //   company.timeslots.splice(9, Number.MAX_VALUE)
-          // }
-          // console.log(company.timeslots)
+        // if (company.timeslots.length > 9) {
+        //   company.timeslots.splice(9, Number.MAX_VALUE)
+        // }
+        // console.log(company.timeslots)
       });
 
       // studentsRemoved.sort((a, b) => a - b);

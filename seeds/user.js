@@ -18,7 +18,7 @@ module.exports = [{
     photo: "https://s3.amazonaws.com/uifaces/faces/twitter/vista/128.jpg",
     cohort: "1506",
     fellow: false,
-    preferences: ["Google", "Facebook", "Dropbox"],
+    // preferences: ["Google", "Facebook", "Dropbox"],
     currentCompany: "FVCproductions",
     socialLinks: {
         linkedin: "http://linkedin.com/in/fvcproductions",
@@ -36,7 +36,7 @@ module.exports = [{
     photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
     cohort: "1503",
     fellow: true,
-    preferences: ["Facebook", "Google", "Dropbox"],
+    // preferences: ["Facebook", "Google", "Dropbox"],
     currentCompany: "Fullstack",
     socialLinks: {
         linkedin: "http://linkedin.com/in/jimmfy",
@@ -49,10 +49,10 @@ module.exports = [{
     title: "Dropbox",
     role: ["Company"],
     photo: "http://www.fullstackacademy.com/img/team/JF.jpg",
-    preferences: ["Jimmy Farell", "Violet Siegius"],
+    // preferences: ["Jimmy Farell", "Violet Siegius"],
     socialLinks: {
         linkedin: "http://linkedin.com/in/dropbox",
         website: "http://dropbox.com",
-        angellist: "http://angellist.com/dropbox"
+        // angellist: "http://angellist.com/dropbox"
     },
 }];

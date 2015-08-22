@@ -5,9 +5,9 @@ var searchPlugin = require("mongoose-search-plugin");
 var schema = new mongoose.Schema({
     title: {
         type: String,
-        unique: true,
-        required: true,
-        trim: true
+        // unique: true,
+        // required: true,
+        // trim: true
     },
     team: {
         type: [{
@@ -17,8 +17,8 @@ var schema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true,
-        trim: true
+        // required: true,
+        // trim: true
     },
     awards: {
         type: [{
@@ -28,7 +28,7 @@ var schema = new mongoose.Schema({
     },
     github: {
         type: String,
-        required: true
+        // required: true
     },
     website: {
         type: String,
