@@ -39,8 +39,8 @@
 
             </div>
             <div class="row moreMarginTop centerText">
-                <div class="col-sm-12 col-md-2" >
-                    <button class="btn btn-view" ui-sref="project?tag=technology" ng-repeat="technology in project.technologies">{{technology}}</button>
+                <div class="col-sm-12 col-md-2" ng-repeat="technology in project.technologies">
+                    <button class="btn btn-view" ui-sref="project?tag=technology" >{{technology}}</button>
                 </div>
                 <!-- <div class="col-sm-12 col-md-2">
                     <button class="btn btn-view">tag 2</button>
@@ -94,16 +94,14 @@
             </div>
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
-                <ul>
-                    <li class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
+                    <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angular_js/achievements/badges/badge-01-6273f8e2-33f7-4e2e-be76-2e35f1b1c2f8.png">
                         <h3 class="regularFont">{{award}}</h3>
-                    </li>
+                    </div>
 
                     <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/288/completed-rails-4-patterns-5a6b1afee6e76347946ccf30e975eb41.png">
                     </div> -->
-                </ul>
                 </div>
                 <!-- <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6">

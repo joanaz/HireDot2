@@ -6,7 +6,7 @@ module.exports = [{
     "github": "https://github.com/TheoLipeles/SpiderEyes",
     "technologies": ["Web crawling", "D3"],
     "logo": "http://i.imgur.com/tdWIz3K.png",
-    "screenshot": "",
+    "screenshot": "http://i.imgur.com/IQ5BIlD.png",
     "category": "Stackathon"
 }, {
     "title": "EyeContact.space",
@@ -94,5 +94,13 @@ module.exports = [{
     technologies: ["jQuery", "VexFlow", "Canvas", "P5.JS"],
     logo: "http://i.imgur.com/oSafUqe.png",
     screenshot: "http://imgur.com/MlncgcK",
+    category: "Stackathon"
+}, {
+    title: "Kotekanator",
+    team: ["Peter Steele"],
+    description: "A synthesizer that generates its own music",
+    awards: ["Nerd Cred"],
+    github: "https://github.com/celanajaya/kotekanator",
+    technologies: ["awesome", "synthesizer", "gongLife"],
     category: "Stackathon"
 }]
