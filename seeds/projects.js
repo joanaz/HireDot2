@@ -58,7 +58,7 @@ module.exports = [{
     team: ["Patrick Trasborg, Carolyn Zelenetz"],
     description: "An application using your computer as a canvas and your phone as the palette/paint brush. Features included a blank canvas, coloring book, and pictionary mode.",
     awards: ["People's Choice"],
-    github: "https://github.com/pat310/stackathon.git",
+    github: "https://github.com/pat310/stackathon",
     technologies: ["Socket.io", "gyroscope"],
     logo: "http://7-themes.com/data_images/out/59/6973241-mood-brush-paint-color.jpg",
     screenshot: "http://7-themes.com/data_images/out/59/6973241-mood-brush-paint-color.jpg",
@@ -103,4 +103,4 @@ module.exports = [{
     github: "https://github.com/celanajaya/kotekanator",
     technologies: ["awesome", "synthesizer", "gongLife"],
     category: "Stackathon"
-}]
+}];
