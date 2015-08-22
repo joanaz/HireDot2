@@ -23,66 +23,21 @@ var chalk = require('chalk');
 var connectToDb = require('./server/db');
 var User = Promise.promisifyAll(mongoose.model('User'));
 var usersSeeds = require('./seeds/students.js');
+var Project = Promise.promisifyAll(mongoose.model('Project'));
+var projectsSeeds = require('./seeds/projects.js');
 
 var seedUsers = function() {
+    return User.createAsync(usersSeeds)
+}
 
-    var users = usersSeeds;
-
-    // [{
-    //     name: 'Frances',
-    //     email: 'testing@fsa.com',
-    //     password: 'password',
-    //     role: 'Student'
-    // }, {
-    //     name: 'Joanna',
-    //     email: 'joanaz',
-    //     password: '123',
-    //     role: 'Student'
-    // }, {
-    //     name: 'Violet',
-    //     email: 'violet',
-    //     password: '456',
-    //     role: 'Student'
-    // }, {
-    //     name: 'Theo',
-    //     email: 'violet',
-    //     password: '789',
-    //     role: 'Student'
-    // }, {
-    //     name: 'Jack',
-    //     email: 'violet',
-    //     password: '123',
-    //     role: 'Student'
-    // }, {
-    //     email: 'obama@gmail.com',
-    //     password: 'potus',
-    //     role: 'Admin'
-    // }, {
-    //     name: 'Google',
-    //     password: 'google',
-    //     role: 'Company'
-    // }, {
-    //     name: 'Twitter',
-    //     password: 'twitter',
-    //     role: 'Company'
-    // }, {
-    //     name: 'Facebook',
-    //     password: 'facebook',
-    //     role: 'Company'
-    // }, {
-    //     name: 'LinkedIn',
-    //     password: 'linkedin',
-    //     role: 'Company'
-    // }];
-
-    return User.createAsync(users);
-
-};
+var seedProjects = function() {
+    return Project.createAsync(projectsSeeds)
+}
 
 connectToDb.then(function() {
     User.removeAsync()
         .then(function() {
-            return seedUsers();
+            return seedUsers()
         })
         // User.findAsync({}).then(function(users) {
         //         if (users.length === 0) {
@@ -92,6 +47,12 @@ connectToDb.then(function() {
         //             process.kill(0);
         //         }
         //     })
+        .then(function() {
+            return Project.removeAsync()
+                .then(function() {
+                    return seedProjects()
+                })
+        })
         .then(function() {
             console.log(chalk.green('Seed successful!'));
             process.kill(0);
