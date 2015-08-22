@@ -40,7 +40,7 @@ $ npm start
 
 > For the future
 
-- add staff page that showcases those who work at Fullstack
+- add tumblr link for students
 
 ### User Types
 

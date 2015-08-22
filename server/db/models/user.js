@@ -2,6 +2,17 @@
 var crypto = require('crypto');
 var mongoose = require('mongoose');
 
+/* Removed Items From Original User JSON file
+_id
+_t
+_v
+available
+id
+token {}
+google {}
+*/
+
+
 var schema = new mongoose.Schema({
     "provider": {
         type: String
