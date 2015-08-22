@@ -7,4 +7,4 @@ var schema = new mongoose.Schema({
     }
 });
 
-mongoose.model("ProjectCategory", schema);
+mongoose.model("Category", schema);
