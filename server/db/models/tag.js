@@ -7,4 +7,4 @@ var schema = new mongoose.Schema({
     }
 });
 
-mongoose.model("ProjectTag", schema);
+mongoose.model("Tag", schema);

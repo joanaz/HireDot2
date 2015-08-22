@@ -13,4 +13,4 @@ var schema = new mongoose.Schema({
     }
 });
 
-mongoose.model("ProjectAward", schema);
+mongoose.model("Award", schema);

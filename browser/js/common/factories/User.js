@@ -4,6 +4,8 @@ app.factory('User', function($http, $rootScope) {
         $http.get('/api/users?role=' + role)
         .then(res => res.data);
 
+    // var getAwards = (
+
     return {
         getAdmins: () =>
             getHelperFunction('Admin'),
@@ -19,6 +21,8 @@ app.factory('User', function($http, $rootScope) {
             $http.get('/api/companies/' + id)
             .then(res => res.data)
 
+
+        // getAwards: () =>
 
         // // returns all users
         // getAll: function(query) {
