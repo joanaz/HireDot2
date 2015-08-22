@@ -1,7 +1,40 @@
 <div class="row headerMessage valign-middle">
     <div class="container marginTopBottom">
         <div class="col-md-6">
-            <h1>Welcome to Hiredot</h1>
+            <h1 class="headerTitle">
+                <div ng-show="$parent.location.path() === '/'">
+                    Welcome to Hiredot
+                </div>
+                <div ng-show="$parent.location.path() === '/login'">
+                    Login
+                </div>
+                <div ng-show="$parent.location.path() === '/signup'">
+                    Signup
+                </div>
+                <div ng-show="$parent.location.path() === '/student'">
+                    Students
+                </div>
+                <div ng-show="$parent.location.path() === '/project'">
+                    Projects
+                </div>
+                <div ng-show="$parent.location.path() === '/project-profile'">
+                    <a ui-sref="project">
+                        Back to Projects
+                    </a>
+                </div>
+                <div ng-show="$parent.location.path() === '/hackathon'">
+                    Hackathons
+                </div>
+                <div ng-show="$parent.location.path() === '/staff'">
+                    Staff
+                </div>
+                <div ng-show="$parent.location.path() === '/company'">
+                    Companies
+                </div>
+                <div ng-show="$parent.location.path() === '/award'">
+                    Awards
+                </div>
+            </h1>
         </div>
         <div class="col-md-3">
         </div>
@@ -9,9 +42,6 @@
             <form class="searchBar" role="search">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for..." ng-model="searchString">
-                    <!--  <div class="input-group-btn">
-                        <button class="btn btn-search" ng-click="search()"><i class="fa fa-search"></i></button>
-                    </div> -->
                 </div>
             </form>
         </div>

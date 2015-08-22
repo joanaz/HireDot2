@@ -2,13 +2,41 @@
     <div class="col-md-12 studentCard">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row moreMarginTop centerText">
-                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{project.screenshot}}" alt="">
+                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{project.screenshot}}">
             </div>
             <div class="row moreMarginTop title">
-                <h3><a href="{{project.website}}">{{project.title}}</a></h3>
+                <h1><a href="{{project.website}}">{{project.title}}</a></h1>
             </div>
             <div class="row moreMarginTop">
-                <p class="regularFont">{{project.description}}</p>
+                <h2 class="regularFont">{{project.description}}</h2>
+            </div>
+            <div class="row moreMarginTop">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <a href="{{project.website}}" target="_blank">
+                        <span class="fa-stack fa-3x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <a href="{{project.github}}" target="_blank">
+                        <span class="fa-stack fa-3x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                    </a>
+                </div>
+            </div>
+            <div class="row moreMarginTop">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <code>{{project.website}}</code>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <code>{{project.github}}</code>
+                </div>
+
+
             </div>
             <div class="row moreMarginTop centerText">
                 <div class="col-sm-12 col-md-2" >
@@ -34,7 +62,7 @@
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="col-md-12">
                 <div class="row centerText">
-                    <h2>Team Members</h2>
+                    <h2><i class="fa fa-briefcase twentyPixelsMarginRight"></i> Team Members</h2>
                 </div>
             </div>
             <div class="col-md-12">
@@ -49,33 +77,45 @@
                 </div>
                 <!-- <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <p><a ui-sref="student-profile">Jimmy Farrell</a></p>
+                        <h3 class="regularFont"><a ui-sref="student-profile">Jimmy Farrell</a></h3>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <p><a ui-sref="student-profile">Jimmy Clone</a></p>
+                        <h3 class="regularFont"><a ui-sref="student-profile">Jimmy Clone</a></h3>
                     </div>
                 </div> -->
-            </div>
-            <div class="row moreMarginTop centerText">
-                <div class="col-md-3 linksMarginTop">
-                    <img src="http://png-2.findicons.com/files/icons/2799/flat_icons/256/trophy.png" class="img-responsive img-center trophy">
-                </div>
-                <div class="col-md-9 linksMarginTop">
-                    <h3><a ui-sref="awards" ng-repeat="award in project.awards">{{award}}</a></h3>
+                <div class="row moreMarginTop centerText">
+                    <button class="btn btn-view" ui-sref="student">view all students</button>
                 </div>
             </div>
-            <div class="row moreMarginTop centerText">
-                <div class="col-md-3 linksMarginTop">
-                    <a target="_blank" href="{{project.github}}">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
+            <div class="col-md-12">
+                <div class="row moreMarginTop centerText">
+                    <h2><i class="fa fa-trophy twentyPixelsMarginRight"></i> Awards</h2>
                 </div>
-                <!-- <div class="col-md-9 linksMarginTop">
-                    <h3><a href="https://github.com/joshfinnie" target="_blank">View on GitHub</a></h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row moreMarginTop centerText">
+                <ul>
+                    <li class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
+                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angular_js/achievements/badges/badge-01-6273f8e2-33f7-4e2e-be76-2e35f1b1c2f8.png">
+                        <h3 class="regularFont">{{award}}</h3>
+                    </li>
+
+                    <!-- <div class="col-sm-12 col-md-6 col-lg-6">
+                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/288/completed-rails-4-patterns-5a6b1afee6e76347946ccf30e975eb41.png">
+                    </div> -->
+                </ul>
+                </div>
+                <!-- <div class="row moreMarginTop centerText">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h3 class="regularFont">Best Design</h3>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h3 class="regularFont">Weirdest Project</h3>
+                    </div>
                 </div> -->
+                <div class="row moreMarginTop centerText">
+                    <button class="btn btn-view" ui-sref="award">view all awards</button>
+                </div>
             </div>
         </div>
     </div>

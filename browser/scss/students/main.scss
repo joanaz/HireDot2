@@ -1,5 +1,5 @@
 form.searchBar {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .input-group .form-control:last-child {
@@ -14,8 +14,8 @@ form.searchBar {
 }
 
 .studentCard {
-    padding: 3%;
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.2),0 1px 8px 0 rgba(0,0,0,.12);
+    padding: 5%;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
     border-radius: 2px;
     height: 100%;
     margin-left: auto;
@@ -36,6 +36,20 @@ form.searchBar {
 }
 
 .resumeMargin {
-    margin-top: 2%;
+    margin-top: 5%;
     margin-bottom: 2%;
+}
+
+.panel-title {
+    font-size: large;
+}
+
+.panel-footer, .panel-heading, .panel-default .panel-heading {
+    background-color: white;
+    border: none;
+}
+
+.img-responsive {
+    border-radius: 100%;
+    border: 5px solid #444
 }
