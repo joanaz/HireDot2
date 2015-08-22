@@ -210,6 +210,17 @@ var schema = new mongoose.Schema({
             type: String
         },
     },
+    "hiredAlumni": [{
+        "fullName": {
+            type: String
+        },
+        "photo": {
+            type: String
+        }
+    }],
+    "participateHiringDay": {
+        type: Boolean
+    },
     "needsGithubReset": {
         type: Boolean
     },

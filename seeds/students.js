@@ -5,7 +5,61 @@ module.exports = [{
   "photo": "http://icons.iconarchive.com/icons/danleech/simple/1024/dropbox-icon.png",
   "role": "Company",
   "website": "https://www.dropbox.com/jobs",
-  "angellist": "https://angel.co/dropbox"
+  "angellist": "https://angel.co/dropbox",
+  "hiredAlumni": [{
+    "fullName": "Colin Vanlang",
+    "photo": "http://www.fullstackacademy.com/img/alumni/graduates/colin_vanlang.jpg"
+  }],
+  "participateHiringDay": true
+}, {
+  "fullName": "Do Something",
+  "photo": "http://forge.dosomething.org/resources/ds-logo-highres.png",
+  "role": "Company",
+  "website": "https://www.dosomething.org/",
+  "angellist": "https://angel.co/dosomething-org",
+  "participateHiringDay": true
+}, {
+  "fullName": "NYSE",
+  "photo": "https://upload.wikimedia.org/wikipedia/en/0/00/New_York_Stock_Exchange_Logo.png",
+  "role": "Company",
+  "website": "https://www.nyse.com/index",
+  "angellist": "https://angel.co/nyse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Greenhouse",
+  "photo": "http://hr.sparkhire.com/wp-content/uploads/2014/11/Greenhouse.jpg",
+  "role": "Company",
+  "website": "http: //www.greenhouse.io/",
+  "angellist": "https://angel.co/greenhouse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Venmo",
+  "photo": "https://venmo.s3.amazonaws.com/pr/app-icon.png",
+  "role": "Company",
+  "website": "https://venmo.com/jobs/",
+  "angellist": "https://angel.co/venmo",
+  "participateHiringDay": true
+}, {
+  "fullName": "Accenture",
+  "photo": "http://picsbelgium.be/wp-content/uploads/2012/07/accenture-logo.jpg",
+  "role": "Company",
+  "website": "https://www.accenture.com/us-en/careers",
+  "angellist": "https://angel.co/accenture",
+  "participateHiringDay": true
+}, {
+  "fullName": "American Express",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/American_Express_logo.svg/1000px-American_Express_logo.svg.png",
+  "role": "Company",
+  "website": "https://careers.americanexpress.com/",
+  "angellist": "https://angel.co/american-express",
+  "participateHiringDay": true
+}, {
+  "fullName": "Visa",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Visa_2014_logo_detail.svg/2000px-Visa_2014_logo_detail.svg.png",
+  "role": "Company",
+  "website": "http://usa.visa.com/careers/index.jsp?n=1",
+  "angellist": "https://angel.co/visa",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Gregory",
@@ -250,7 +304,8 @@ module.exports = [{
     "fullName": "Gavin Young"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54efb4b52089971100a7a52d"
+  "id": "54efb4b52089971100a7a52d",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Yuen",
@@ -372,7 +427,8 @@ module.exports = [{
     "fullName": "Yves Yuen"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "550b262077f5e0110053689b"
+  "id": "550b262077f5e0110053689b",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Steele",
@@ -494,7 +550,8 @@ module.exports = [{
     "fullName": "Peter Steele"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54f6136cbd314811000461f7"
+  "id": "54f6136cbd314811000461f7",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Meyer",
@@ -616,7 +673,8 @@ module.exports = [{
     "fullName": "Gregory Meyer"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54e38c33b802920c00639ef0"
+  "id": "54e38c33b802920c00639ef0",
+  "participateHiringDay": true
 }, {
   "lastName": "Lei",
   "firstName": "Kevin",
@@ -756,7 +814,8 @@ module.exports = [{
     "fullName": "Kevin Lei"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5515e271fd8a9d0300114205"
+  "id": "5515e271fd8a9d0300114205",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Nierenberg",
@@ -878,7 +937,8 @@ module.exports = [{
     "fullName": "Jovia Nierenberg"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "55529904554da90300be13fb"
+  "id": "55529904554da90300be13fb",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Ayscue",
@@ -995,7 +1055,8 @@ module.exports = [{
     "fullName": "Christian Ayscue"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "554edccedae7620300b6b6bd"
+  "id": "554edccedae7620300b6b6bd",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Zhang",
@@ -1117,7 +1178,8 @@ module.exports = [{
     "fullName": "Joanna Zhang"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5550d3320eeec40300da4145"
+  "id": "5550d3320eeec40300da4145",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Kim",
@@ -1222,7 +1284,8 @@ module.exports = [{
     "fullName": "Robin Kim"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "55403244368ffa0300dda6d4"
+  "id": "55403244368ffa0300dda6d4",
+  "participateHiringDay": true
 }, {
   "lastName": "Cook",
   "firstName": "Annie",
@@ -1354,7 +1417,8 @@ module.exports = [{
     "fullName": "Annie Cook"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5553d2d0c6439203000ecf2a"
+  "id": "5553d2d0c6439203000ecf2a",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Zelenetz",
@@ -1468,7 +1532,8 @@ module.exports = [{
     "fullName": "Carolyn Zelenetz"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "553ec5a075028403009579ea"
+  "id": "553ec5a075028403009579ea",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Hoang",
@@ -1590,7 +1655,8 @@ module.exports = [{
     "fullName": "Kevin Hoang"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "555013cb1303c40300333584"
+  "id": "555013cb1303c40300333584",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Lipeles",
@@ -1712,7 +1778,8 @@ module.exports = [{
     "fullName": "Theo Lipeles"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "553c2bc69ff5480300b1dad8"
+  "id": "553c2bc69ff5480300b1dad8",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Goldberg",
@@ -1835,7 +1902,8 @@ module.exports = [{
     "fullName": "Anna Goldberg"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "556653ec27d604030065cb48"
+  "id": "556653ec27d604030065cb48",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Evans",
@@ -1957,7 +2025,8 @@ module.exports = [{
     "fullName": "Christian Evans"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "55073bdeb39b0a110004134f"
+  "id": "55073bdeb39b0a110004134f",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Hara",
@@ -2072,7 +2141,8 @@ module.exports = [{
     "fullName": "Kaito Hara"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "55538a6ee0c1db0300009a69"
+  "id": "55538a6ee0c1db0300009a69",
+  "participateHiringDay": true
 }, {
   "lastName": "Ellsworth",
   "firstName": "Nick",
@@ -2261,7 +2331,8 @@ module.exports = [{
     "fullName": "Nick Ellsworth"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "550a0d9877f5e01100532478"
+  "id": "550a0d9877f5e01100532478",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Mulrow",
@@ -2383,7 +2454,8 @@ module.exports = [{
     "fullName": "Jack Mulrow"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54fb5c2cdc1e3f110043eefa"
+  "id": "54fb5c2cdc1e3f110043eefa",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Kim",
@@ -2497,7 +2569,8 @@ module.exports = [{
     "fullName": "Justin Kim"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "551af5f56df1500300abd987"
+  "id": "551af5f56df1500300abd987",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Roberts",
@@ -2619,7 +2692,8 @@ module.exports = [{
     "fullName": "Kelsey Roberts"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "552c0e731b4b250300055d8f"
+  "id": "552c0e731b4b250300055d8f",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Ruggiano",
@@ -2727,7 +2801,8 @@ module.exports = [{
     "fullName": "Will Ruggiano"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "554f664fdae7620300b6c019"
+  "id": "554f664fdae7620300b6c019",
+  "participateHiringDay": false
 }, {
   "lastName": "Michels",
   "firstName": "Richard",
@@ -2861,7 +2936,8 @@ module.exports = [{
     "fullName": "Richard Michels"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54f9f3d09e175611003f5dc2"
+  "id": "54f9f3d09e175611003f5dc2",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Ratner",
@@ -2983,7 +3059,8 @@ module.exports = [{
     "fullName": "Isaac Ratner"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5522f7b481e615030046f058"
+  "id": "5522f7b481e615030046f058",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Trasborg",
@@ -3105,7 +3182,8 @@ module.exports = [{
     "fullName": "Patrick Trasborg"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "554511060e49f503003602a6"
+  "id": "554511060e49f503003602a6",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Devasthale",
@@ -3227,7 +3305,8 @@ module.exports = [{
     "fullName": "Nirmohi Devasthale"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5550c73c53f990030042832c"
+  "id": "5550c73c53f990030042832c",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Nguyen",
@@ -3335,7 +3414,8 @@ module.exports = [{
     "fullName": "Thang Huy Nguyen"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5537caf9682a300300e9d6a9"
+  "id": "5537caf9682a300300e9d6a9",
+  "participateHiringDay": false
 }, {
   "lastName": "Madwed",
   "firstName": "Isaac",
@@ -3482,7 +3562,8 @@ module.exports = [{
     "fullName": "Isaac Madwed"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5514afc803aaf60300d25945"
+  "id": "5514afc803aaf60300d25945",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Rice",
@@ -3582,7 +3663,8 @@ module.exports = [{
     "fullName": "Joe Rice"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "5527d616b5af470300d8ccd7"
+  "id": "5527d616b5af470300d8ccd7",
+  "participateHiringDay": true
 }, {
   "lastName": "Durand-Smet",
   "firstName": "Xavier",
@@ -3742,7 +3824,8 @@ module.exports = [{
     "fullName": "Xavier Durand-Smet"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "554b971b2a3a600300d2e3c2"
+  "id": "554b971b2a3a600300d2e3c2",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Enriquez",
@@ -3852,7 +3935,8 @@ module.exports = [{
     "fullName": "Alfonso Enriquez"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "555113f489064a0300c91ea7"
+  "id": "555113f489064a0300c91ea7",
+  "participateHiringDay": false
 }, {
   "provider": "local",
   "lastName": "Chu",
@@ -3974,7 +4058,8 @@ module.exports = [{
     "fullName": "Bryan Chu"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54f47b300993461100a4a3b4"
+  "id": "54f47b300993461100a4a3b4",
+  "participateHiringDay": true
 }, {
   "provider": "local",
   "lastName": "Coronel",
@@ -4097,5 +4182,6 @@ module.exports = [{
     "fullName": "Frances Coronel"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "id": "54f8d550807ae1110059d90f"
+  "id": "54f8d550807ae1110059d90f",
+  "participateHiringDay": false
 }];
