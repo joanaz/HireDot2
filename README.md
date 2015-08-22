@@ -6,7 +6,7 @@
 
 >> Specifically, **Hiredot** is a place for <a href="http://fullstackacademy.com" target="_blank">Fullstack Academy</a> students and interested companies to explore projects and hackathons as well as create their own profiles and set up hiring event preferences.
 
-[![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/joanaz/Hiredot2/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/joanaz/Hiredot2/pulls)  [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/joanaz/Hiredot2/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/joanaz/Hiredot2/pulls)  [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Stories in Ready](https://badge.waffle.io/joanaz/HireDot2.svg?label=ready&title=Ready)](http://waffle.io/joanaz/HireDot2) [![Stories in Done](https://badge.waffle.io/joanaz/HireDot2.svg?label=ready&title=Done)](http://waffle.io/joanaz/HireDot2) [![Stories in Backlog](https://badge.waffle.io/joanaz/HireDot2.svg?label=ready&title=Backlog)](http://waffle.io/joanaz/HireDot2) [![Stories in Progress](https://badge.waffle.io/joanaz/HireDot2.svg?label=ready&title=In Progress)](http://waffle.io/joanaz/HireDot2)
 
 ---
 
@@ -37,6 +37,10 @@ $ npm start
 ---
 
 ## Features
+
+> For the future
+
+- add staff page that showcases those who work at Fullstack
 
 ### User Types
 

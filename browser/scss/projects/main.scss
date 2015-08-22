@@ -1,21 +1,30 @@
 .regularFont {
-  font-family: "FFTisa";
+    font-family: "FFTisa";
 }
 
 .teamMemberPhoto {
-  max-width: 50%;
+    max-width: 50%;
 }
 
 .trophy {
-  max-width: 75%;
+    max-width: 75%;
 }
 
 .studentCard {
-  a {
-    text-decoration: underline;
-  }
+    a {
+        text-decoration: underline;
+    }
 }
 
 .linksMarginTop {
-  margin-top: 10%;
+    margin-top: 10%;
+}
+
+.projectPhoto {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.img-responsive {
+    width: 100%;
 }
