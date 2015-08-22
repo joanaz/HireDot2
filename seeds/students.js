@@ -26,6 +26,34 @@ module.exports = [{
     "angellist": "https://angel.co/nyse",
     "participateHiringDay": true
 }, {
+    "fullName": "Timehop",
+    "photo": "http://screenshots.en.sftcdn.net/en/scrn/69682000/69682580/timehop-01-535x535.png",
+    "role": "Company",
+    "website": "http://timehop.com/",
+    "angellist": "https://angel.co/nyse",
+    "participateHiringDay": true
+}, {
+    "fullName": "HubSpot",
+    "photo": "https://pbs.twimg.com/profile_images/626105757004492800/CdxLMoHH.png",
+    "role": "Company",
+    "website": "http://www.hubspot.com/",
+    "angellist": "https://angel.co/nyse",
+    "participateHiringDay": true
+}, {
+    "fullName": "Gilt",
+    "photo": "https://pbs.twimg.com/profile_images/1956559542/Facebook_ProfilePic_W_400x400.jpg",
+    "role": "Company",
+    "website": "http://timehop.com/",
+    "angellist": "https://angel.co/nyse",
+    "participateHiringDay": true
+}, {
+    "fullName": "Thrillist",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Thrillist_Logo.JPG",
+    "role": "Company",
+    "website": "http://timehop.com/",
+    "angellist": "https://angel.co/nyse",
+    "participateHiringDay": true
+}, {
     "fullName": "Greenhouse",
     "photo": "http://hr.sparkhire.com/wp-content/uploads/2014/11/Greenhouse.jpg",
     "role": "Company",
