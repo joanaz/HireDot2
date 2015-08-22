@@ -1,7 +1,7 @@
 module.exports = [{
     "title": "SpiderEyes",
     "team": ["Joanna Zhang", "Theo Lipeles"],
-    "description": "",
+    "description": "A web crawler that visualizes the relationships between Wikipedia pages with a force diagram.",
     "awards": ["People's Choice"],
     "github": "https://github.com/TheoLipeles/SpiderEyes",
     "technologies": ["Web crawling", "D3"],
@@ -101,6 +101,6 @@ module.exports = [{
     description: "A synthesizer that generates its own music",
     awards: ["Nerd Cred"],
     github: "https://github.com/celanajaya/kotekanator",
-    technologies: ["awesome", "synthesizer", "gongLife"],
+    technologies: ["web audio API", "tone.js", "Angular.js"],
     category: "Stackathon"
 }]

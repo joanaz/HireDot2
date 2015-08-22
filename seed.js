@@ -35,18 +35,18 @@ var seedProjects = function() {
 }
 
 connectToDb.then(function() {
-    User.removeAsync()
-        .then(function() {
-            return seedUsers()
+    // User.removeAsync()
+    //     .then(function() {
+    //         return seedUsers()
+    //     })
+    User.findAsync({}).then(function(users) {
+            if (users.length === 0) {
+                return seedUsers();
+            } else {
+                console.log(chalk.magenta('Seems to already be user data, exiting!'));
+                process.kill(0);
+            }
         })
-        // User.findAsync({}).then(function(users) {
-        //         if (users.length === 0) {
-        //             return seedUsers();
-        //         } else {
-        //             console.log(chalk.magenta('Seems to already be user data, exiting!'));
-        //             process.kill(0);
-        //         }
-        //     })
         .then(function() {
             return Project.removeAsync()
                 .then(function() {

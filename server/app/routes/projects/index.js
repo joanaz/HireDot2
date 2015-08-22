@@ -3,6 +3,7 @@ module.exports = router;
 var _ = require('lodash');
 var mongoose = require('mongoose');
 var Project = mongoose.model('Project');
+var User = mongoose.model('User');
 
 router.get('/', function(req, res, next) {
     Project.find(req.query).exec()
@@ -24,6 +25,11 @@ router.param('id', function(req, res, next, id) {
     Project.findById(id).exec()
         .then(function(project) {
             if (!project) throw Error('Not Found');
+            // project.team.forEach(member => {
+            //         User.find({
+            //             fullName: member
+            //         }).then(res => res[0]))
+            // }
             req.project = project;
             next();
         })

@@ -11,7 +11,12 @@ app.factory('User', function($http, $rootScope) {
             getHelperFunction('Student'),
         getCompanies: () =>
             getHelperFunction('Company'),
-
+        getUserFromFullName: (fullname) =>
+            $http.get('/api/users?fullName=' + fullname)
+            .then(res => {
+                console.log(res)
+                return res.data
+            });
         // // returns all users
         // getAll: function(query) {
         //     return $http.get('/api/users/', {

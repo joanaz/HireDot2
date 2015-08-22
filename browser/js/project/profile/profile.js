@@ -6,7 +6,10 @@ app.config(function($stateProvider) {
       project: null
     },
     resolve: {
-      project: ($stateParams) => $stateParams.project
+      project: ($stateParams, User) => {
+        $stateParams.project.team.map(member => User.getUserFromFullName(member))
+        return $stateParams.project
+      }
     },
     controller: ($scope, project) => {
       $scope.project = project
