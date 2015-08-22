@@ -10,11 +10,8 @@ var schema = new mongoose.Schema({
             // trim: true
     },
     team: [{
-        type: String
-            // type: [{
-            //     type: mongoose.Schema.Types.ObjectId,
-            //     ref: "User",
-            // }]
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
     }],
     description: {
         type: String
@@ -22,11 +19,9 @@ var schema = new mongoose.Schema({
             // trim: true
     },
     awards: [{
-        type: String
-            // type: [{
-            //     type: mongoose.Schema.Types.ObjectId,
-            //     ref: "ProjectAward",
-            // }]
+        // type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "ProjectAward",
     }],
     github: {
         type: String

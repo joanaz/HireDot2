@@ -2,14 +2,9 @@ app.config(function($stateProvider) {
   $stateProvider.state('project-profile', {
     url: '/project/:id',
     templateUrl: 'js/project/profile/profile.html',
-    params: {
-      project: null
-    },
     resolve: {
-      project: ($stateParams, User) => {
-        $stateParams.project.team.map(member => User.getUserFromFullName(member))
-        return $stateParams.project
-      }
+      project: ($stateParams, ProjectsFactory) =>
+        ProjectsFactory.getProject($stateParams.id)
     },
     controller: ($scope, project) => {
       $scope.project = project

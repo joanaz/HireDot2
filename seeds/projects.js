@@ -1,6 +1,6 @@
 module.exports = [{
     "title": "SpiderEyes",
-    "team": ["Joanna Zhang", "Theo Lipeles"],
+    "team": ["55d8f6d39ff0e584abd67c52", "55d8f6d39ff0e584abd67c57"],
     "description": "A web crawler that visualizes the relationships between Wikipedia pages with a force diagram.",
     "awards": ["People's Choice"],
     "github": "https://github.com/TheoLipeles/SpiderEyes",
@@ -10,7 +10,7 @@ module.exports = [{
     "category": "Stackathon"
 }, {
     "title": "EyeContact.space",
-    "team": ["Isaac Madwed"],
+    "team": ["55d8f6d39ff0e584abd67c65"],
     "description": "EyeContact.space is an application where users are connected with a stranger to gaze into their eyes.",
     "awards": ["Mad-Scientist"],
     "github": "github.com/madwed/eyecontact",
@@ -21,7 +21,7 @@ module.exports = [{
     "category": "Stackathon"
 }, {
     "title": "Pitch Battle",
-    "team": ["Yves Yuen"],
+    "team": ["55d8f6d39ff0e584abd67c4c"],
     "description": "Pitch detection and Real Time Singing Battle Application",
     "awards": ["Best Design"],
     "github": "https://github.com/justYves/stackathon",
@@ -32,7 +32,7 @@ module.exports = [{
     "category": "Stackathon"
 }, {
     title: 'JackCoin',
-    team: ['Jack Mulrow'],
+    team: ["55d8f6d39ff0e584abd67c5c"],
     description: 'A lightweight implementation of core bitcoin concepts using the MEAN stack, socket.io, and Web Workers',
     awards: ['Nerd Cred'],
     github: 'http://www.github.com/jsmulrow/jackcoin',
@@ -42,7 +42,7 @@ module.exports = [{
     category: "Stackathon"
 }, {
     title: "Dragg'z",
-    team: ["Richard Michels", "Xavier Durand-Smet"],
+    team: ["55d8f6d39ff0e584abd67c60", "55d8f6d39ff0e584abd67c67"],
     description: 'Collaborative Chrome Extension enabling people to modify the structure of webPages, reorganize the DOM, and share those changes',
     github: 'https://github.com/xavierdurandsmet/ExtensionDragDrop',
     technologies: [
@@ -55,7 +55,7 @@ module.exports = [{
     category: "Stackathon"
 }, {
     title: "Contemporary Art",
-    team: ["Patrick Trasborg, Carolyn Zelenetz"],
+    team: ["55d8f6d39ff0e584abd67c62", "55d8f6d39ff0e584abd67c55"],
     description: "An application using your computer as a canvas and your phone as the palette/paint brush. Features included a blank canvas, coloring book, and pictionary mode.",
     awards: ["People's Choice"],
     github: "https://github.com/pat310/stackathon.git",
@@ -65,7 +65,7 @@ module.exports = [{
     category: "Stackathon"
 }, {
     title: "Paper Plane",
-    team: ["Jovia Nierenberg", "Anna Goldberg"],
+    team: ["55d8f6d39ff0e584abd67c50", "55d8f6d39ff0e584abd67c58"],
     description: "A chrome extension that facilitates bibliography creation through highlighting fields on websites",
     awards: ["Education"],
     github: "https: //github.com/JoviaNierenberg/paper-plane",
@@ -76,7 +76,7 @@ module.exports = [{
 
 }, {
     title: 'Citibike Visualizer',
-    team: ["Kaito Hara"],
+    team: ["55d8f6d39ff0e584abd67c5a"],
     description: 'A tool built with D3 and leaflet.js to visualize Citibike trip data',
     awards: ["People's Choice"],
     github: 'https://github.com/kaitohara/citibike-visualizer',
@@ -86,7 +86,7 @@ module.exports = [{
     category: "Stackathon"
 }, {
     title: "Dictatone",
-    team: ["Nick Ellsworth", "Christian Evans"],
+    team: ["55d8f6d39ff0e584abd67c5b", "55d8f6d39ff0e584abd67c59"],
     description: "Real-time transcription of audio input into sheet-music incorporating P5 and VexFlow.",
     awards: ["Mad-Scientist"],
     github: "https://github.com/christianevans214/Harmonizer",
@@ -97,7 +97,7 @@ module.exports = [{
     category: "Stackathon"
 }, {
     title: "Kotekanator",
-    team: ["Peter Steele"],
+    team: ["55d8f6d39ff0e584abd67c4d"],
     description: "A synthesizer that generates its own music",
     awards: ["Nerd Cred"],
     github: "https://github.com/celanajaya/kotekanator",

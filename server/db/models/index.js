@@ -7,3 +7,4 @@ require('./hackathon');
 require('./project');
 require('./tag');
 require('./user');
+require('./company');

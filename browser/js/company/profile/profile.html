@@ -2,17 +2,17 @@
     <div class="col-md-12 studentCard">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row moreMarginTop centerText">
-                <img class="img-circle img-responsive img-center studentProfilePhoto" src="http://icons.iconarchive.com/icons/danleech/simple/1024/dropbox-icon.png">
+                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{company.photo}}">
             </div>
             <div class="row moreMarginTop title">
-                <h1><a href="http://dropbox.com" target="_blank">Dropbox</a></h1>
+                <h1><a href="{{company.website}}" target="_blank">{{company.fullName}}</a></h1>
             </div>
             <div class="row moreMarginTop">
-                <h2 class="regularFont">A sharing utility for the cloud.</h2>
+                <h2 class="regularFont">{{company.description}}</h2>
             </div>
             <div class="row moreMarginTop">
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="https://linkedin.com/in/joshfinnie" target="_blank">
+                    <a href="{{company.website}}" target="_blank">
                         <span class="fa-stack fa-3x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
@@ -20,7 +20,7 @@
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="https://github.com/joshfinnie" target="_blank">
+                    <a href="{{company.angellist}}" target="_blank">
                         <span class="fa-stack fa-3x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-angellist fa-stack-1x fa-inverse"></i>
@@ -35,7 +35,12 @@
             </div>
             <div class="row moreMarginTop title centerText">
                 <div class="col-md-12">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="position in company.openPositions">
+                        <button class="btn btn-view jobButton moreMarginTop regularFont" href="{{position.url}}" target="_blank">
+                            {{position.title}}
+                        </button>
+                    </div>
+                    <!-- <div class="col-md-6">
                         <button class="btn btn-view jobButton moreMarginTop regularFont" href="http://angellist.com/dropbox" target="_blank">
                             Fullstack Developer
                         </button>
@@ -59,26 +64,21 @@
                         <button class="btn btn-view jobButton moreMarginTop regularFont" href="http://angellist.com/dropbox" target="_blank">
                             Fullstack Developer
                         </button>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-view jobButton moreMarginTop regularFont" href="http://angellist.com/dropbox" target="_blank">
-                            Fullstack Developer
-                        </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="row moreMarginTop title centerText">
                 <h2><i class="fa fa-users twentyPixelsMarginRight"></i> Previous Hires</h2>
             </div>
             <div class="row moreMarginTop centerText">
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.fullstackacademy.com/img/team/JF.jpg">
-                    <h3 class="marginTop regularFont"><a ui-sref="student-profile">Jimmy Farrell</a></h3>
+                <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="hire in company.hiredAlumni">
+                    <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{hire.photo}}">
+                    <h3 class="marginTop regularFont"><a ui-sref="student-profile">{{hire.fullName}}</a></h3>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                     <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.fullstackacademy.com/img/team/JF.jpg">
                     <h3 class="marginTop regularFont"><a ui-sref="student-profile">Jimmy Clone</a></h3>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

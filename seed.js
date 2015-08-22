@@ -23,36 +23,53 @@ var chalk = require('chalk');
 var connectToDb = require('./server/db');
 var User = Promise.promisifyAll(mongoose.model('User'));
 var usersSeeds = require('./seeds/students.js');
+var Company = Promise.promisifyAll(mongoose.model('Company'));
+var companiesSeeds = require('./seeds/companies.js');
+var ProjectAward = Promise.promisifyAll(mongoose.model('ProjectAward'));
+var awardsSeeds = require('./seeds/awards.js');
 var Project = Promise.promisifyAll(mongoose.model('Project'));
 var projectsSeeds = require('./seeds/projects.js');
 
 var seedUsers = function() {
     return User.createAsync(usersSeeds)
 }
-
+var seedCompanies = function() {
+    return Company.createAsync(companiesSeeds)
+}
+var seedAwards = function() {
+    return ProjectAward.createAsync(awardsSeeds)
+}
 var seedProjects = function() {
     return Project.createAsync(projectsSeeds)
 }
 
 connectToDb.then(function() {
-    User.removeAsync()
-        .then(function() {
-            return seedUsers()
+    // User.removeAsync()
+    //     .then(function() {
+    //         return seedUsers()
+    //     })
+    User.findAsync({}).then(function(users) {
+            if (users.length === 0) {
+                return seedUsers();
+            } else {
+                console.log(chalk.magenta('Seems to already be user data, exiting!'));
+                process.kill(0);
+            }
         })
-        // User.findAsync({}).then(function(users) {
-        //         if (users.length === 0) {
-        //             return seedUsers();
+        // seedCompanies()
+        // ProjectAward.findAsync({}).then(function(awards) {
+        //         if (awards.length === 0) {
+        //             return seedAwards();
         //         } else {
-        //             console.log(chalk.magenta('Seems to already be user data, exiting!'));
-        //             process.kill(0);
+        //             return ""
         //         }
         //     })
-        .then(function() {
-            return Project.removeAsync()
-                .then(function() {
-                    return seedProjects()
-                })
-        })
+        // .then(function() {
+        //     return Project.removeAsync()
+        //         .then(function() {
+        //             return seedProjects()
+        //         })
+        // })
         .then(function() {
             console.log(chalk.green('Seed successful!'));
             process.kill(0);

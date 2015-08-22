@@ -35,12 +35,9 @@ var schema = new mongoose.Schema({
     salt: {
         type: String
     },
-    photo: {
-        type: String
-    },
     preferences: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "Company",
     }],
     currentCompany: {
         type: String
@@ -195,12 +192,6 @@ var schema = new mongoose.Schema({
             type: String,
         }
     },
-    "website": {
-        type: String
-    },
-    "angellist": {
-        type: String,
-    },
     "slack": {
         "ok": {
             type: Boolean
@@ -221,14 +212,6 @@ var schema = new mongoose.Schema({
             type: String
         },
     },
-    "hiredAlumni": [{
-        "fullName": {
-            type: String
-        },
-        "photo": {
-            type: String
-        }
-    }],
     "participateHiringDay": {
         type: Boolean
     },
@@ -252,7 +235,7 @@ var schema = new mongoose.Schema({
     }, ],
     "role": {
         type: String,
-        enum: ['Admin', 'Student', 'Company'],
+        enum: ['Admin', 'Student'],
         default: 'Student',
     },
     // "token": {

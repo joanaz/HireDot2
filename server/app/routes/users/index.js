@@ -46,9 +46,9 @@ router.param('id', function(req, res, next, id) {
 });
 
 
-// router.get('/:id', function(req, res) {
-//     res.json(req.user);
-// });
+router.get('/:id', function(req, res) {
+    res.json(req.user);
+});
 
 // router.put('/:id', function(req, res, next) {
 //     _.extend(req.user, req.body);

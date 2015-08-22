@@ -6,11 +6,9 @@ app.config(function($stateProvider) {
     resolve: {
       companies: (User) =>
         User.getCompanies()
+    },
+    controller: ($scope, companies) => {
+      $scope.companies = companies
     }
   });
 });
-
-app.controller('CompanyController', function($scope, companies) {
-  console.log(companies)
-  $scope.companies = companies
-})

@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('id', function(req, res, next, id) {
-    Project.findById(id).exec()
+    Project.findById(id).populate('team awards').exec()
         .then(function(project) {
             if (!project) throw Error('Not Found');
             // project.team.forEach(member => {
