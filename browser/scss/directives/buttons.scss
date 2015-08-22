@@ -4,19 +4,19 @@
     border: transparent;
 }
 
-.btn-primary {
-    color: white;
-    background-color: #DB2856;
-    border: transparent;
-}
-
 .btn-primary.focus,
 .btn-primary:focus {
     background-color: light(#DB2856, 25%);
 }
 
+.btn-primary:active:hover {
+    color: white;
+    background-color: light(#DB2856, 25%);
+    border-color: #DB2856;
+}
+
 .btn.btn-view {
-    border-radius: 20px;
+    border-radius: 30px;
     border: 2px solid #444;
     background: white;
 }
@@ -25,24 +25,6 @@
     border: 2px solid #DB2856;
     background: #DB2856;
     color: white;
-}
-
-.btn.btn-login {
-    border-radius: 10px;
-    border: 2px solid #444;
-    background: white;
-}
-
-.btn.btn-login:hover {
-    border: 2px solid #DB2856;
-    background: #DB2856;
-    color: white;
-}
-
-.btn-primary:active:hover {
-    color: white;
-    background-color: light(#DB2856, 25%);
-    border-color: #DB2856;
 }
 
 .btn-standard:hover {
@@ -54,16 +36,4 @@
 button.btn.btn-lg.btn-primary.btn-block {
     margin-top: 1%;
     margin-bottom: 1%;
-}
-
-.btn.btn-view {
-    border-radius: 20px;
-    border: 2px solid #444;
-    background: white;
-}
-
-.btn.btn-view:hover {
-    border: 2px solid #DB2856;
-    background: #DB2856;
-    color: white;
 }

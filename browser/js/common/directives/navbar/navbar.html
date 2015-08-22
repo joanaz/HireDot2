@@ -12,10 +12,15 @@
             </a>
         </div>
         <div class="collapse navbar-collapse pull-right" id="navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav regularFont">
                 <li>
                     <a ui-sref="student">
                         <i class="fa fa-users marginRight"></i> Students
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="staff">
+                        <i class="fa fa-smile-o marginRight"></i> Staff
                     </a>
                 </li>
                 <li>
@@ -30,7 +35,12 @@
                 </li>
                 <li>
                     <a ui-sref="hackathon">
-                        <i class="fa fa-trophy marginRight"></i> Hackathons
+                        <i class="fa fa-laptop marginRight"></i> Hackathons
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="award">
+                        <i class="fa fa-trophy marginRight"></i> Awards
                     </a>
                 </li>
                 <li ng-show="user">
@@ -38,18 +48,18 @@
                         <i class="fa fa-briefcase marginRight"></i> Hiring Events
                     </a>
                 </li>
-<!--                 <li ng-show="admin">
+                <li ng-show="admin">
                     <a ui-sref="time-slots">
                         <i class="fa fa-briefcase marginRight"></i> Admin
                     </a>
-                </li> -->
-                <li ng-show="!user">
+                </li>
+                <!-- <li ng-show="!user">
                     <a ui-sref="signup" target="_self"><i class="fa fa-external-link marginRight"></i> Sign Up
                     </a>
                 </li>
                 <li ng-show="!user">
                     <a ui-sref="login"><i class="fa fa-sign-in marginRight"></i> Login</a>
-                </li>
+                </li> -->
                 <li ng-show="user">
                     <a ng-click="logout()"><i class="fa fa-sign-out marginRight"></i> Logout</a>
                 </li>
