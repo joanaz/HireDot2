@@ -2,7 +2,7 @@
     <div class="panel panel-default bootcards-media studentCard">
         <img src="{{student.github.avatar_url}}" class="img-responsive" />
         <div class="panel-heading">
-            <h3 class="panel-title"><a ui-sref="student-profile">{{student.fullName}}</a></h3>
+            <h3 class="panel-title"><a ui-sref="student-profile({id:student._id})">{{student.fullName}}</a></h3>
         </div>
         <div class="panel-footer">
             <div class="col-sm-12 col-md-6 col-lg-6">

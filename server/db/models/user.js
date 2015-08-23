@@ -37,8 +37,12 @@ var schema = new mongoose.Schema({
     },
     preferences: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Company",
+        ref: "Company"
     }],
+    projects: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Project"
+    }]
     currentCompany: {
         type: String
     },

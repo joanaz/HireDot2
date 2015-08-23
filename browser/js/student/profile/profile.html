@@ -2,14 +2,14 @@
     <div class="col-md-12 studentCard">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row moreMarginTop centerText">
-                <img class="img-circle img-responsive img-center studentProfilePhoto" src="http://www.fullstackacademy.com/img/team/JF.jpg">
+                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{student.github.avatar_url}}">
             </div>
             <div class="row moreMarginTop title">
-                <h1>Jimmy Farrell</h1>
+                <h1>{{student.fullName}}</h1>
             </div>
             <div class="row moreMarginTop">
                 <div class="col-sm-12 col-md-4 col-lg-4">
-                    <a href="https://linkedin.com/in/joshfinnie" target="_blank">
+                    <a href="{{student.linkedin}}" target="_blank">
                         <span class="fa-stack fa-3x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -17,23 +17,23 @@
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4">
-                    <a href="https://github.com/joshfinnie" target="_blank">
+                    <a href="{{student.github.html_url}}" target="_blank">
                         <span class="fa-stack fa-3x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
                             </span>
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <!-- <div class="col-sm-12 col-md-4 col-lg-4">
                     <a href="https://github.com/joshfinnie" target="_blank">
                         <span class="fa-stack fa-3x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-tumblr fa-stack-1x fa-inverse"></i>
                             </span>
                     </a>
-                </div>
+                </div> -->
             </div>
-            <div class="row moreMarginTop">
+            <!-- <div class="row moreMarginTop">
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <code>linkedin.com/in/joshfinnie</code>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <code>tumblr.com/joshfinnie</code>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row moreMarginTop title">

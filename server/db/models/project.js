@@ -9,10 +9,6 @@ var schema = new mongoose.Schema({
             // required: true,
             // trim: true
     },
-    team: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-    }],
     description: {
         type: String
             // required: true,
