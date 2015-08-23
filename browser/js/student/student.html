@@ -1,6 +1,15 @@
-<div class="container options valign-middle">
+<!-- <div class="container options valign-middle">
     <student-thumb student="student" ng-repeat="student in students | orderBy:'lastName'"></student-thumb>
 </div>
 <div class="centerText moreMarginTop">
     <button class="btn btn-lg btn-view" ui-sref="cohort">view all cohorts</button>
+</div> -->
+<div class="container options valign-middle">
+    <div gridster="gridsterOptions" class="gridster gridster-desktop gridster-loaded">
+        <ul>
+            <li gridster-item="student" ng-repeat="student in students | orderBy:'lastName'" class="gridster-item">
+                <student-thumb student="student"></student-thumb>
+            </li>
+        </ul>
+    </div>
 </div>
