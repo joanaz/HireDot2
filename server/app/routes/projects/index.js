@@ -6,7 +6,7 @@ var Project = mongoose.model('Project');
 var User = mongoose.model('User');
 
 router.get('/', function(req, res, next) {
-    Project.find(req.query).exec()
+    Project.find(req.query).populate('technologies').exec()
         .then(function(projects) {
             res.json(projects);
         })
@@ -22,16 +22,12 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('id', function(req, res, next, id) {
-    Project.findById(id).populate('team awards').exec()
+    Project.findById(id).populate('awards technologies').exec()
         .then(function(project) {
             if (!project) throw Error('Not Found');
-            // project.team.forEach(member => {
-            //         User.find({
-            //             fullName: member
-            //         }).then(res => res[0]))
-            // }
             req.project = project;
             next();
+
         })
         .then(null, function(e) {
             // invalid ids sometimes throw cast error
@@ -41,7 +37,25 @@ router.param('id', function(req, res, next, id) {
 });
 
 router.get('/:id', function(req, res) {
-    res.json(req.project);
+    res.json(req.project)
+})
+
+router.get('/:id/team', function(req, res) {
+    let team = []
+    User.find().then(users => {
+        users.forEach(user => {
+            if (user.projects.some(userproject => {
+                    return userproject == req.params.id
+                })) {
+                team.push({
+                    _id: user._id,
+                    fullName: user.fullName,
+                    photo: user.github.avatar_url
+                })
+            }
+        })
+        res.json(team);
+    })
 });
 
 router.put('/:id', function(req, res, next) {

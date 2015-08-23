@@ -40,7 +40,7 @@
             </div>
             <div class="row moreMarginTop centerText">
                 <div class="col-sm-12 col-md-2" ng-repeat="technology in project.technologies">
-                    <button class="btn btn-view" ui-sref="project?tag=technology" >{{technology}}</button>
+                    <button class="btn btn-view" ui-sref="technology({id:technology._id})">{{technology.name}}</button>
                 </div>
                 <!-- <div class="col-sm-12 col-md-2">
                     <button class="btn btn-view">tag 2</button>
@@ -68,8 +68,9 @@
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="member in project.team">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{member.github.avatar_url}}" alt="">
-                        <p><a ui-sref="student-profile">{{member.fullName}}</a></p>
+                    <a ui-sref="student-profile({id:member._id})">
+                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{member.photo}}" alt="">
+                        <p>{{member.fullName}}</p></a>
                     </div>
                     <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.fullstackacademy.com/img/team/JF.jpg" alt="">
@@ -95,8 +96,10 @@
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angular_js/achievements/badges/badge-01-6273f8e2-33f7-4e2e-be76-2e35f1b1c2f8.png">
-                        <h3 class="regularFont">{{award}}</h3>
+                    <a ui-sref="award({id:award._id})">
+                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{award.photo}}">
+                        <h3 class="regularFont">{{award.name}}</h3>
+                    </a>
                     </div>
 
                     <!-- <div class="col-sm-12 col-md-6 col-lg-6">

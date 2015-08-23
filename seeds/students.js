@@ -363,7 +363,8 @@ module.exports = [{
     "fullName": "Yves Yuen"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Pitch Battle"]
 }, {
   "provider": "local",
   "lastName": "Steele",
@@ -485,7 +486,8 @@ module.exports = [{
     "fullName": "Peter Steele"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": false
+  "participateHiringDay": false,
+  projects: ["Kotekanator"]
 }, {
   "provider": "local",
   "lastName": "Meyer",
@@ -843,7 +845,8 @@ module.exports = [{
     "fullName": "Jovia Nierenberg"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": false
+  "participateHiringDay": false,
+  projects: ["Paper Plane"]
 }, {
   "provider": "local",
   "lastName": "Ayscue",
@@ -1082,7 +1085,9 @@ module.exports = [{
     "fullName": "Joanna Zhang"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": false
+  "participateHiringDay": false,
+  projects: ["SpiderEyes"]
+
 }, {
   "provider": "local",
   "lastName": "Kim",
@@ -1409,7 +1414,8 @@ module.exports = [{
     "fullName": "Carolyn Zelenetz"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Contemporary Art"]
 }, {
   "provider": "local",
   "lastName": "Hoang",
@@ -1653,7 +1659,8 @@ module.exports = [{
     "fullName": "Theo Lipeles"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["SpiderEyes"]
 }, {
   "provider": "local",
   "lastName": "Goldberg",
@@ -1775,7 +1782,8 @@ module.exports = [{
     "fullName": "Anna Goldberg"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": false
+  "participateHiringDay": false,
+  projects: ["Paper Plane"]
 }, {
   "provider": "local",
   "lastName": "Evans",
@@ -1897,7 +1905,8 @@ module.exports = [{
     "fullName": "Christian Evans"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Dictatone"]
 }, {
   "provider": "local",
   "lastName": "Hara",
@@ -2011,7 +2020,8 @@ module.exports = [{
     "fullName": "Kaito Hara"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Citibike Visualizer"]
 }, {
   "lastName": "Ellsworth",
   "firstName": "Nick",
@@ -2133,7 +2143,8 @@ module.exports = [{
     "fullName": "Nick Ellsworth"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Dictatone"]
 }, {
   "provider": "local",
   "lastName": "Mulrow",
@@ -2255,7 +2266,8 @@ module.exports = [{
     "fullName": "Jack Mulrow"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": false
+  "participateHiringDay": false,
+  projects: ["JackCoin"]
 }, {
   "provider": "local",
   "lastName": "Kim",
@@ -2721,7 +2733,9 @@ module.exports = [{
     "fullName": "Richard Michels"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Dragg'z"]
+
 }, {
   "provider": "local",
   "lastName": "Ratner",
@@ -2965,7 +2979,8 @@ module.exports = [{
     "fullName": "Patrick Trasborg"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Contemporary Art"]
 }, {
   "provider": "local",
   "lastName": "Devasthale",
@@ -3317,7 +3332,8 @@ module.exports = [{
     "fullName": "Isaac Madwed"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["EyeContact.space"]
 }, {
   "provider": "local",
   "lastName": "Rice",
@@ -3539,7 +3555,9 @@ module.exports = [{
     "fullName": "Xavier Durand-Smet"
   },
   "cohort": "54da44981a76b80c00cdd828",
-  "participateHiringDay": true
+  "participateHiringDay": true,
+  projects: ["Dragg'z"]
+
 }, {
   "provider": "local",
   "lastName": "Enriquez",

@@ -27,11 +27,9 @@ var schema = new mongoose.Schema({
         type: String,
     },
     technologies: [{
-        type: String
-            // type: [{
-            //     type: mongoose.Schema.Types.ObjectId,
-            //     ref: "ProjectTag",
-            // }]
+        // type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Technology",
     }],
     logo: {
         type: String,

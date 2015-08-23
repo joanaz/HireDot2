@@ -8,7 +8,7 @@ var Promise = require("bluebird");
 var User = Promise.promisifyAll(mongoose.model("User"));
 var Project = Promise.promisifyAll(mongoose.model("Project"));
 var Hackathon = Promise.promisifyAll(mongoose.model("Hackathon"));
-var Tag = Promise.promisifyAll(mongoose.model("Tag"));
+var Technology = Promise.promisifyAll(mongoose.model("Technology"));
 
 var userSearch = function(string) {
     return new Promise(function(resolve, reject) {
@@ -37,9 +37,9 @@ var hackathonSearch = function(string) {
     });
 };
 
-var tagSearch = function(string) {
+var technologySearch = function(string) {
     return new Promise(function(resolve, reject) {
-        Tag.search(string, function(err, data) {
+        Technology.search(string, function(err, data) {
             if (err) reject(err);
             else resolve(data);
         });
@@ -56,7 +56,7 @@ router.get("/:searchString", function(req, res, next) {
     hackathonSearch(decodeURI(req.params.searchString)).then(function(hackathons) {
         res.json(hackathons);
     }, next);
-    tagSearch(decodeURI(req.params.searchString)).then(function(tags) {
-        res.json(tags);
+    technologySearch(decodeURI(req.params.searchString)).then(function(technologies) {
+        res.json(technologies);
     }, next);
 });

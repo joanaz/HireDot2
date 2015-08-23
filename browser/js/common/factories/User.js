@@ -19,7 +19,7 @@ app.factory('User', function($http, $rootScope) {
             .then(res => res.data),
         getCompany: (id) =>
             $http.get('/api/companies/' + id)
-            .then(res => res.data)
+            .then(res => res.data),
 
 
         // getAwards: () =>

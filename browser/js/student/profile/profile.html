@@ -50,10 +50,10 @@
                 <h2><i class="fa fa-object-group twentyPixelsMarginRight"></i> Projects</h2>
             </div>
             <div class="row moreMarginTop">
-                <div class="col-md-6 studentCard centerText">
-                    <img class="img-circle img-responsive img-center projectPhoto" src="http://www.chelseahedrick.com/paperPlanes.jpg">
+                <div class="col-md-6 studentCard centerText" ng-repeat="project in student.projects">
+                    <img class="img-circle img-responsive img-center projectPhoto" src="{{project.logo}}">
                     <div class="row moreMarginTop title">
-                        <h3 class="regularFont"><a ui-sref="project-profile">Paper Planes</a></h3>
+                        <h3 class="regularFont"><a ui-sref="project-profile">{{project.title}}</a></h3>
                     </div>
                 </div>
             </div>
