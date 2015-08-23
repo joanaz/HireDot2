@@ -17,7 +17,7 @@ var schema = new mongoose.Schema({
     awards: [{
         // type: String
         type: mongoose.Schema.Types.ObjectId,
-        ref: "ProjectAward",
+        ref: "Award",
     }],
     github: {
         type: String
