@@ -42,7 +42,7 @@ var schema = new mongoose.Schema({
     projects: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Project"
-    }]
+    }],
     currentCompany: {
         type: String
     },
