@@ -22,6 +22,11 @@ form.searchBar {
     margin-right: auto;
 }
 
+.overflowThumb {
+    height: 400px;
+    overflow: auto;
+}
+
 .title {
     a {
         text-decoration: underline;
@@ -44,7 +49,9 @@ form.searchBar {
     font-size: large;
 }
 
-.panel-footer, .panel-heading, .panel-default .panel-heading {
+.panel-footer,
+.panel-heading,
+.panel-default .panel-heading {
     background-color: white;
     border: none;
 }

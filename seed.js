@@ -25,7 +25,7 @@ var User = Promise.promisifyAll(mongoose.model('User'));
 var usersSeeds = require('./seeds/students.js');
 var Company = Promise.promisifyAll(mongoose.model('Company'));
 var companiesSeeds = require('./seeds/companies.js');
-var ProjectAward = Promise.promisifyAll(mongoose.model('ProjectAward'));
+var Award = Promise.promisifyAll(mongoose.model('Award'));
 var awardsSeeds = require('./seeds/awards.js');
 var Project = Promise.promisifyAll(mongoose.model('Project'));
 var projectsSeeds = require('./seeds/projects.js');
@@ -37,7 +37,7 @@ var seedCompanies = function() {
     return Company.createAsync(companiesSeeds)
 }
 var seedAwards = function() {
-    return ProjectAward.createAsync(awardsSeeds)
+    return Award.createAsync(awardsSeeds)
 }
 var seedProjects = function() {
     return Project.createAsync(projectsSeeds)

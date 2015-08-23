@@ -1,5 +1,5 @@
-<div class="col-md-3">
-    <div class="panel panel-default bootcards-media studentCard">
+<div class="col-md-3 row-eq-height">
+    <div class="panel panel-default bootcards-media studentCard overflowThumb">
         <img src="{{project.logo}}" class="img-responsive" />
         <div class="panel-heading">
             <h3 class="panel-title"><a ui-sref="project-profile({id:project._id})">{{project.title}}</a></h3>
@@ -8,10 +8,11 @@
             {{project.description}}
         </div> -->
         <div class="panel-footer">
-            <div class="col-sm-12 col-md-2" ng-repeat="technology in project.technologies | limitTo:3">
-                <button class="btn btn-view" ui-sref="project?tag=technology">{{technology}}</button>
+            <div ng-repeat="technology in project.technologies | limitTo:3">
+                <div class="col-sm-12 col-md-2">
+                    <button class="btn btn-view" ui-sref="project?tag=technology">{{technology}}</button>
+                </div>
             </div>
-
             <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                 <a href="{{project.website}}">
                     <span class="fa-stack fa-2x">
