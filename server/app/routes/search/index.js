@@ -8,7 +8,7 @@ var Promise = require("bluebird");
 var User = Promise.promisifyAll(mongoose.model("User"));
 var Project = Promise.promisifyAll(mongoose.model("Project"));
 var Hackathon = Promise.promisifyAll(mongoose.model("Hackathon"));
-var Tag = Promise.promisifyAll(mongoose.model("ProjectTag"));
+var Tag = Promise.promisifyAll(mongoose.model("Tag"));
 
 var userSearch = function(string) {
     return new Promise(function(resolve, reject) {
