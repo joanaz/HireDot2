@@ -21,7 +21,6 @@ app.factory('User', function($http, $rootScope) {
             $http.get('/api/companies/' + id)
             .then(res => res.data)
 
-
         // getAwards: () =>
 
         // // returns all users

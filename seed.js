@@ -29,34 +29,43 @@ var Award = Promise.promisifyAll(mongoose.model('Award'));
 var awardsSeeds = require('./seeds/awards.js');
 var Project = Promise.promisifyAll(mongoose.model('Project'));
 var projectsSeeds = require('./seeds/projects.js');
+var Hackathon = Promise.promisifyAll(mongoose.model('Hackathon'));
+var hackathonsSeeds = require('./seeds/hackathons.js');
 
 var seedUsers = function() {
-    return User.createAsync(usersSeeds)
-}
+    return User.createAsync(usersSeeds);
+};
 var seedCompanies = function() {
-    return Company.createAsync(companiesSeeds)
-}
+    return Company.createAsync(companiesSeeds);
+};
 var seedAwards = function() {
-    return Award.createAsync(awardsSeeds)
-}
+    return Award.createAsync(awardsSeeds);
+};
 var seedProjects = function() {
-    return Project.createAsync(projectsSeeds)
-}
+    return Project.createAsync(projectsSeeds);
+};
+var seedHackathons = function() {
+    return Hackathon.createAsync(hackathonsSeeds);
+};
 
 connectToDb.then(function() {
     // User.removeAsync()
     //     .then(function() {
     //         return seedUsers()
     //     })
-    User.findAsync({}).then(function(users) {
-            if (users.length === 0) {
-                return seedUsers();
-            } else {
-                console.log(chalk.magenta('Seems to already be user data, exiting!'));
-                process.kill(0);
-            }
-        })
-        // seedCompanies()
+    // User.findAsync({}).then(function(users) {
+    //         if (users.length === 0) {
+    //             return seedUsers();
+    //         } else {
+    //             console.log(chalk.magenta('Seems to already be user data, exiting!'));
+    //             process.kill(0);
+    //         }
+    //     })
+    seedUsers();
+    seedAwards();
+    seedProjects();
+    seedCompanies();
+    seedHackathons()
         // ProjectAward.findAsync({}).then(function(awards) {
         //         if (awards.length === 0) {
         //             return seedAwards();

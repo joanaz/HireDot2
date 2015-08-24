@@ -1,24 +1,15 @@
 app.config(function($stateProvider) {
-  $stateProvider.state('project', {
-    url: '/project',
-    templateUrl: 'js/project/project.html',
-    resolve: {
-      projects: (ProjectsFactory) =>
-        ProjectsFactory.getProjects()
-    },
-    controller: ($scope, projects) => {
-      $scope.projects = projects
-    }
-  });
+    $stateProvider.state('project', {
+        url: '/project',
+        templateUrl: 'js/project/project.html',
+        controller: 'ProjectController',
+        resolve: {
+            projects: (Project) =>
+                Project.getProjects()
+        }
+    });
 });
 
-app.factory('ProjectsFactory', ($http) => {
-  return {
-    getProjects: () =>
-      $http.get('/api/projects/')
-      .then(res => res.data),
-    getProject: (id) =>
-      $http.get('/api/projects/' + id)
-      .then(res => res.data)
-  }
-})
+app.controller('ProjectController', function($scope, projects) {
+    $scope.projects = projects;
+});

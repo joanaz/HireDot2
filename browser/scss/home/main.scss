@@ -86,7 +86,9 @@ body {
 }
 
 .valign-middle {
-    display: table;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
 .valign-middle .columns {
@@ -97,6 +99,8 @@ body {
 .valign-middle .columns,
 .valign-middle [class*="column"] + [class*="column"]:last-child {
     float: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .marginTopBottom {
@@ -105,8 +109,13 @@ body {
 }
 
 .topBottom {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.topBottomHeader {
     margin-top: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
 }
 
 .bottom {
