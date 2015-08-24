@@ -11,15 +11,12 @@ app.factory('User', function($http, $rootScope) {
             getHelperFunction('Admin'),
         getStudents: () =>
             getHelperFunction('Student'),
+        getCompanies: () =>
+            getHelperFunction('Company'),
         getUserById: (id) =>
             $http.get('/api/users/' + id)
-            .then(res => res.data),
-        getCompanies: () =>
-            $http.get('/api/companies')
-            .then(res => res.data),
-        getCompany: (id) =>
-            $http.get('/api/companies/' + id)
-            .then(res => res.data),
+            .then(res => res.data)
+
 
 
         // getAwards: () =>

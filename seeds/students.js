@@ -1,4 +1,105 @@
 module.exports = [{
+  "fullName": "Dropbox",
+  "email": "dropbox",
+  "password": "123",
+  "role": "Company",
+  "photo": "http://icons.iconarchive.com/icons/danleech/simple/1024/dropbox-icon.png",
+  description: "A sharing utility for the cloud.",
+  "website": "https://www.dropbox.com/jobs",
+  "angellist": "https://angel.co/dropbox",
+  openPositions: [{
+    title: "Site Reliability Engineer",
+    url: "https://www.dropbox.com/jobs/listing/761"
+  }, {
+    title: "Software Engineer",
+    url: "https://www.dropbox.com/jobs/listing/450"
+  }, {
+    title: "Product Designer",
+    url: "https://www.dropbox.com/jobs/listing/937"
+  }],
+  "hiredAlumni": [{
+    "fullName": "Colin Vanlang",
+    "photo": "http://www.fullstackacademy.com/img/alumni/graduates/colin_vanlang.jpg"
+  }],
+  "participateHiringDay": true
+}, {
+  "fullName": "Do Something",
+  "role": "Company",
+  "photo": "http://forge.dosomething.org/resources/ds-logo-highres.png",
+  "website": "https://www.dosomething.org/",
+  "angellist": "https://angel.co/dosomething-org",
+  "participateHiringDay": true
+}, {
+  "fullName": "NYSE",
+  "role": "Company",
+  "photo": "https://upload.wikimedia.org/wikipedia/en/0/00/New_York_Stock_Exchange_Logo.png",
+  "website": "https://www.nyse.com/index",
+  "angellist": "https://angel.co/nyse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Timehop",
+  "role": "Company",
+  "photo": "http://screenshots.en.sftcdn.net/en/scrn/69682000/69682580/timehop-01-535x535.png",
+  "website": "http://timehop.com/",
+  "angellist": "https://angel.co/nyse",
+  "participateHiringDay": true
+}, {
+  "fullName": "HubSpot",
+  "role": "Company",
+  "photo": "https://pbs.twimg.com/profile_images/626105757004492800/CdxLMoHH.png",
+  "website": "http://www.hubspot.com/",
+  "angellist": "https://angel.co/nyse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Gilt",
+  "role": "Company",
+  "photo": "https://pbs.twimg.com/profile_images/1956559542/Facebook_ProfilePic_W_400x400.jpg",
+  "website": "http://timehop.com/",
+  "angellist": "https://angel.co/nyse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Thrillist",
+  "role": "Company",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Thrillist_Logo.JPG",
+  "website": "http://timehop.com/",
+  "angellist": "https://angel.co/nyse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Greenhouse",
+  "role": "Company",
+  "photo": "http://hr.sparkhire.com/wp-content/uploads/2014/11/Greenhouse.jpg",
+  "website": "http: //www.greenhouse.io/",
+  "angellist": "https://angel.co/greenhouse",
+  "participateHiringDay": true
+}, {
+  "fullName": "Venmo",
+  "role": "Company",
+  "photo": "https://venmo.s3.amazonaws.com/pr/app-icon.png",
+  "website": "https://venmo.com/jobs/",
+  "angellist": "https://angel.co/venmo",
+  "participateHiringDay": true
+}, {
+  "fullName": "Accenture",
+  "role": "Company",
+  "photo": "http://picsbelgium.be/wp-content/uploads/2012/07/accenture-logo.jpg",
+  "website": "https://www.accenture.com/us-en/careers",
+  "angellist": "https://angel.co/accenture",
+  "participateHiringDay": true
+}, {
+  "fullName": "American Express",
+  "role": "Company",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/American_Express_logo.svg/1000px-American_Express_logo.svg.png",
+  "website": "https://careers.americanexpress.com/",
+  "angellist": "https://angel.co/american-express",
+  "participateHiringDay": true
+}, {
+  "fullName": "Visa",
+  "role": "Company",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Visa_2014_logo_detail.svg/2000px-Visa_2014_logo_detail.svg.png",
+  "website": "http://usa.visa.com/careers/index.jsp?n=1",
+  "angellist": "https://angel.co/visa",
+  "participateHiringDay": true
+}, {
   "provider": "local",
   "lastName": "Gregory",
   "firstName": "Shanna",
@@ -970,6 +1071,7 @@ module.exports = [{
   "firstName": "Joanna",
   "fullName": "Joanna Zhang",
   "email": "rz258@cornell.edu",
+  "password": "123",
   "phone": "9179120864",
   "status": "current",
   "lastOnline": "2015-08-13T14:45:18.032Z",

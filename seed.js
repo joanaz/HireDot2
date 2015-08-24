@@ -101,31 +101,32 @@ var seedUsers = function() {
 
 
 connectToDb.then(function() {
-    Project.removeAsync()
-        .then(function() {
-            return seedProjects()
-        })
-        // Technology.removeAsync()
-        //     .then(function() {
-        //         return seedTechnologies()
-        //     })
-        // Award.findAsync({}).then(function(awards) {
-        //         if (awards.length === 0) {
-        //             return seedAwards();
-        //         } else {
-        //             return
-        //         }
-        //     })
-        //     .then(function() {
-        //         Company.findAsync({}).then(function(companies) {
-        //             if (companies.length === 0) {
-        //                 return seedCompanies()
-        //             } else return
-        //         })
-        //     })
-        .then(function() {
-            return User.removeAsync()
-        })
+    // Project.removeAsync()
+    //     .then(function() {
+    //         return seedProjects()
+    //     })
+    // Technology.removeAsync()
+    //     .then(function() {
+    //         return seedTechnologies()
+    //     })
+    // Award.findAsync({}).then(function(awards) {
+    //         if (awards.length === 0) {
+    //             return seedAwards();
+    //         } else {
+    //             return
+    //         }
+    //     })
+    //     .then(function() {
+    //         Company.findAsync({}).then(function(companies) {
+    //             if (companies.length === 0) {
+    //                 return seedCompanies()
+    //             } else return
+    //         })
+    //     })
+    // .then(function() {
+    //     return 
+    User.removeAsync()
+        // })
         .then(function() {
             return seedUsers()
         })
