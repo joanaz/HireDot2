@@ -2,17 +2,19 @@
     <div class="col-md-12 studentCard">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row moreMarginTop centerText">
-                <img class="img-circle img-responsive img-center studentProfilePhoto" src="http://tech.co/wp-content/uploads/2013/10/BattleHack.jpg">
+                <img class="img-circle img-responsive img-center hackathonProfilePhoto" src="{{hackathon.photo}}" href="{{hackathon.website}}" target="_blank">
             </div>
-            <div class="row moreMarginTop title">
-                <h1><a href="http://paperplanes.com">Battle Hack</a></h1>
+            <div class="row moreMarginTop title" href="{{hackathon.website}}" target="_blank">
+                <h1>{{hackathon.title}}</h1>
             </div>
             <div class="row moreMarginTop">
-                <h2 class="regularFont">Battle for good.</h2>
+                <p class="regularFont">{{hackathon.month}} {{hackathon.year}}</p>
+                <h3>{{hackathon.numberWins}} Win<span ng-if="hackathon.numberWins > 1">s</span></h3>
+                <h2 class="regularFont">{{hackathon.description}}</h2>
             </div>
             <div class="row moreMarginTop">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <a href="https://linkedin.com/in/joshfinnie" target="_blank">
+                    <a href="{{hackathon.website}}" target="_blank">
                         <span class="fa-stack fa-3x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
@@ -31,17 +33,7 @@
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.lawsitesblog.com/wp-content/uploads/2014/02/Hackathon-icon-300x269.jpg">
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.lawsitesblog.com/wp-content/uploads/2014/02/Hackathon-icon-300x269.jpg">
-                    </div>
-                </div>
-                <div class="row moreMarginTop centerText">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h3 class="regularFont"><a ui-sref="project-profile">Project One</a></h3>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h3 class="regularFont"><a ui-sref="project-profile">Project Two</a></h3>
+                        <h3 class="regularFont"><a ui-sref="project-profile">Hackathon Project Title</a></h3>
                     </div>
                 </div>
                 <div class="row moreMarginTop centerText">
@@ -56,18 +48,12 @@
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angular_js/achievements/badges/badge-01-6273f8e2-33f7-4e2e-be76-2e35f1b1c2f8.png">
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/288/completed-rails-4-patterns-5a6b1afee6e76347946ccf30e975eb41.png">
-                    </div>
-                </div>
-                <div class="row moreMarginTop centerText">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://i.imgur.com/rJlMTJZ.png">
                         <h3 class="regularFont">Best Design</h3>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h3 class="regularFont">Weirdest Project</h3>
+                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://i.imgur.com/3sFSbQN.png">
+                        <h3 class="regularFont">Mad-Scientist</h3>
                     </div>
                 </div>
                 <div class="row moreMarginTop centerText">

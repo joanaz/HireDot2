@@ -9,6 +9,12 @@ var schema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    month: {
+        type: Number
+    },
+    year: {
+        type: String
+    },
     numberWins: {
         type: Number
     },
@@ -27,7 +33,7 @@ var schema = new mongoose.Schema({
     photo: {
         type: String,
         default: ["http://wiki.solid-run.com/images/7/75/No_image_available.png"]
-    }
+    },
 });
 
 schema.plugin(searchPlugin, {

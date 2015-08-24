@@ -40,7 +40,8 @@ $ npm start
 
 > For the future
 
-- add tumblr link for students
+- add Tumblr blog link for student profiles
+- show projects based on awards won
 
 ### User Types
 

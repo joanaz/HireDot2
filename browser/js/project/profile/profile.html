@@ -4,8 +4,8 @@
             <div class="row moreMarginTop centerText">
                 <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{project.screenshot}}">
             </div>
-            <div class="row moreMarginTop title">
-                <h1><a href="{{project.website}}">{{project.title}}</a></h1>
+            <div class="row moreMarginTop title" ui-sref="{{project.website}}">
+                <h1>{{project.title}}</h1>
             </div>
             <div class="row moreMarginTop">
                 <h2 class="regularFont">{{project.description}}</h2>
@@ -35,8 +35,6 @@
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <code>{{project.github}}</code>
                 </div>
-
-
             </div>
             <div class="row moreMarginTop centerText">
                 <div class="col-sm-12 col-md-2" ng-repeat="technology in project.technologies">
@@ -68,9 +66,10 @@
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="member in project.team">
-                    <a ui-sref="student-profile({id:member._id})">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{member.photo}}" alt="">
-                        <p>{{member.fullName}}</p></a>
+                        <a ui-sref="student-profile({id:member._id})">
+                            <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{member.photo}}" alt="">
+                            <p>{{member.fullName}}</p>
+                        </a>
                     </div>
                     <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.fullstackacademy.com/img/team/JF.jpg" alt="">
@@ -96,12 +95,11 @@
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
-                    <a ui-sref="award({id:award._id})">
-                        <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{award.photo}}">
-                        <h3 class="regularFont">{{award.name}}</h3>
-                    </a>
+                        <a ui-sref="award({id:award._id})">
+                            <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{award.photo}}">
+                            <h3 class="regularFont">{{award.name}}</h3>
+                        </a>
                     </div>
-
                     <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/288/completed-rails-4-patterns-5a6b1afee6e76347946ccf30e975eb41.png">
                     </div> -->

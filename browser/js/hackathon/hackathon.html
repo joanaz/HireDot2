@@ -1,3 +1,25 @@
-<div class="container options valign-middle">
+<!-- <div class="container options valign-middle">
     <hackathon-thumb hackathon="singleHackathon"></hackathon-thumb>
+</div> -->
+<div class="container options valign-middle">
+    <div class=row ng-repeat="hackathon in hackathons track by $index" ng-if="$index%4==0">
+        <div class="col-xs-3" ng-repeat="i in [$index,$index+1,$index+2,$index+3]" ng-if="hackathons[i]!=null">
+            <div class="panel panel-default bootcards-media studentCard">
+                <img src="{{hackathons[i].photo}}" class="img-responsive" ui-sref="hackathon-profile({id:hackathons[i]._id})" />
+                <div class="panel-heading" ui-sref="hackathon-profile({id:hackathons[i]._id})">
+                    <h3 class="panel-title">{{hackathons[i].title}}</h3>
+                </div>
+                <div class="panel-footer">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <a href="{{hackathons[i].website}}" target="_blank">
+                            <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

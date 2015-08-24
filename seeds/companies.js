@@ -23,7 +23,7 @@ module.exports = [{
   "participateHiringDay": true
 }, {
   "name": "Do Something",
-  "photo": "http://forge.dosomething.org/resources/ds-logo-highres.png",
+  "photo": "https://yt3.ggpht.com/-UOEmRH7BWMU/AAAAAAAAAAI/AAAAAAAAAAA/xbTo2c4KFjE/s900-c-k-no/photo.jpg",
   "website": "https://www.dosomething.org/",
   "angellist": "https://angel.co/dosomething-org",
   "participateHiringDay": true
@@ -71,20 +71,20 @@ module.exports = [{
   "participateHiringDay": true
 }, {
   "name": "Accenture",
-  "photo": "http://picsbelgium.be/wp-content/uploads/2012/07/accenture-logo.jpg",
+  "photo": "http://www.crisp-research.com/wp-content/uploads/2014/01/accenture2.png",
   "website": "https://www.accenture.com/us-en/careers",
   "angellist": "https://angel.co/accenture",
   "participateHiringDay": true
 }, {
   "name": "American Express",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/American_Express_logo.svg/1000px-American_Express_logo.svg.png",
+  "photo": "http://img1.wikia.nocookie.net/__cb20120526223909/logopedia/images/c/c2/American_Express_card_logo.png",
   "website": "https://careers.americanexpress.com/",
   "angellist": "https://angel.co/american-express",
   "participateHiringDay": true
 }, {
   "name": "Visa",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Visa_2014_logo_detail.svg/2000px-Visa_2014_logo_detail.svg.png",
+  "photo": "https://yt3.ggpht.com/-Kp48LAJTzRY/AAAAAAAAAAI/AAAAAAAAAAA/xyAJ-blO9s8/s900-c-k-no/photo.jpg",
   "website": "http://usa.visa.com/careers/index.jsp?n=1",
   "angellist": "https://angel.co/visa",
   "participateHiringDay": true
-}]
+}];

@@ -9,7 +9,7 @@
             </div>
             <div class="row moreMarginTop">
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="{{student.linkedin}}" target="_blank">
+                    <a href="{{student.linkedin.url}}" target="_blank">
                         <span class="fa-stack fa-3x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -61,16 +61,13 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="row resumeMargin title">
                 <h2><i class="fa fa-file-text-o twentyPixelsMarginRight"></i>Resume</h2>
+
             </div>
             <!-- PDF -->
             <div class="resumeFile">
-                <iframe src="https://docs.google.com/viewer?srcid=0BxibmGV5GFRjdzlac0VKamdJVG8&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="750px"></iframe>
+                <iframe src="{{student.resume.url}}" width="100%" height="750px"></iframe>
             </div>
-            <!-- <iframe src="http://docs.google.com/gview?url=https://drive.google.com/file/d/0BxibmGV5GFRjdzlac0VKamdJVG8/view?usp=sharing&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe> -->
-            <!-- Resume URL will be a PDF document publicly hosted on Google Drive -->
-            <!-- <iframe src="http://docs.google.com/gview?url={{resume.url}}&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe> -->
-            <!-- Google Doc -->
-            <!-- <iframe src="https://docs.google.com/document/d/1qczDcMVYcwbAOSFxVqneLDZWQ_5GGzMtzCOVmHVKwzk/pub?embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe> -->
+            <!-- To get file URL, upload and share with public using Google Drive. Then preview the document, pop it out so that it goes to a preview window all on its own, and then use the '...' dropdown menu to click 'Embed item...' and copy the URL within the iframe that is provided -->
         </div>
     </div>
 </div>

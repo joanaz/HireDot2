@@ -11,6 +11,5 @@ app.config(function($stateProvider) {
 });
 
 app.controller('StudentController', function($scope, students) {
-  console.log(students)
-  $scope.students = students
-})
+  $scope.students = students;
+});

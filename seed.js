@@ -29,18 +29,25 @@ var Award = Promise.promisifyAll(mongoose.model('Award'));
 var awardsSeeds = require('./seeds/awards.js');
 var Project = Promise.promisifyAll(mongoose.model('Project'));
 var projectsSeeds = require('./seeds/projects.js');
+var Hackathon = Promise.promisifyAll(mongoose.model('Hackathon'));
+var hackathonsSeeds = require('./seeds/hackathons.js');
 var Technology = Promise.promisifyAll(mongoose.model('Technology'));
 var TechnologiesSeeds = require('./seeds/technologies.js');
 
+var seedCompanies = function() {
+    return Company.createAsync(companiesSeeds);
+};
 var seedAwards = function() {
-    return Award.createAsync(awardsSeeds)
-}
+    return Award.createAsync(awardsSeeds);
+};
+var seedHackathons = function() {
+    return Hackathon.createAsync(hackathonsSeeds);
+};
+
 var seedTechnologies = function() {
     return Technology.createAsync(TechnologiesSeeds)
 }
-var seedCompanies = function() {
-    return Company.createAsync(companiesSeeds)
-}
+
 var seedProjects = function() {
     return Award.findAsync({})
         .then(function(awards) {
@@ -97,34 +104,49 @@ var seedUsers = function() {
                 // console.log(usersSeeds)
             return User.createAsync(usersSeeds)
         })
-}
-
+};
 
 connectToDb.then(function() {
     // Project.removeAsync()
     //     .then(function() {
     //         return seedProjects()
     //     })
-    // Technology.removeAsync()
-    //     .then(function() {
-    //         return seedTechnologies()
-    //     })
-    // Award.findAsync({}).then(function(awards) {
-    //         if (awards.length === 0) {
-    //             return seedAwards();
+    // User.findAsync({}).then(function(users) {
+    //         if (users.length === 0) {
+    //             return seedUsers();
     //         } else {
-    //             return
+    //             console.log(chalk.magenta('Seems to already be user data, exiting!'));
+    //             process.kill(0);
     //         }
     //     })
-    //     .then(function() {
-    //         Company.findAsync({}).then(function(companies) {
-    //             if (companies.length === 0) {
-    //                 return seedCompanies()
-    //             } else return
-    //         })
-    //     })
-    // .then(function() {
-    //     return 
+    // seedUsers();
+    seedAwards();
+    seedProjects();
+    seedCompanies();
+    seedHackathons()
+        // ProjectAward.findAsync({}).then(function(awards) {
+        //         if (awards.length === 0) {
+        //             return seedAwards();
+        // Technology.removeAsync()
+        //     .then(function() {
+        //         return seedTechnologies()
+        //     })
+        // Award.findAsync({}).then(function(awards) {
+        //         if (awards.length === 0) {
+        //             return seedAwards();
+        //         } else {
+        //             return
+        //         }
+        //     })
+        //     .then(function() {
+        //         Company.findAsync({}).then(function(companies) {
+        //             if (companies.length === 0) {
+        //                 return seedCompanies()
+        //             } else return
+        //         })
+        //     })
+        // .then(function() {
+        //     return
     User.removeAsync()
         // })
         .then(function() {

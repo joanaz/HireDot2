@@ -58,5 +58,9 @@ form.searchBar {
 
 .img-responsive {
     border-radius: 100%;
-    border: 5px solid #444
+    border: 5px solid #444;
+    display: block;
+    min-width: 100%;
+    min-height: 60%;
+    max-height: 60%;
 }

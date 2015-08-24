@@ -46,8 +46,10 @@ var schema = new mongoose.Schema({
     currentCompany: {
         type: String
     },
-    resume: {
-        type: String,
+    "resume": {
+        "url": {
+            type: String,
+        }
     },
     "phone": {
         type: String

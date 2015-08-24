@@ -3,7 +3,7 @@ app.directive('staffThumb', function(){
     restrict: 'E',
     templateUrl: 'js/staff/staff-thumb.html',
     scope: {
-      theStaff: '=staff'
+      staff: '='
     }
   };
 });
