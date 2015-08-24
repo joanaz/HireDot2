@@ -1,6 +1,5 @@
 var router = require('express').Router();
 module.exports = router;
-var _ = require('lodash');
 var mongoose = require('mongoose');
 var Company = mongoose.model('Company');
 

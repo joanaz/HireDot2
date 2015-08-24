@@ -1,9 +1,9 @@
 var router = require('express').Router();
 module.exports = router;
-var _ = require('lodash');
+// var _ = require('lodash');
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-var secure = require("../security");
+// var secure = require("../security");
 
 router.get('/', function(req, res, next) {
     User.find(req.query).exec()
