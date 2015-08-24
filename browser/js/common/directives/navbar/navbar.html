@@ -43,11 +43,26 @@
                         <i class="fa fa-trophy marginRight"></i> Awards
                     </a>
                 </li>
-                <li ng-show="user">
+                <li ng-show="isAdmin">
                     <a ui-sref="time-slots">
                         <i class="fa fa-briefcase marginRight"></i> Hiring Day
                     </a>
                 </li>
+                <li ng-show="isStudent">
+                    <a ui-sref="student-preferences">
+                        <i class="fa fa-briefcase marginRight"></i> Hiring Day
+                    </a>
+                </li>
+                <li ng-show="isCompany">
+                    <a ui-sref="company-preferences">
+                        <i class="fa fa-briefcase marginRight"></i> Hiring Day
+                    </a>
+                </li>
+                <!-- <li ng-show="user">
+                    <a ui-sref="{{hiringDayState}}">
+                        <i class="fa fa-briefcase marginRight"></i> Hiring Day
+                    </a>
+                </li> -->
                <!--  <li ng-show="admin">
                     <a ui-sref="time-slots">
                         <i class="fa fa-briefcase marginRight"></i> Admin

@@ -1,6 +1,6 @@
 app.config(function($stateProvider) {
-    $stateProvider.state('preferences', {
-        url: '/preferences',
+    $stateProvider.state('student-preferences', {
+        url: '/student/preferences',
         templateUrl: 'js/student/preferences/preferences.html',
         controller: 'PreferencesController',
         resolve: {

@@ -17,6 +17,11 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
             // ];
 
             scope.user = null;
+            scope.isAdmin = null;
+            scope.isStudent = null;
+            scope.isCompany = null;
+
+            // scope.hiringDayState = 'home';
 
             scope.isLoggedIn = function() {
                 return AuthService.isAuthenticated();
@@ -31,6 +36,27 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
             var setUser = function() {
                 AuthService.getLoggedInUser().then(function(user) {
                     scope.user = user;
+                    if (user) {
+
+                        scope.isAdmin = user.role === 'Admin'
+
+                        scope.isStudent = user.role === 'Student'
+
+                        scope.isCompany = user.role === 'Company'
+
+                        // console.log(scope.hiringDayState)
+                    }
+                    // 
+                    // if (user) {
+                    //     if (user.role === 'Admin')
+                    //         scope.hiringDayState = "time-slots"
+                    //     else if (user.role === 'Student')
+                    //         scope.hiringDayState = 'home'
+                    //     else if (user.role === 'Company')
+                    //         scope.hiringDayState = 'company-preference'
+
+                    // console.log(scope.hiringDayState)
+                    // }
                 });
             };
 
