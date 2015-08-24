@@ -1,26 +1,24 @@
-<div class="col-md-3">
-    <div class="panel panel-default bootcards-media studentCard">
-        <img src="http://www.fullstackacademy.com/img/team/nimit_maru.jpg" class="img-responsive" />
-        <div class="panel-heading">
-            <h3 class="panel-title">Nimit Maru</h3>
-        </div>
-        <div class="panel-footer">
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <a href="https://linkedin.com/in/joshfinnie">
-                    <span class="fa-stack fa-2x">
+<div class="panel panel-default bootcards-media studentCard">
+    <img src="{{admins[i].github.avatar_url}}" class="img-responsive" />
+    <div class="panel-heading">
+        <h3 class="panel-title">{{admins[i].fullName}}</h3>
+    </div>
+    <div class="panel-footer">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <a href="{{admins[i].linkedin.url}}" target="_blank">
+                <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                     </span>
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <a href="https://github.com/joshfinnie">
-                    <span class="fa-stack fa-2x">
+            </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <a href="{{admins[i].github.html_url}}" target="_blank">
+                <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
                     </span>
-                </a>
-            </div>
+            </a>
         </div>
     </div>
 </div>

@@ -10,10 +10,10 @@ var schema = new mongoose.Schema({
         trim: true
     },
     month: {
-        type: Number
+        type: String
     },
     year: {
-        type: String
+        type: Number
     },
     numberWins: {
         type: Number
