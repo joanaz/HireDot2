@@ -1,4 +1,4 @@
-app.factory('Award', function($http, $rootScope) {
+app.factory('Award', function($http) {
     return {
         getAwards: () =>
             $http.get('/api/awards')

@@ -40,12 +40,15 @@ router.get('/:id', function(req, res) {
     res.json(req.project)
 })
 
+// this route could be optimized
+// so that mongo iterates through students and not the web app
+
 router.get('/:id/team', function(req, res) {
     let team = []
     User.find().then(users => {
         users.forEach(user => {
             if (user.projects.some(userproject => {
-                    return userproject == req.params.id
+                    return userproject === req.params.id
                 })) {
                 team.push({
                     _id: user._id,
