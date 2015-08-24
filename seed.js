@@ -31,27 +31,85 @@ var Project = Promise.promisifyAll(mongoose.model('Project'));
 var projectsSeeds = require('./seeds/projects.js');
 var Hackathon = Promise.promisifyAll(mongoose.model('Hackathon'));
 var hackathonsSeeds = require('./seeds/hackathons.js');
+var Technology = Promise.promisifyAll(mongoose.model('Technology'));
+var TechnologiesSeeds = require('./seeds/technologies.js');
 
-var seedUsers = function() {
-    return User.createAsync(usersSeeds);
-};
 var seedCompanies = function() {
     return Company.createAsync(companiesSeeds);
 };
 var seedAwards = function() {
     return Award.createAsync(awardsSeeds);
 };
-var seedProjects = function() {
-    return Project.createAsync(projectsSeeds);
-};
 var seedHackathons = function() {
     return Hackathon.createAsync(hackathonsSeeds);
 };
 
+var seedTechnologies = function() {
+    return Technology.createAsync(TechnologiesSeeds)
+}
+
+var seedProjects = function() {
+    return Award.findAsync({})
+        .then(function(awards) {
+            projectsSeeds.forEach(function(project) {
+                if (project.awards) {
+                    project.awards = project.awards.map(function(projectAward) {
+                        awards.forEach(function(award) {
+                            if (award.name === projectAward) {
+                                projectAward = award._id
+                            }
+                        })
+                        return projectAward
+                    })
+
+                }
+            })
+            return Technology.findAsync({})
+        })
+        .then(function(technologies) {
+            projectsSeeds.forEach(function(project) {
+                project.technologies = project.technologies.map(function(projectTech) {
+                    technologies.forEach(function(technology) {
+                        if (technology.name === projectTech) {
+                            projectTech = technology._id
+                        }
+                    })
+                    return projectTech
+                })
+            })
+
+            return Project.createAsync(projectsSeeds)
+        })
+}
+
+
+var seedUsers = function() {
+    return Project.findAsync({})
+        .then(function(projects) {
+            usersSeeds.forEach(function(user) {
+                    if (user.projects) {
+                        user.projects = user.projects.map(function(userproject) {
+                            projects.forEach(function(project) {
+                                if (project.title === userproject) {
+                                    userproject = project._id
+                                }
+                            })
+                            return userproject
+                        })
+
+                        // console.log(user.projects)
+
+                    }
+                })
+                // console.log(usersSeeds)
+            return User.createAsync(usersSeeds)
+        })
+};
+
 connectToDb.then(function() {
-    // User.removeAsync()
+    // Project.removeAsync()
     //     .then(function() {
-    //         return seedUsers()
+    //         return seedProjects()
     //     })
     // User.findAsync({}).then(function(users) {
     //         if (users.length === 0) {
@@ -61,7 +119,7 @@ connectToDb.then(function() {
     //             process.kill(0);
     //         }
     //     })
-    seedUsers();
+    // seedUsers();
     seedAwards();
     seedProjects();
     seedCompanies();
@@ -69,15 +127,40 @@ connectToDb.then(function() {
         // ProjectAward.findAsync({}).then(function(awards) {
         //         if (awards.length === 0) {
         //             return seedAwards();
+        // Technology.removeAsync()
+        //     .then(function() {
+        //         return seedTechnologies()
+        //     })
+        // Award.findAsync({}).then(function(awards) {
+        //         if (awards.length === 0) {
+        //             return seedAwards();
         //         } else {
-        //             return ""
+        //             return
         //         }
         //     })
-        // .then(function() {
-        //     return Project.removeAsync()
-        //         .then(function() {
-        //             return seedProjects()
+        //     .then(function() {
+        //         Company.findAsync({}).then(function(companies) {
+        //             if (companies.length === 0) {
+        //                 return seedCompanies()
+        //             } else return
         //         })
+        //     })
+        // .then(function() {
+        //     return
+    User.removeAsync()
+        // })
+        .then(function() {
+            return seedUsers()
+        })
+        //     User.findAsync({}).then(function(users) {
+        //         if (users.length === 0) {
+        //             return seedUsers();
+        //         } else {
+        //             return
+        //             // console.log(chalk.magenta('Seems to already be user data, exiting!'));
+        //             // process.kill(0);
+        //         }
+        //     })
         // })
         .then(function() {
             console.log(chalk.green('Seed successful!'));

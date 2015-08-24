@@ -4,10 +4,13 @@ app.config(function($stateProvider) {
     templateUrl: 'js/project/profile/profile.html',
     resolve: {
       project: ($stateParams, ProjectsFactory) =>
-        ProjectsFactory.getProject($stateParams.id)
+        ProjectsFactory.getProject($stateParams.id),
+      team: ($stateParams, ProjectsFactory) =>
+        ProjectsFactory.getProjectTeam($stateParams.id)
     },
-    controller: ($scope, project) => {
+    controller: ($scope, project, team) => {
       $scope.project = project
+      $scope.project.team = team
     }
   });
 });

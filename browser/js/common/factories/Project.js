@@ -5,6 +5,9 @@ app.factory('Project', ($http) => {
             .then(res => res.data),
         getProject: (id) =>
             $http.get('/api/projects/' + id)
+            .then(res => res.data),
+        getProjectTeam: (id) =>
+            $http.get('/api/projects/' + id + "/team")
             .then(res => res.data)
     };
 });

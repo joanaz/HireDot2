@@ -37,7 +37,7 @@ var schema = new mongoose.Schema({
     },
     preferences: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Company"
+        ref: "User"
     }],
     projects: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -221,6 +221,34 @@ var schema = new mongoose.Schema({
     "participateHiringDay": {
         type: Boolean
     },
+    photo: {
+        type: String
+    },
+    description: {
+        type: String
+    },
+    "website": {
+        type: String
+    },
+    "angellist": {
+        type: String,
+    },
+    openPositions: [{
+        title: {
+            type: String
+        },
+        url: {
+            type: String
+        }
+    }],
+    "hiredAlumni": [{
+        "fullName": {
+            type: String
+        },
+        "photo": {
+            type: String
+        }
+    }],
     "needsGithubReset": {
         type: Boolean
     },
@@ -241,7 +269,7 @@ var schema = new mongoose.Schema({
     }, ],
     "role": {
         type: String,
-        enum: ['Admin', 'Student'],
+        enum: ['Admin', 'Student', 'Company'],
         default: 'Student',
     },
     // "token": {

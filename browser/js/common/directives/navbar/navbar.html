@@ -45,21 +45,21 @@
                 </li>
                 <li ng-show="user">
                     <a ui-sref="time-slots">
-                        <i class="fa fa-briefcase marginRight"></i> Hiring Events
+                        <i class="fa fa-briefcase marginRight"></i> Hiring Day
                     </a>
                 </li>
-                <li ng-show="admin">
+               <!--  <li ng-show="admin">
                     <a ui-sref="time-slots">
                         <i class="fa fa-briefcase marginRight"></i> Admin
                     </a>
-                </li>
+                </li> -->
                 <!-- <li ng-show="!user">
                     <a ui-sref="signup" target="_self"><i class="fa fa-external-link marginRight"></i> Sign Up
                     </a>
-                </li>
+                </li> -->
                 <li ng-show="!user">
                     <a ui-sref="login"><i class="fa fa-sign-in marginRight"></i> Login</a>
-                </li> -->
+                </li>
                 <li ng-show="user">
                     <a ng-click="logout()"><i class="fa fa-sign-out marginRight"></i> Logout</a>
                 </li>

@@ -5,6 +5,6 @@ require('./award');
 require('./category');
 require('./hackathon');
 require('./project');
-require('./tag');
+require('./technology');
 require('./user');
 require('./company');
