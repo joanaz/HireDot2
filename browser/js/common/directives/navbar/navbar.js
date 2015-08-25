@@ -7,11 +7,9 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
         link: function(scope) {
 
             scope.user = null;
-            scope.isAdmin = null;
-            scope.isStudent = null;
-            scope.isCompany = null;
-
-            // scope.hiringDayState = 'home';
+            // scope.isAdmin = null;
+            // scope.isStudent = null;
+            // scope.isCompany = null;
 
             scope.isLoggedIn = function() {
                 return AuthService.isAuthenticated();
@@ -53,6 +51,10 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
             };
 
             setUser();
+            console.log(scope.user)
+            console.log(scope.isAdmin)
+            console.log(scope.isStudent)
+            console.log(scope.isCompany)
 
             $rootScope.$on(AUTH_EVENTS.loginSuccess, setUser);
             $rootScope.$on(AUTH_EVENTS.logoutSuccess, removeUser);
