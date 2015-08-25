@@ -147,13 +147,14 @@ app.controller('TimeSlotsCtrl', function($scope, students, companies, TimeSlots)
 			console.error("Has conflict!")
 		else {
 			console.log("No conflict!")
+
 			$scope.students.forEach(student => {
 				let timeslots = student.timeslots.map(timeslot => timeslot._id)
-				User.saveTimeslots(student._id, preferences)
+				User.saveTimeslots(student._id, timeslots)
 			})
-			$scope.students.forEach(student => {
-				let preferences = student.preferences.map(preference => preference._id)
-				User.saveTimeslots(student._id, preferences)
+			$scope.companies.forEach(company => {
+				let timeslots = company.timeslots.map(timeslot => timeslot._id)
+				User.saveTimeslots(company._id, timeslots)
 			})
 		}
 	}

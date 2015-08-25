@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('id', function(req, res, next, id) {
-    User.findById(id).populate('projects preferences').exec()
+    User.findById(id).populate('projects preferences timeslots').exec()
         .then(function(user) {
             if (!user) throw Error('Not Found');
             req.user = user;

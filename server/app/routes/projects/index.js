@@ -45,6 +45,10 @@ router.get('/:id', function(req, res) {
 
 router.get('/:id/team', function(req, res) {
     let team = []
+
+    // User.find({ projects: { $elemMatch: { $eq: req.params.id}}})
+
+
     User.find().then(users => {
         users.forEach(user => {
             if (user.projects.some(userproject => {

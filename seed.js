@@ -151,12 +151,12 @@ connectToDb.then(function() {
         //             } else return
         //         })
         //     })
-        .then(function() {
-            return User.removeAsync()
-        })
-        .then(function() {
-            return seedUsers()
-        })
+        // .then(function() {
+        //     return User.removeAsync()
+        // })
+        // .then(function() {
+        //     return seedUsers()
+        // })
         //     User.findAsync({}).then(function(users) {
         //         if (users.length === 0) {
         //             return seedUsers();
