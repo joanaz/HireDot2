@@ -1718,6 +1718,7 @@ module.exports = [{
     "firstName": "Theo",
     "fullName": "Theo Lipeles",
     "email": "theo@lipeles.com",
+    "password": "123",
     "phone": "6466475784",
     "status": "current",
     "lastOnline": "2015-08-13T14:45:57.963Z",
