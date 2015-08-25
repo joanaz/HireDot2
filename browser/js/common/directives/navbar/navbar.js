@@ -5,16 +5,6 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
         scope: {},
         templateUrl: 'js/common/directives/navbar/navbar.html',
         link: function(scope) {
-            // scope.items = [
-            //     { label: 'Home', state: 'home' },
-            //     { label: 'About', state: 'about' },
-            //     { label: 'Students', state: 'students' },
-            //     { label: 'Projects', state: 'projects' },
-            //     { label: 'Companies', state: 'companies' },
-            //     { label: 'Hackathons', state: 'hackathons' },
-            //     { label: 'My Company Profile', state: 'companyProfile', auth: true },
-            //     { label: 'My User Profile', state: 'userProfile', auth: true }
-            // ];
 
             scope.user = null;
             scope.isAdmin = null;
@@ -37,16 +27,12 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
                 AuthService.getLoggedInUser().then(function(user) {
                     scope.user = user;
                     if (user) {
-
-                        scope.isAdmin = user.role === 'Admin'
-
-                        scope.isStudent = user.role === 'Student'
-
-                        scope.isCompany = user.role === 'Company'
-
+                        scope.isAdmin = user.role === 'Admin';
+                        scope.isStudent = user.role === 'Student';
+                        scope.isCompany = user.role === 'Company';
                         // console.log(scope.hiringDayState)
                     }
-                    // 
+                    //
                     // if (user) {
                     //     if (user.role === 'Admin')
                     //         scope.hiringDayState = "time-slots"

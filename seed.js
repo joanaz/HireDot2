@@ -130,6 +130,9 @@ connectToDb.then(function() {
         .then(function() {
             return seedHackathons();
         })
+        .then(function() {
+            return seedCompanies();
+        })
         // ProjectAward.findAsync({}).then(function(awards) {
         //         if (awards.length === 0) {
         //             return seedAwards();
