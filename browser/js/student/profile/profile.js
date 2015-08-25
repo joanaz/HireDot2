@@ -6,8 +6,9 @@ app.config(function($stateProvider) {
             student: ($stateParams, User) =>
                 User.getUserById($stateParams.id)
         },
-        controller: ($scope, student) => {
+        controller: ($scope, student, $sce) => {
             $scope.student = student;
+            $scope.student.resume.url = $sce.trustAsResourceUrl($scope.student.resume.url);
         }
     });
 });

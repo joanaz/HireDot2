@@ -13,6 +13,9 @@ app.controller('LoginCtrl', function($scope, AuthService, $state) {
     $scope.login = {};
     $scope.error = null;
 
+    // $scope.viewName = 'Login';
+    // $scope.angularName = 'login';
+
     $scope.sendLogin = function(loginInfo) {
 
         $scope.error = null;
