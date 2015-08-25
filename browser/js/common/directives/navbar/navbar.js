@@ -27,10 +27,12 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
                 AuthService.getLoggedInUser().then(function(user) {
                     scope.user = user;
                     if (user) {
-                        scope.isAdmin = user.role === 'Admin';
-                        scope.isStudent = user.role === 'Student';
-                        scope.isCompany = user.role === 'Company';
-                        // console.log(scope.hiringDayState)
+                        scope.isAdmin = user.role === 'Admin'
+                        scope.isStudent = user.role === 'Student'
+                        scope.isCompany = user.role === 'Company'
+
+                        if (!scope.user.firstName)
+                            scope.user.firstName = scope.user.fullName
                     }
                     //
                     // if (user) {
