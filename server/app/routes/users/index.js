@@ -22,7 +22,8 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('id', function(req, res, next, id) {
-    User.findById(id).populate('projects preferences timeslots')
+    User.findById(id)
+        .populate('projects preferences timeslots')
         .exec()
         .then(function(user) {
             if (!user) throw Error('Not Found');
@@ -36,9 +37,14 @@ router.param('id', function(req, res, next, id) {
         });
 });
 
-
 router.get('/:id', function(req, res) {
-    res.json(req.user);
+    User.populate(req.user, {
+        path: 'projects.technologies',
+        model: 'Technology'
+    }, function(err, user) {
+        if (err) next(err)
+        res.json(user)
+    });
 });
 
 router.put('/:id', function(req, res, next) {

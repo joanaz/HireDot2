@@ -31,10 +31,15 @@
                 <h2><i class="fa fa-object-group twentyPixelsMarginRight"></i> Projects</h2>
             </div>
             <div class="row moreMarginTop">
-                <div class="col-md-6 studentCard centerText" ng-repeat="project in student.projects">
-                    <img class="img-circle img-responsive img-center projectPhoto" src="{{project.logo}}" ui-sref="project-profile({id:project._id})">
-                    <div class="row moreMarginTop title" ui-sref="project-profile({id:project._id})">
-                        <h3 class="regularFont" ui-sref="project-profile({id:project._id})">{{project.title}}</a></h3>
+                <div class="col-md-6 studentCard centerText" ng-repeat="project in student.projects" ui-sref="project-profile({id:project._id})">
+                    <img class="img-circle img-responsive img-center projectPhoto" src="{{project.logo}}">
+                    <div class="row moreMarginTop title">
+                        <h3 class="regularFont">{{project.title}}</h3>
+                    </div>
+                    <div ng-repeat="technology in project.technologies | limitTo:3">
+                        <div class="col-sm-12 col-md-2">
+                            <button class="btn btn-view btn-sm" ui-sref="technology({id:technology._id})">{{technology.name}}</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,7 +50,7 @@
             </div>
             <!-- PDF -->
             <div class="resumeFile">
-                <iframe ng-src="{{student.resume.url}}" width="100%" height="750px"></iframe>
+                <iframe ng-src="{{student.resume.url}}" width="100%" height="1100px"></iframe>
             </div>
             <!-- To get file URL, upload and share with public using Google Drive. Then preview the document, pop it out so that it goes to a preview window all on its own, and then use the '...' dropdown menu to click 'Embed item...' and copy the URL within the iframe that is provided -->
         </div>
