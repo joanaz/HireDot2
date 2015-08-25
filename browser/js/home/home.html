@@ -29,16 +29,27 @@
             <a class="marginTopBottom" ui-sref="award"><h1><i class="fa fa-trophy"></i><br><br>Awards</h1></a>
         </div>
     </div>
-    <!-- <div class="col-md-6">
+    <div class="col-md-6" ng-show="isStudent">
         <div class="mdl-card mdl-shadow--3dp">
-            <a class="marginTopBottom" ui-sref="time-slots"><h1><i class="fa fa-briefcase"></i><br><br>Hiring Events</h1></a>
+            <a class="marginTopBottom" ui-sref="student-preferences">
+                <h1><i class="fa fa-briefcase"></i><br><br>My Preferences</h1>
+            </a>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" ng-show="isCompany">
         <div class="mdl-card mdl-shadow--3dp">
-            <a class="marginTopBottom" ui-sref="time-slots"><h1><i class="fa fa-user-secret"></i><br><br>Admin</h1></a>
+            <a class="marginTopBottom" ui-sref="company-preferences">
+                <h1><i class="fa fa-briefcase"></i><br><br>My Preferences</h1>
+            </a>
         </div>
-    </div> -->
+    </div>
+    <div class="col-md-6" ng-show="isAdmin">
+        <div class="mdl-card mdl-shadow--3dp">
+            <a class="marginTopBottom" ui-sref="company-preferences">
+                <h1><i class="fa fa-user-secret"></i><br><br>My Preferences</h1>
+            </a>
+        </div>
+    </div>
     <div class="col-md-12">
         <div class="mdl-card mdl-shadow--3dp">
             <a class="marginTopBottom regularFont" ui-sref="login"><h1><i class="fa fa-sign-in"></i><br><br>Have an account?</h1></a>

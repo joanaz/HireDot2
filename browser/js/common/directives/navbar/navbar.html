@@ -51,38 +51,27 @@
                 </li>
                 <li ng-show="isAdmin">
                     <a ui-sref="time-slots" rel="tooltip" tooltip="hello" title="Hiring Day">
-                        <i class="fa fa-briefcase marginRight"></i><!-- Hiring Day -->
+                        <i class="fa fa-briefcase marginRight"></i>
+                        <!-- Hiring Day -->
                     </a>
                 </li>
                 <li ng-show="isStudent">
                     <a ui-sref="student-preferences" rel="tooltip" tooltip="hello" title="Hiring Day">
-                        <i class="fa fa-briefcase marginRight"></i></i><!-- Hiring Day -->
+                        <i class="fa fa-briefcase marginRight"></i></i>
+                        <!-- Hiring Day -->
                     </a>
                 </li>
                 <li ng-show="isCompany">
                     <a ui-sref="company-preferences" rel="tooltip" tooltip="hello" title="Hiring Day">
-                        <i class="fa fa-briefcase marginRight"></i><!-- Hiring Day -->
+                        <i class="fa fa-briefcase marginRight"></i>
+                        <!-- Hiring Day -->
                     </a>
                 </li>
-                <!-- <li ng-show="user">
-                    <a ui-sref="{{hiringDayState}}">
-                        <i class="fa fa-briefcase marginRight"></i> Hiring Day
-                    </a>
-                </li> -->
-                <!--  <li ng-show="admin">
-                    <a ui-sref="time-slots">
-                        <i class="fa fa-briefcase marginRight"></i> Admin
-                    </a>
-                </li> -->
-                <!-- <li ng-show="!user">
-                    <a ui-sref="signup" target="_self"><i class="fa fa-external-link marginRight"></i> Sign Up
-                    </a>
-                </li> -->
                 <li ng-show="!user" rel="tooltip" tooltip="hello" title="Login">
                     <a ui-sref="login"><i class="fa fa-sign-in marginRight"></i> <!-- Login --></a>
                 </li>
-                <li ng-show="user">
-                    <a>Hello, {{user.firstName}}</a>
+                <li ng-show="user && isStudent">
+                    <a ui-sref="student-preferences" rel="tooltip" tooltip="hello" title="Hiring Day">Hello, {{user.firstName}}</a>
                 </li>
                 <li ng-show="user" rel="tooltip" tooltip="hello" title="Logout">
                     <a ng-click="logout()"><i class="fa fa-sign-out marginRight"></i> <!-- Logout --></a>
