@@ -152,11 +152,23 @@ connectToDb.then(function() {
     //         })
     //     })
     // .then(function() {
-    //     return 
+    //     return
     User.removeAsync()
         // })
         .then(function() {
-            return seedUsers()
+            return seedAwards();
+        })
+        .then(function() {
+            return seedTechnologies();
+        })
+        .then(function() {
+            return seedProjects();
+        })
+        .then(function() {
+            return seedHackathons();
+        })
+        .then(function() {
+            return seedUsers();
         })
         //     User.findAsync({}).then(function(users) {
         //         if (users.length === 0) {

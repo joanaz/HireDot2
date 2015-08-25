@@ -70,8 +70,8 @@
                 <li ng-show="!user" rel="tooltip" tooltip="hello" title="Login">
                     <a ui-sref="login"><i class="fa fa-sign-in marginRight"></i> <!-- Login --></a>
                 </li>
-                <li ng-show="user">
-                    <a>Hello, {{user.firstName}}</a>
+                <li ng-show="user && isStudent">
+                    <a ui-sref="student-preferences" rel="tooltip" tooltip="hello" title="Hiring Day">Hello, {{user.firstName}}</a>
                 </li>
                 <li ng-show="user" rel="tooltip" tooltip="hello" title="Logout">
                     <a ng-click="logout()"><i class="fa fa-sign-out marginRight"></i> <!-- Logout --></a>
