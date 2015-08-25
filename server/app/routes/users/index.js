@@ -1,6 +1,6 @@
 var router = require('express').Router();
 module.exports = router;
-// var _ = require('lodash');
+var _ = require('lodash');
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
 // var secure = require("../security");
@@ -22,7 +22,8 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('id', function(req, res, next, id) {
-    User.findById(id).populate('projects preferences timeslots').exec()
+    User.findById(id).populate('projects preferences timeslots')
+        .exec()
         .then(function(user) {
             if (!user) throw Error('Not Found');
             req.user = user;

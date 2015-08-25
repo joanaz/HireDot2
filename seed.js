@@ -120,43 +120,44 @@ connectToDb.then(function() {
     //         }
     //     })
     // seedUsers();
-    seedAwards()
-        .then(function() {
-            return seedTechnologies();
-        })
-        .then(function() {
-            return seedProjects();
-        })
-        .then(function() {
-            return seedHackathons();
-        })
-        // ProjectAward.findAsync({}).then(function(awards) {
-        //         if (awards.length === 0) {
-        //             return seedAwards();
-        // Technology.removeAsync()
-        //     .then(function() {
-        //         return seedTechnologies()
-        //     })
-        // Award.findAsync({}).then(function(awards) {
-        //         if (awards.length === 0) {
-        //             return seedAwards();
-        //         } else {
-        //             return
-        //         }
-        //     })
-        //     .then(function() {
-        //         Company.findAsync({}).then(function(companies) {
-        //             if (companies.length === 0) {
-        //                 return seedCompanies()
-        //             } else return
-        //         })
-        //     })
-        // .then(function() {
-        //     return User.removeAsync()
+    // seedAwards()
+    //     .then(function() {
+    //         return seedTechnologies();
+    //     })
+    //     .then(function() {
+    //         return seedProjects();
+    //     })
+    //     .then(function() {
+    //         return seedHackathons();
+    //     })
+    // ProjectAward.findAsync({}).then(function(awards) {
+    //         if (awards.length === 0) {
+    //             return seedAwards();
+    // Technology.removeAsync()
+    //     .then(function() {
+    //         return seedTechnologies()
+    //     })
+    // Award.findAsync({}).then(function(awards) {
+    //         if (awards.length === 0) {
+    //             return seedAwards();
+    //         } else {
+    //             return
+    //         }
+    //     })
+    //     .then(function() {
+    //         Company.findAsync({}).then(function(companies) {
+    //             if (companies.length === 0) {
+    //                 return seedCompanies()
+    //             } else return
+    //         })
+    //     })
+    // .then(function() {
+    //     return 
+    User.removeAsync()
         // })
-        // .then(function() {
-        //     return seedUsers()
-        // })
+        .then(function() {
+            return seedUsers()
+        })
         //     User.findAsync({}).then(function(users) {
         //         if (users.length === 0) {
         //             return seedUsers();

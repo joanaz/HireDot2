@@ -10,13 +10,14 @@ app.config(function($stateProvider) {
 	});
 });
 
-app.controller('TimeSlotsCtrl', function($scope, students, companies, TimeSlots) {
-	$scope.students = students
-	$scope.companies = companies
+app.controller('TimeSlotsCtrl', function($scope, students, companies, User) {
+	$scope.students = students;
+	$scope.companies = companies;
 	$scope.studentNumOfTimeSlots = 6;
 	$scope.companyNumOfTimeSlots = 9;
-	$scope.numCompaniesNeeded = studentNumOfTimeSlots * $scope.students.length / $scope.companyNumOfTimeSlots;
+	$scope.numCompaniesNeeded = $scope.studentNumOfTimeSlots * $scope.students.length / $scope.companyNumOfTimeSlots;
 
+	$scope.timeslots = Array.apply(null, Array($scope.companyNumOfTimeSlots)).map((n, index) => index + 1)
 
 	// $scope.students = TimeSlots.generateStudents();
 	// TimeSlots.seperateStudentsCandidates($scope.students)
@@ -120,7 +121,7 @@ app.controller('TimeSlotsCtrl', function($scope, students, companies, TimeSlots)
 	// }
 
 	var generateStudentTimeSlots = () => {
-		let initTimeSlots = Array($scope.studentNumOfTimeSlots > $scope.companyNumOfTimeSlots ? $scope.studentNumOfTimeSlots : $scope.companyNumOfTimeSlots).map(n => '');
+		let initTimeSlots = Array.apply(null, Array($scope.studentNumOfTimeSlots > $scope.companyNumOfTimeSlots ? $scope.studentNumOfTimeSlots : $scope.companyNumOfTimeSlots)).map(n => '');
 
 		$scope.students.forEach(student => {
 			student.timeslots = initTimeSlots.slice()
@@ -148,14 +149,14 @@ app.controller('TimeSlotsCtrl', function($scope, students, companies, TimeSlots)
 		else {
 			console.log("No conflict!")
 
-			$scope.students.forEach(student => {
-				let timeslots = student.timeslots.map(timeslot => timeslot._id)
-				User.saveTimeslots(student._id, timeslots)
-			})
-			$scope.companies.forEach(company => {
-				let timeslots = company.timeslots.map(timeslot => timeslot._id)
-				User.saveTimeslots(company._id, timeslots)
-			})
+			// $scope.students.forEach(student => {
+			// 	let timeslots = student.timeslots.map(timeslot => timeslot._id)
+			// 	User.saveTimeslots(student._id, timeslots)
+			// })
+			// $scope.companies.forEach(company => {
+			// 	let timeslots = company.timeslots.map(timeslot => timeslot._id)
+			// 	User.saveTimeslots(company._id, timeslots)
+			// })
 		}
 	}
 
@@ -180,7 +181,7 @@ app.controller('TimeSlotsCtrl', function($scope, students, companies, TimeSlots)
 					if ($scope.companies[i].timeslots[j] !== undefined) continue;
 					let safe = true
 					for (let k = 0; k < numOfCompanies; k++) {
-						if (currentCandidate === $scope.companies[k].timeslots[j]) {
+						if ($scope.companies[k].timeslots[j] && currentCandidate.fullName === $scope.companies[k].timeslots[j].fullName) {
 							// $scope.companies[i].timeslots[j + 1] = currentCandidate
 							// j++;
 							safe = false;

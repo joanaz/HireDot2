@@ -1,12 +1,20 @@
 <div class="container">
-  <h1>Students</h1>
-  <ul>
-    <li ng-repeat="student in students" class="row">
-      <h2>{{student.fullName}}</h2>
-      <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.preferences">
-        <li ng-repeat="studentCandidate in student.preferences" class="item">{{studentCandidate.fullName}}</li>
-      </ul>
-
+  <h1>Preferences</h1>
+  <!-- <ul> -->
+    <!-- <li ng-repeat="student in students" class="row"> -->
+      <!-- <h2>{{user.fullName}}</h2> -->
+<div class="row">
+<div class="col-md-4">
+  <ul ui-sortable class="apps-container" ng-model="user.preferences">
+    <li ng-repeat="studentCandidate in user.preferences" class="item">
+      <a ui-sref="student-preferences.company-view({id:studentCandidate._id})">{{studentCandidate.fullName}}</a>
+    </li>
+  </ul>
+  </div>
+  <div class='col-md-8'>
+    <ui-view></ui-view>
+  </div>
+  </div>
      <!--  <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.potentialCandidates">
         <li ng-repeat="potentialCandidate in student.potentialCandidates" class="item">{{potentialCandidate.name}}</li>
       </ul> -->
@@ -17,12 +25,12 @@
           {{entry.name}}
         </li>
       </ul> -->
-    </li>
-  </ul>
+    <!-- </li> -->
+  <!-- </ul> -->
 
   <button class="btn btn-view" ng-click="submit()">Update Preferences</button>
 
-  <h1>Companies</h1>
+  <!-- <h1>Companies</h1>
   <div class="row">
   <ul>
     <li ng-repeat="company in companies" class="col-md-4 ">{{company.fullName}}
@@ -31,7 +39,7 @@
       </ul>
     </li>
   </ul>
- </div>
+ </div> -->
 
   <!-- <button class="btn btn-default" ng-click="submit()">Submit</button> -->
 

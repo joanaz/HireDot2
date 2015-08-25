@@ -1,0 +1,73 @@
+<div class="container options v-align middle marginTop">
+    <div class="col-md-12 studentCard">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="row moreMarginTop centerText">
+                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{student.github.avatar_url}}" target="_blank">
+            </div>
+            <div class="row moreMarginTop title">
+                <h1>{{student.fullName}}</h1>
+            </div>
+            <div class="row moreMarginTop">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <a href="{{student.linkedin.url}}" target="_blank">
+                        <span class="fa-stack fa-3x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <a href="{{student.github.html_url}}" target="_blank">
+                        <span class="fa-stack fa-3x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                    </a>
+                </div>
+                <!-- <div class="col-sm-12 col-md-4 col-lg-4">
+                    <a href="https://github.com/joshfinnie" target="_blank">
+                        <span class="fa-stack fa-3x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tumblr fa-stack-1x fa-inverse"></i>
+                            </span>
+                    </a>
+                </div> -->
+            </div>
+            <!-- <div class="row moreMarginTop">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <code>linkedin.com/in/joshfinnie</code>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <code>github.com/joshfinnie</code>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <code>tumblr.com/joshfinnie</code>
+                </div>
+            </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-sm-12 col-md-6 col-lg-6"> -->
+            <div class="row moreMarginTop title">
+                <h2><i class="fa fa-object-group twentyPixelsMarginRight"></i> Projects</h2>
+            </div>
+            <div class="row moreMarginTop">
+                <div class="col-md-6 studentCard centerText" ng-repeat="project in student.projects">
+                    <img class="img-circle img-responsive img-center projectPhoto" src="{{project.logo}}">
+                    <div class="row moreMarginTop title">
+                        <h3 class="regularFont"><a ui-sref="project-profile">{{project.title}}</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="row resumeMargin title">
+                <h2><i class="fa fa-file-text-o twentyPixelsMarginRight"></i>Resume</h2>
+
+            </div>
+            <!-- PDF -->
+            <div class="resumeFile">
+                <iframe src="{{student.resume.url}}" width="100%" height="750px"></iframe>
+            </div>
+            <!-- To get file URL, upload and share with public using Google Drive. Then preview the document, pop it out so that it goes to a preview window all on its own, and then use the '...' dropdown menu to click 'Embed item...' and copy the URL within the iframe that is provided -->
+        </div>
+    </div>
+</div>
