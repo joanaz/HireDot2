@@ -6,7 +6,7 @@ var User = mongoose.model('User');
 var secure = require("../security");
 
 router.get('/', function(req, res, next) {
-    User.find(req.query).exec()
+    User.find(req.query).populate('preferences').exec()
         .then(function(users) {
             res.json(users);
         })
@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.param('id', function(req, res, next, id) {
-    User.findById(id).populate('projects').exec()
+    User.findById(id).populate('projects preferences').exec()
         .then(function(user) {
             if (!user) throw Error('Not Found');
             req.user = user;
@@ -40,14 +40,14 @@ router.get('/:id', function(req, res) {
     res.json(req.user);
 });
 
-// router.put('/:id', function(req, res, next) {
-//     _.extend(req.user, req.body);
-//     req.user.save()
-//         .then(function(user) {
-//             res.json(user);
-//         })
-//         .then(null, next);
-// });
+router.put('/:id', function(req, res, next) {
+    _.merge(req.user, req.body);
+    req.user.save()
+        .then(function(user) {
+            res.json(user);
+        })
+        .then(null, next);
+});
 
 // router.delete('/:id', function(req, res, next) {
 //     req.user.remove()

@@ -39,6 +39,13 @@ var schema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }],
+    timeslots: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }],
+    numOfTimeSlots: {
+        type: Number
+    }
     projects: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Project"

@@ -120,10 +120,16 @@ connectToDb.then(function() {
     //         }
     //     })
     // seedUsers();
-    seedAwards();
-    seedProjects();
-    seedCompanies();
-    seedHackathons()
+    seedAwards()
+        .then(function() {
+            return seedProjects();
+        })
+        .then(function() {
+            return seedTechnologies();
+        })
+        .then(function() {
+            return seedHackathons();
+        })
         // ProjectAward.findAsync({}).then(function(awards) {
         //         if (awards.length === 0) {
         //             return seedAwards();
@@ -145,10 +151,9 @@ connectToDb.then(function() {
         //             } else return
         //         })
         //     })
-        // .then(function() {
-        //     return
-    User.removeAsync()
-        // })
+        .then(function() {
+            return User.removeAsync()
+        })
         .then(function() {
             return seedUsers()
         })

@@ -2,47 +2,49 @@
   <h1>Students</h1>
   <ul>
     <li ng-repeat="student in students" class="row">
-      <h2>{{student.name}}</h2>
-      <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.candidates">
-        <li ng-repeat="studentCandidate in student.candidates" class="item">{{studentCandidate.name}}</li>
+      <h2>{{student.fullName}}</h2>
+      <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.preferences">
+        <li ng-repeat="studentCandidate in student.preferences" class="item">{{studentCandidate.fullName}}</li>
       </ul>
 
-      <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.potentialCandidates">
+     <!--  <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.potentialCandidates">
         <li ng-repeat="potentialCandidate in student.potentialCandidates" class="item">{{potentialCandidate.name}}</li>
-      </ul>
+      </ul> -->
 
-      <ul class="col-md-4 list logList">
-      <!--  -->
-        <li ng-repeat="entry in student.candidates track by $index" class="logItem">
+      <!-- <ul class="col-md-4 list logList">
+    
+        <li ng-repeat="entry in student.preferences track by $index" class="logItem">
           {{entry.name}}
         </li>
-      </ul>
+      </ul> -->
     </li>
   </ul>
 
-  <button class="btn btn-default" ng-click="submit(student)">Submit</button>
+  <button class="btn btn-default" ng-click="submit()">Submit</button>
 
   <h1>Companies</h1>
   <div class="row">
   <ul>
-    <li ng-repeat="company in companies" class="col-md-4 ">{{company.name}}
-      <ul ui-sortable ng-model="company.candidates" class="list apps-container">
-        <li ng-repeat="companyCandidate in company.candidates" class="item">{{companyCandidate.name}}</li>
+    <li ng-repeat="company in companies" class="col-md-4 ">{{company.fullName}}
+      <ul ui-sortable ng-model="company.preferences" class="list apps-container">
+        <li ng-repeat="companyCandidate in company.preferences" class="item">{{companyCandidate.fullName}}</li>
       </ul>
     </li>
   </ul>
  </div>
 
-  <button class="btn btn-default" ng-click="match()">Stable Marriage</button>
-  <button class="btn btn-default" ng-click="arrange()">Speed Dates</button>
+  <!-- <button class="btn btn-default" ng-click="submit()">Submit</button> -->
 
+  <!-- <button class="btn btn-default" ng-click="match()">Stable Marriage</button>
+  <button class="btn btn-default" ng-click="arrange()">Speed Dates</button>
+ -->
   <!-- <ul> -->
   <!-- <li ng-repeat="sortingLog in sortingLogs"> -->
-  <ul class="list logList">
+  <!-- <ul class="list logList">
     <li ng-repeat="entry in sortingLog track by $index" class="logItem">
       {{entry}}
     </li>
-  </ul>
+  </ul> -->
   <!-- </li> -->
   <!-- </ul> -->
 

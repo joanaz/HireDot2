@@ -4,68 +4,88 @@ app.config(function($stateProvider) {
         templateUrl: 'js/student/preferences/preferences.html',
         controller: 'PreferencesController',
         resolve: {
-            students: (User) =>
-                User.getStudents(),
-            companies: (User) =>
-                User.getCompanies()
+            students: (User) => User.getStudentsAttendingHiringDay(),
+            companies: (User) => User.getCompaniesAttendingHiringDay()
         }
     })
 });
 
-app.controller('PreferencesController', function($scope, students, companies, Student) {
+app.controller('PreferencesController', function($scope, students, companies, Student, PreferencesFactory) {
     // console.log("students", students)
-    $scope.students = students.map(student => Student.createPerson(student))
-        // $scope.students = students;
-    $scope.companies = companies.map(company => Student.createPerson(company));
+    // $scope.students = students.map(student => Student.createPerson(student))
+    $scope.students = students;
+    // $scope.companies = companies.map(company => Student.createPerson(company));
+    $scope.companies = companies;
 
-    $scope.students.forEach((student, index) => {
-        student.potentialCandidates = $scope.companies.slice()
-        student.sortableOptions = {
-            // placeholder: "app",
-            connectWith: ".student-" + index
-        }
-    });
+    // $scope.students.forEach((student, index) => {
+    //     student.preferences = $scope.companies.slice()
+    //         // student.sortableOptions = {
+    //         //     // placeholder: "app",
+    //         //     connectWith: ".student-" + index
+    //         // }
+    // });
 
     console.log($scope.students[0])
 
     $scope.submit = () => {
-        console.log($scope.companies[0].candidates)
-        console.log("studnet", $scope.students[4].candidates)
+        console.log($scope.companies[0].preferences)
+        console.log("studnet", $scope.students[4].preferences)
+
+        $scope.students.forEach(student => {
+            let preferences = student.preferences.map(preference => preference._id)
+            PreferencesFactory.savePreferences(student._id, preferences)
+        })
 
         $scope.companies.forEach(company => {
-            company.candidates = []
-            $scope.students.forEach(student => {
-                if (student.candidates.some(candidate => candidate.name === company.name)) {
-                    company.candidates.push(student)
-                }
-            })
-        })
-        console.log("after studnet", $scope.students[4].candidates)
+            company.preferences = []
+            let len = $scope.students[0].preferences.length
 
-        console.log($scope.companies[0].candidates)
+            for (let i = 0; i < len; i++) {
+                $scope.students.forEach(student => {
+                    //     if (student.preferences.some(candidate => candidate.name === company.name)) {
+                    //         company.preferences.push(student)
+                    //     }
+                    // })
+
+                    if (student.preferences[i].fullName === company.fullName) {
+                        company.preferences.push(student);
+                    }
+                })
+
+            }
+
+            let preferences = company.preferences.map(preference => preference._id)
+
+            PreferencesFactory.savePreferences(company._id, preferences)
+
+        })
+
+        console.log("after studnet", $scope.students[4].preferences)
+
+        console.log($scope.companies[0].preferences)
     }
 
 
     // for (let i = 0; i < $scope.students.length; i++) {
-    //   $scope.students[i].candidates = $scope.companies.slice()
+    //   $scope.students[i].preferences = $scope.companies.slice()
     // }
 
 
     // console.log($scope.companies[0])
 
-    // console.log($scope.companies[0].candidates[0])
+    // console.log($scope.companies[0].preferences[0])
 
     $scope.sortingLog = []
 
     $scope.logModels = () => {
         // $scope.sortingLog = [];
         for (let i = 0; i < $scope.students.length; i++) {
-            let logEntry = $scope.students[i].candidates.map(x => x.name).join(', ');
+            let logEntry = $scope.students[i].preferences.map(x => x.name).join(', ');
             logEntry = 'student ' + $scope.students[i].name + ': ' + logEntry;
             $scope.sortingLog.push(logEntry);
         }
         for (let i = 0; i < $scope.companies.length; i++) {
-            let logEntry = $scope.companies[i].candidates.map(x => x.name).join(', ');
+            let logEntry = $scope.companies[i].preferences.map(x => x.name).join(', ');
             logEntry = 'company ' + $scope.companies[i].name + ': ' + logEntry;
             $scope.sortingLog.push(logEntry);
         }
@@ -94,5 +114,16 @@ app.controller('PreferencesController', function($scope, students, companies, St
         var numOfSlots = 3
         Student.arrangeEveryone(numOfSlots)
             // $scope.sortingLogs = []
+    }
+})
+
+app.factory('PreferencesFactory', ($http) => {
+    return {
+        savePreferences: (userId, preferences) =>
+            $http.put('/api/users/' + userId, {
+                preferences: preferences
+            })
+
+
     }
 })
