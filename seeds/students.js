@@ -234,10 +234,10 @@ module.exports = [{
     "previousAction": "555010401303c40300333426",
     "lastOnline": "2015-08-13T14:39:18.039Z",
     "resume": {
-        url: "https://drive.google.com/file/d/0BxibmGV5GFRjNkpmd3dvVzZIbUk/preview",
+        "url": "https://drive.google.com/file/d/0BxibmGV5GFRjNkpmd3dvVzZIbUk/preview",
     },
     "linkedin": {
-        url: "https://www.linkedin.com/pub/gavin-young/a7/9a6/852"
+        "url": "https://www.linkedin.com/pub/gavin-young/a7/9a6/852"
     },
     "github": {
         "login": "GavinYoung1994",
@@ -362,10 +362,10 @@ module.exports = [{
     "previousAction": "54cf8f9764bbc00c007e2a6e",
     "lastOnline": "2015-08-13T14:40:04.667Z",
     "resume": {
-        url: "https://drive.google.com/file/d/0BxibmGV5GFRjNG5PVlI0Q3p3cFE/preview",
+        "url": "https://drive.google.com/file/d/0BxibmGV5GFRjNG5PVlI0Q3p3cFE/preview",
     },
     "linkedin": {
-        url: "https://www.linkedin.com/in/yvesyuen"
+        "url": "https://www.linkedin.com/in/yvesyuen"
     },
     "github": {
         "login": "justYves",
@@ -491,10 +491,10 @@ module.exports = [{
     "online": false,
     "lastOnline": "2015-08-12T18:37:54.474Z",
     "resume": {
-        url: "https://drive.google.com/file/d/0BxibmGV5GFRjdE1IU0llYVBkMEk/preview",
+        "url": "https://drive.google.com/file/d/0BxibmGV5GFRjdE1IU0llYVBkMEk/preview",
     },
     "linkedin": {
-        url: "https://www.linkedin.com/in/petermsteele"
+        "url": "https://www.linkedin.com/in/petermsteele"
     },
     "github": {
         "login": "celanajaya",
@@ -619,10 +619,10 @@ module.exports = [{
     "currentAction": "55abb95f9e221d03007ce2e4",
     "previousAction": "54e3688df35ce80c00977364",
     "resume": {
-        url: "https://drive.google.com/file/d/0BxibmGV5GFRjNnhkSU5sZ0Y3bDQ/preview",
+        "url": "https://drive.google.com/file/d/0BxibmGV5GFRjNnhkSU5sZ0Y3bDQ/preview",
     },
     "linkedin": {
-        url: "https://www.linkedin.com/in/meyergregory"
+        "url": "https://www.linkedin.com/in/meyergregory"
     },
     "github": {
         "login": "GregAMeyer",
@@ -745,10 +745,10 @@ module.exports = [{
     "online": false,
     "phone": "6199816858",
     "resume": {
-        url: "https://drive.google.com/file/d/0BxibmGV5GFRjNnhkSU5sZ0Y3bDQ/preview",
+        "url": "https://drive.google.com/file/d/0BxibmGV5GFRjNnhkSU5sZ0Y3bDQ/preview",
     },
     "linkedin": {
-        url: "https://www.linkedin.com/pub/kevin-lei/a4/1b6/111"
+        "url": "https://www.linkedin.com/pub/kevin-lei/a4/1b6/111"
     },
     "github": {
         "login": "kevinninglei",
@@ -866,10 +866,10 @@ module.exports = [{
     "lastOnline": "2015-08-12T23:29:21.563Z",
     "online": false,
     "resume": {
-        url: "https://drive.google.com/file/d/0BxibmGV5GFRjRTMxYkV4NExxTmc/preview",
+        "url": "https://drive.google.com/file/d/0BxibmGV5GFRjRTMxYkV4NExxTmc/preview",
     },
     "linkedin": {
-        url: "https://www.linkedin.com/in/jovianierenberg"
+        "url": "https://www.linkedin.com/in/jovianierenberg"
     },
     "github": {
         "login": "JoviaNierenberg",

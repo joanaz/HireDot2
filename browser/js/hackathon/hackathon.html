@@ -7,7 +7,7 @@
             <div class="panel panel-default bootcards-media studentCard">
                 <img src="{{hackathons[i].photo}}" class="img-responsive" ui-sref="hackathon-profile({id:hackathons[i]._id})" />
                 <div class="panel-heading" ui-sref="hackathon-profile({id:hackathons[i]._id})">
-                    <h3 class="panel-title">{{hackathons[i].title}}</h3>
+                    <h3 class="panel-title" ui-sref="hackathon-profile({id:hackathons[i]._id})">{{hackathons[i].title}}</h3>
                 </div>
                 <div class="panel-footer">
                     <div class="col-sm-12 col-md-12 col-lg-12">
