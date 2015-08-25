@@ -45,7 +45,7 @@ var schema = new mongoose.Schema({
     }],
     numOfTimeSlots: {
         type: Number
-    }
+    },
     projects: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Project"

@@ -122,10 +122,10 @@ connectToDb.then(function() {
     // seedUsers();
     seedAwards()
         .then(function() {
-            return seedProjects();
+            return seedTechnologies();
         })
         .then(function() {
-            return seedTechnologies();
+            return seedProjects();
         })
         .then(function() {
             return seedHackathons();
@@ -163,7 +163,7 @@ connectToDb.then(function() {
         //         } else {
         //             return
         //             // console.log(chalk.magenta('Seems to already be user data, exiting!'));
-        //             // process.kill(0);
+        //             // process.kill(0);ç
         //         }
         //     })
         // })
