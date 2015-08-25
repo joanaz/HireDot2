@@ -58,6 +58,8 @@ form.searchBar {
 
 .img-responsive {
     border-radius: 100%;
-    border: 5px solid #444;
     display: block;
+    border-style: double;
+    border-width: 5px;
+    border-color: #444;
 }
