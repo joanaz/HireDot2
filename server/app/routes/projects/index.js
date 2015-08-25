@@ -44,25 +44,34 @@ router.get('/:id', function(req, res) {
 // so that mongo iterates through students and not the web app
 
 router.get('/:id/team', function(req, res) {
-    let team = []
+    // let team = []
 
-    // User.find({ projects: { $elemMatch: { $eq: req.params.id}}})
-
-
-    User.find().then(users => {
-        users.forEach(user => {
-            if (user.projects.some(userproject => {
-                    return userproject === req.params.id
-                })) {
-                team.push({
-                    _id: user._id,
-                    fullName: user.fullName,
-                    photo: user.github.avatar_url
-                })
+    User.find({
+        projects: {
+            $elemMatch: {
+                $eq: req.params.id
             }
-        })
-        res.json(team);
+        }
+    }).then(users => {
+        res.json(users)
     })
+
+
+    // User.find().then(users => {
+    //     users.forEach(user => {
+    //         if (user.projects.some(userproject => {
+    //                 return userproject === req.params.id
+    //             })) {
+    //             team.push({
+    //                 _id: user._id,
+    //                 fullName: user.fullName,
+    //                 photo: user.github.avatar_url
+    //             })
+    //         }
+    //     })
+    // res.json(team)
+
+    // })
 });
 
 router.put('/:id', function(req, res, next) {

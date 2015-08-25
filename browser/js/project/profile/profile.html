@@ -1,28 +1,46 @@
 <div class="container options v-align middle">
     <div class="col-md-12 studentCard">
+        <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="row moreMarginTop centerText">
-                <img class="img-center projectPhoto noBorderRadius" src="{{project.screenshot}}">
-            </div>
             <div class="row moreMarginTop title" href="{{project.website}}" target="_blank">
                 <h1 href="{{project.website}}" target="_blank">{{project.title}}</h1>
             </div>
             <div class="row moreMarginTop">
                 <h2 class="regularFont">{{project.description}}</h2>
             </div>
+            <!-- <div class="col-md-12">
+                <div class="row moreMarginTop centerText">
+                    <h2><i class="fa fa-tags twentyPixelsMarginRight"></i> Tech</h2>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-12"> -->
+                <div class="row moreMarginTop centerText">
+                    <div class=row ng-repeat="technology in project.technologies" ng-if="$index%2==0">
+                        <div class="col-xs-6" ng-repeat="i in [$index,$index+1]" ng-if="project.technologies[i]!=null">
+                            <button class="btn btn-view tagButton regularFont" ui-sref="technology({id:project.technologies[i]._id})">
+                            {{project.technologies[i].name}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row moreMarginTop centerText">
+                    <button class="btn btn-view" ui-sref="technology">view all tags</button>
+                </div> -->
+            <!-- </div>  -->
+            
             <div class="row moreMarginTop">
-                <div ng-show="project.website" class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     <a href="{{project.website}}" target="_blank">
                         <span class="fa-stack fa-3x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i ng-class="{'text-muted': !project.website}" class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
                             </span>
                     </a>
                 </div>
-                <div ng-show="project.github" class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-sm-12 col-md-6 col-lg-6">
                     <a href="{{project.github}}" target="_blank">
                         <span class="fa-stack fa-3x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i ng-class="{'text-muted': !project.github}" class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
                             </span>
                     </a>
@@ -37,17 +55,18 @@
             </div>
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
-                    <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="member in project.team">
+                    <div class="col-md-6 studentCard centerText" ng-repeat="member in project.team">
                         <a ui-sref="student-profile({id:member._id})">
                             <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{member.photo}}" alt="">
                             <p>{{member.fullName}}</p>
                         </a>
                     </div>
                 </div>
-                <div class="row moreMarginTop centerText">
+                <!-- <div class="row moreMarginTop centerText">
                     <button class="btn btn-view" ui-sref="student">view all students</button>
-                </div>
+                </div> -->
             </div>
+            <hr>
             <div class="col-md-12">
                 <div class="row moreMarginTop centerText">
                     <h2><i class="fa fa-trophy twentyPixelsMarginRight"></i> Awards</h2>
@@ -57,30 +76,23 @@
                 <div class="row moreMarginTop centerText">
                     <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
                         <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{award.photo}}" ui-sref="award({id:award._id})">
-                        <h3 class="regularFont moreMarginTop" ui-sref="award({id:award._id})">{{award.name}}</h3>
+                        <h3 class="regularFont moreMarginTop" ui-sref="award({id:award._id})">
+                        <!-- {{award.name}} -->
+                        </h3>
                     </div>
                 </div>
-                <div class="row moreMarginTop centerText">
+                <!-- <div class="row moreMarginTop centerText">
                     <button class="btn btn-view" ui-sref="award">view all awards</button>
-                </div>
+                </div> -->
             </div>
-            <div class="col-md-12">
-                <div class="row moreMarginTop centerText">
-                    <h2><i class="fa fa-tags twentyPixelsMarginRight"></i> Tags</h2>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row moreMarginTop centerText">
-                    <div class=row ng-repeat="technology in project.technologies" ng-if="$index%2==0">
-                        <div class="col-xs-6" ng-repeat="i in [$index,$index+1]" ng-if="project.technologies[i]!=null">
-                            <button class="btn btn-view tagButton regularFont" ui-sref="technology({id:project.technologies[i]._id})">{{project.technologies[i].name}}</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row moreMarginTop centerText">
-                    <button class="btn btn-view" ui-sref="technology">view all tags</button>
-                </div>
+            <hr>
+           
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="row moreMarginTop centerText">
+                <img class="img-center projectPhoto noBorderRadius" src="{{project.screenshot}}">
             </div>
         </div>
+    </div>
     </div>
 </div>

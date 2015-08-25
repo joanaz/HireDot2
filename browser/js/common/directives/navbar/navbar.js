@@ -51,10 +51,10 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
             };
 
             setUser();
-            console.log(scope.user)
-            console.log(scope.isAdmin)
-            console.log(scope.isStudent)
-            console.log(scope.isCompany)
+            // console.log(scope.user)
+            // console.log(scope.isAdmin)
+            // console.log(scope.isStudent)
+            // console.log(scope.isCompany)
 
             $rootScope.$on(AUTH_EVENTS.loginSuccess, setUser);
             $rootScope.$on(AUTH_EVENTS.logoutSuccess, removeUser);
