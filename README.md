@@ -1,4 +1,4 @@
-![Hiredot](http://i.imgur.com/d2OfxQX.png)
+![Hiredot - August 25, 2015](http://i.imgur.com/u9zKkBo.png)
 
 # Hiredot
 
