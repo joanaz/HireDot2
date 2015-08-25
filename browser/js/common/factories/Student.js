@@ -1,4 +1,4 @@
-app.factory('Student', ($http) => {
+app.factory('Student', () => {
     class Person {
 
         constructor(user) {

@@ -98,7 +98,7 @@ app.controller('StudentsController', function($scope, students, companies, Stude
 })
 
 
-app.factory('StudentsFactory', ($http) => {
+app.factory('StudentsFactory', () => {
   class Person {
 
     constructor(user) {

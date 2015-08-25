@@ -21,13 +21,13 @@ module.exports = [{
 }, {
     "name": "Web Audio API"
 }, {
-    "name": 'bitcoinJS'
+    "name": "bitcoinJS"
 }, {
-    "name": 'crypto-hashing'
+    "name": "crypto-hashing"
 }, {
-    "name": 'web workers'
+    "name": "web workers"
 }, {
-    "name": 'mongoDB'
+    "name": "mongoDB"
 }, {
     "name": "Chrome Extension"
 }, {
@@ -43,11 +43,11 @@ module.exports = [{
 }, {
     "name": "MomentJS"
 }, {
-    "name": 'leaflet.js'
+    "name": "leaflet.js"
 }, {
-    "name": 'MapBox'
+    "name": "MapBox"
 }, {
-    "name": 'Google Directions API'
+    "name": "Google Directions API"
 }, {
     "name": "VexFlow"
 }, {

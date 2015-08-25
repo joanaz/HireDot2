@@ -1,4 +1,4 @@
-app.factory('User', function($http, $rootScope) {
+app.factory('User', function($http) {
 
     var getHelperFunction = (role) =>
         $http.get('/api/users?role=' + role)
