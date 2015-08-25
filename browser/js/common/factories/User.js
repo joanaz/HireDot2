@@ -15,7 +15,25 @@ app.factory('User', function($http) {
             getHelperFunction('Company'),
         getUserById: (id) =>
             $http.get('/api/users/' + id)
-            .then(res => res.data)
+            .then(res => res.data),
+        getStudentsAttendingHiringDay: () =>
+            getHelperFunction('Student')
+            .then(students =>
+                students.filter(student =>
+                    student.participateHiringDay)),
+        getCompaniesAttendingHiringDay: () =>
+            getHelperFunction('Company')
+            .then(companies =>
+                companies.filter(company =>
+                    company.participateHiringDay)),
+        savePreferences: (userId, preferences) =>
+            $http.put('/api/users/' + userId, {
+                preferences: preferences
+            }),
+        saveTimeslots: (userId, timeslots) =>
+            $http.put('/api/users/' + userId, {
+                timeslots: timeslots
+            })
 
         // getAwards: () =>
 
