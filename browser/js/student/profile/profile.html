@@ -1,8 +1,9 @@
-<div class="container options v-align middle">
+<div class="container options valign-middle">
     <div class="col-md-12 studentCard">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row moreMarginTop centerText">
-                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{student.github.avatar_url}}" target="_blank">
+                <img ng-if="student.github.avatar_url && !student.photo" src="{{student.github.avatar_url}}" class="img-circle img-responsive img-center studentProfilePhoto" />
+                <img ng-if="student.photo" src="{{student.photo}}" class="img-circle img-responsive img-center studentProfilePhoto" />
             </div>
             <div class="row moreMarginTop title">
                 <h1>{{student.fullName}}</h1>
@@ -37,8 +38,10 @@
                         <h3 class="regularFont">{{project.title}}</h3>
                     </div>
                     <div ng-repeat="technology in project.technologies | limitTo:3">
-                        <div class="col-sm-12 col-md-2">
-                            <button class="btn btn-view btn-sm" ui-sref="tech-projects({id:technology._id})">{{technology.name}}</button>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-view tagButton" ui-sref="tech-projects({id:technology._id})">{{technology.name}}</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,7 +53,8 @@
             </div>
             <!-- PDF -->
             <div class="resumeFile">
-                <iframe ng-src="{{student.resume.url}}" width="100%" height="1100px"></iframe>
+                <!-- <iframe ng-src="{{student.resume.url}}" width="100%" height="1100px"></iframe> -->
+                <iframe ng-src="{{student.resume.url}}" width="100%" height="500px"></iframe>
             </div>
             <!-- To get file URL, upload and share with public using Google Drive. Then preview the document, pop it out so that it goes to a preview window all on its own, and then use the '...' dropdown menu to click 'Embed item...' and copy the URL within the iframe that is provided -->
         </div>

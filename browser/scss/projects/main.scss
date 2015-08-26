@@ -33,3 +33,17 @@
     border-width: 5px;
     border-color: #444;
 }
+
+.projectLogo {
+    border-radius: 100%;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    border-width: 5px;
+    border-color: #444;
+    border-style: solid;
+}
+
+.text-muted {
+    color: gainsboro;
+}
