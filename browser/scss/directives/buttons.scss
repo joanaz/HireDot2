@@ -1,53 +1,53 @@
 .btn-primary {
-    color: white;
-    background-color: #DB2856;
-    border: transparent;
+  color: white;
+  background-color: #DB2856;
+  border: transparent;
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
-    background-color: light(#DB2856, 25%);
+  background-color: lighten(#DB2856, 25%);
 }
 
 .btn-primary:active:hover {
-    color: white;
-    background-color: light(#DB2856, 25%);
-    border-color: #DB2856;
+  color: white;
+  background-color: lighten(#DB2856, 25%);
+  border-color: #DB2856;
 }
 
 .btn.btn-view {
-    border-radius: 30px;
-    border: 2px solid #444;
-    background: white;
+  border-radius: 30px;
+  border: 2px solid #444;
+  background: white;
 }
 
 .btn.btn-view:hover {
-    border: 2px solid #DB2856;
-    background: #DB2856;
-    color: white;
+  border: 2px solid #DB2856;
+  background: #DB2856;
+  color: white;
 }
 
 .btn-standard:hover {
-    color: white;
-    background-color: light(#DB2856, 25%);
-    border-color: #DB2856;
+  color: white;
+  background-color: lighten(#DB2856, 25%);
+  border-color: #DB2856;
 }
 
 button.btn.btn-lg.btn-primary.btn-block {
-    margin-top: 1%;
-    margin-bottom: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 button.btn.btn-view.jobButton.moreMarginTop.regularFont {
-    width: 100%;
-    font-size: inherit;
+  width: 100%;
+  font-size: inherit;
 }
 
 .tagButton {
-    margin-top: 5%;
-    width: 100%;
+  margin-top: 5%;
+  width: 100%;
 }
 
 .positionButton {
-    width: 100%;
+  width: 100%;
 }
