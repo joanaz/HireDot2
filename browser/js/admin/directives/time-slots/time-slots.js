@@ -17,7 +17,8 @@ app.controller('TimeSlotsCtrl', function($scope, students, companies, User) {
 	$scope.companyNumOfTimeSlots = 9;
 	$scope.numCompaniesNeeded = $scope.studentNumOfTimeSlots * $scope.students.length / $scope.companyNumOfTimeSlots;
 
-	$scope.timeslots = Array.apply(null, Array($scope.companyNumOfTimeSlots)).map((n, index) => index + 1)
+	$scope.timeslots = ['13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45', '15:00'];
+	// Array.apply(null, Array($scope.companyNumOfTimeSlots)).map((n, index) => index + 1)
 
 	// $scope.students = TimeSlots.generateStudents();
 	// TimeSlots.seperateStudentsCandidates($scope.students)
