@@ -15,7 +15,8 @@
     <div class=row ng-repeat="student in students track by $index | orderBy: 'lastName'" ng-if="$index%4==0">
         <div class="col-xs-3" ng-repeat="i in [$index,$index+1,$index+2,$index+3]" ng-if="students[i]!=null">
             <div class="panel panel-default bootcards-media studentCard">
-                <img src="{{students[i].github.avatar_url}}" class="img-responsive" ui-sref="student-profile({id:students[i]._id})" />
+                <img ng-if="students[i].github.avatar_url && !students[i].photo" src="{{students[i].github.avatar_url}}" class="img-responsive fixedPhoto" ui-sref="student-profile({id:students[i]._id})" />
+                <img ng-if="students[i].photo" src="{{students[i].photo}}" class="img-responsive fixedPhoto" ui-sref="student-profile({id:students[i]._id})" />
                 <div class="panel-heading" ui-sref="student-profile({id:students[i]._id})">
                     <h3 class="panel-title">{{students[i].fullName}}</h3>
                 </div>

@@ -33,11 +33,11 @@ var schema = new mongoose.Schema({
     }],
     logo: {
         type: String,
-        default: ["http://wiki.solid-run.com/images/7/75/No_image_available.png"]
+        default: ["http://st.depositphotos.com/1987177/3470/v/950/depositphotos_34700099-No-photo-available-or-missing-image.jpg"]
     },
     screenshot: {
         type: String,
-        default: ["http://wiki.solid-run.com/images/7/75/No_image_available.png"]
+        default: ["http://st.depositphotos.com/1987177/3470/v/950/depositphotos_34700099-No-photo-available-or-missing-image.jpg"]
     },
     category: {
         type: String

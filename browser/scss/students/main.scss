@@ -27,14 +27,9 @@ form.searchBar {
     overflow: auto;
 }
 
-.title {
-    a:hover {
-        text-decoration: underline;
-    }
-}
-
 .studentProfilePhoto {
     width: 50%;
+    height: 50%;
 }
 
 .resumeMargin {
@@ -56,12 +51,15 @@ form.searchBar {
 .img-responsive {
     border-radius: 100%;
     display: block;
-    border-style: double;
+    border-style: solid;
     border-width: 5px;
     border-color: #444;
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+}
+
+.fixedPhoto {
+    width: 235px;
+    height: 235px;
 }

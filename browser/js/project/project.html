@@ -5,7 +5,7 @@
     <div class=row ng-repeat="project in projects track by $index" ng-if="$index%4==0">
         <div class="col-xs-3" ng-repeat="i in [$index,$index+1,$index+2,$index+3]" ng-if="projects[i]!=null">
             <div class="panel panel-default bootcards-media studentCard">
-                <img src="{{projects[i].logo}}" class="img-responsive" ui-sref="project-profile({id:projects[i]._id})" />
+                <img src="{{projects[i].logo}}" class="img-responsive fixedPhoto" ui-sref="project-profile({id:projects[i]._id})" />
                 <div class="panel-heading" ui-sref="project-profile({id:projects[i]._id})">
                     <h3 class="panel-title" ui-sref="project-profile({id:projects[i]._id})">{{projects[i].title}}</h3>
                 </div>
