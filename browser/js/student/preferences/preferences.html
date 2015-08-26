@@ -1,59 +1,97 @@
 <div class="container options valign-middle">
     <div class="col-md-12 studentCard">
-        <!-- <ul> -->
-        <!-- <li ng-repeat="student in students" class="row"> -->
-        <!-- <h2>{{user.fullName}}</h2> -->
-        <h2>Your Company Preferences</h2>
-        <h4 class="regularFont moreMarginTop">Your <b>1st</b> choice goes on <b>top</b>.</h4>
-        <div class="row moreMarginTop centerText">
+        <!-- <div ng-repeat="student in students"> -->
+        <div class="row centerText bottom">
+            <h2>Company Preferences</h2>
+            <h3 class="regularFont">Your <b>1st</b> choice goes on <b>top</b>.</h3>
+        </div>
+        <div class="row centerText marginTopBottom">
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <ul ui-sortable class="apps-container" ng-model="user.preferences">
-                    <li ng-repeat="studentCandidate in user.preferences" class="item">
-                        <a ui-sref="student-preferences.company-view({id:studentCandidate._id})">{{studentCandidate.fullName}}</a>
-                    </li>
-                </ul>
+                <div class="row centerText">
+                    <div ui-sortable ng-model="user.preferences">
+                        <div ng-repeat="studentCandidate in user.preferences" class="item">
+                            <a ui-sref="student-preferences.company-view({id:studentCandidate._id})" class="regularFont">
+                                {{studentCandidate.fullName}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class='col-sm-12 col-md-6 col-lg-6'>
+            <div class="col-sm-12 col-md-6 col-lg-6">
                 <ui-view></ui-view>
             </div>
-        </div>
-        <div class="row moreMarginTop centerText">
-            <div class='col-md-12'>
-                <button class="btn btn-view" ng-click="submit()">update preferences</button>
+            <!-- </div> -->
+            <div class="row moreMarginTop centerText">
+                <div class='col-md-12'>
+                    <button class="btn btn-view moreMarginTop" ng-click="submit()">update preferences</button>
+                </div>
             </div>
         </div>
     </div>
-    <!--  <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.potentialCandidates">
+    <!-- <div class="moreMarginTop">
+        <div ng-repeat="company in companies" class="col-md-6">
+            <div class="row moreMarginTop centerText">
+                <h2>{{company.fullName}}'s Student Preferences</h2>
+                <h3 class="regularFont moreMarginTop">Your <b>1st</b> choice goes on <b>top</b>.</h3>
+            </div>
+            <div class="row moreMarginTop centerText">
+                <div ui-sortable ng-model="student.preferences">
+                    <div ng-repeat="studentCandidate in student.preferences" class="item">
+                        <a ui-sref="student-preferences.company-view({id:studentCandidate._id})" class="regularFont">
+                            {{studentCandidate.fullName}}
+                        </a>
+                    </div>
+                </div>
+                <div ui-sortable ng-model="company.preferences" class="apps-container">
+                    <div ng-repeat="companyCandidate in company.preferences" class="item">
+                        <a class="regularFont">
+                            {{companyCandidate.fullName}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- <div class="col-md-12 studentCard">
+    <div class="row moreMarginTop centerText">
+        <h2>Company Preferences</h2>
+    </div>
+    <div class="row">
+        <div ng-repeat="company in companies" class="col-md-4">
+            <div class="row moreMarginTop centerText">
+                {{company.fullName}}
+            </div>
+            <div ui-sortable ng-model="company.preferences" class="list apps-container">
+                <div ng-repeat="companyCandidate in company.preferences" class="item">
+                    <a class="regularFont">
+                            {{companyCandidate.fullName}}
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!--  <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.potentialCandidates">
         <li ng-repeat="potentialCandidate in student.potentialCandidates" class="item">{{potentialCandidate.name}}</li>
       </ul> -->
-    <!-- <ul class="col-md-4 list logList">
+<!-- <ul class="col-md-4 list logList">
         <li ng-repeat="entry in student.preferences track by $index" class="logItem">
           {{entry.name}}
         </li>
       </ul> -->
-    <!-- </li> -->
-    <!-- </ul> -->
-    <!-- <h1>Companies</h1>
-  <div class="row">
-  <ul>
-    <li ng-repeat="company in companies" class="col-md-4 ">{{company.fullName}}
-      <ul ui-sortable ng-model="company.preferences" class="list apps-container">
-        <li ng-repeat="companyCandidate in company.preferences" class="item">{{companyCandidate.fullName}}</li>
-      </ul>
-    </li>
-  </ul>
- </div> -->
-    <!-- <button class="btn btn-default" ng-click="submit()">Submit</button> -->
-    <!-- <button class="btn btn-default" ng-click="match()">Stable Marriage</button>
+<!-- </li> -->
+<!-- </ul> -->
+<!-- <button class="btn btn-default" ng-click="submit()">Submit</button> -->
+<!-- <button class="btn btn-default" ng-click="match()">Stable Marriage</button>
   <button class="btn btn-default" ng-click="arrange()">Speed Dates</button>
  -->
-    <!-- <ul> -->
-    <!-- <li ng-repeat="sortingLog in sortingLogs"> -->
-    <!-- <ul class="list logList">
+<!-- <ul> -->
+<!-- <li ng-repeat="sortingLog in sortingLogs"> -->
+<!-- <ul class="list logList">
     <li ng-repeat="entry in sortingLog track by $index" class="logItem">
       {{entry}}
     </li>
   </ul> -->
-    <!-- </li> -->
-    <!-- </ul> -->
-</div>
+<!-- </li> -->
+<!-- </ul> -->

@@ -21,13 +21,13 @@ app.controller('PreferencesController', function($scope, students, companies, us
     $scope.user = user;
 
     console.log(user)
-        // $scope.students.forEach(student => {
-        //     student.preferences = $scope.companies.slice()
-        //         // student.sortableOptions = {
-        //         //     // placeholder: "app",
-        //         //     connectWith: ".student-" + index
-        //         // }
-        // });
+        $scope.students.forEach(student => {
+            student.preferences = $scope.companies.slice()
+                // student.sortableOptions = {
+                //     // placeholder: "app",
+                //     connectWith: ".student-" + index
+                // }
+        });
 
     // let preferences = $scope.students[0].preferences.map(preference => preference._id)
     // PreferencesFactory.savePreferences($scope.students[0]._id, preferences)
