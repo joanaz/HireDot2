@@ -25,7 +25,7 @@ module.exports = [{
 }, {
     "fullName": "Do Something",
     "role": "Company",
-    "photo": "http://forge.dosomething.org/resources/ds-logo-highres.png",
+    "photo": "https://lh3.googleusercontent.com/-UOEmRH7BWMU/AAAAAAAAAAI/AAAAAAAAAAA/xbTo2c4KFjE/s0-c-k-no-ns/photo.jpg",
     "website": "https://www.dosomething.org/",
     "angellist": "https://angel.co/dosomething-org",
     "participateHiringDay": true
@@ -81,21 +81,21 @@ module.exports = [{
 }, {
     "fullName": "Accenture",
     "role": "Company",
-    "photo": "http://picsbelgium.be/wp-content/uploads/2012/07/accenture-logo.jpg",
+    "photo": "http://education-and-career.com/wp-content/uploads/2015/03/accenture2.png",
     "website": "https://www.accenture.com/us-en/careers",
     "angellist": "https://angel.co/accenture",
     "participateHiringDay": true
 }, {
     "fullName": "American Express",
     "role": "Company",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/American_Express_logo.svg/1000px-American_Express_logo.svg.png",
+    "photo": "http://2.bp.blogspot.com/-Aj00BsuZeUI/VAU1EqgY-MI/AAAAAAAANt0/PrSGPrP_QHk/s1600/Amex.png",
     "website": "https://careers.americanexpress.com/",
     "angellist": "https://angel.co/american-express",
     "participateHiringDay": true
 }, {
     "fullName": "Visa",
     "role": "Company",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Visa_2014_logo_detail.svg/2000px-Visa_2014_logo_detail.svg.png",
+    "photo": "https://pbs.twimg.com/profile_images/593186410535849984/gELngik-.jpg",
     "website": "http://usa.visa.com/careers/index.jsp?n=1",
     "angellist": "https://angel.co/visa",
     "participateHiringDay": true

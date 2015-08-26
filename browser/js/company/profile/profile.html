@@ -36,11 +36,9 @@
             <div class="row moreMarginTop title centerText">
                 <div class="col-md-12">
                     <div class="col-md-6" ng-repeat="position in company.openPositions">
-                        <div href="{{position.url}}" target="_blank">
-                            <button class="btn btn-view jobButton moreMarginTop regularFont">
-                                {{position.title}}
-                            </button>
-                        </div>
+                        <a class="btn btn-view jobButton moreMarginTop regularFont positionButton" href="{{position.url}}" target="_blank">
+                            {{position.title}}
+                        </a>
                     </div>
                 </div>
             </div>
