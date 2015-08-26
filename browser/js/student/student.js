@@ -8,5 +8,5 @@ app.config(function($stateProvider) {
     controller: ($scope, students) => {
       $scope.students = students;
     }
-  })
+  });
 });

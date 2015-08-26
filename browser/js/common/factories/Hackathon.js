@@ -3,7 +3,7 @@ app.factory('Hackathon', ($http) => {
         getHackathons: () =>
             $http.get('/api/hackathons/')
             .then(res => res.data),
-        getHackathon: (id) =>
+        getHackathonById: (id) =>
             $http.get('/api/hackathons/' + id)
             .then(res => res.data)
     };

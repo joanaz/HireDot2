@@ -1,14 +1,14 @@
 <div class="container options valign-middle">
     <div class="col-md-12 studentCard">
-        <!-- <ul> -->
-        <!-- <li ng-repeat="student in students" class="row"> -->
-        <!-- <h2>{{user.fullName}}</h2> -->
+        <ul>
+        <li ng-repeat="student in students" class="row">
+        <h2>{{student.fullName}}</h2>
         <h2>Your Company Preferences</h2>
         <h4 class="regularFont moreMarginTop">Your <b>1st</b> choice goes on <b>top</b>.</h4>
         <div class="row moreMarginTop centerText">
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <ul ui-sortable class="apps-container" ng-model="user.preferences">
-                    <li ng-repeat="studentCandidate in user.preferences" class="item">
+                <ul ui-sortable class="apps-container" ng-model="student.preferences">
+                    <li ng-repeat="studentCandidate in student.preferences" class="item">
                         <a ui-sref="student-preferences.company-view({id:studentCandidate._id})">{{studentCandidate.fullName}}</a>
                     </li>
                 </ul>
@@ -33,7 +33,7 @@
       </ul> -->
     <!-- </li> -->
     <!-- </ul> -->
-    <!-- <h1>Companies</h1>
+    <h1>Companies</h1>
   <div class="row">
   <ul>
     <li ng-repeat="company in companies" class="col-md-4 ">{{company.fullName}}
@@ -42,7 +42,7 @@
       </ul>
     </li>
   </ul>
- </div> -->
+ </div>
     <!-- <button class="btn btn-default" ng-click="submit()">Submit</button> -->
     <!-- <button class="btn btn-default" ng-click="match()">Stable Marriage</button>
   <button class="btn btn-default" ng-click="arrange()">Speed Dates</button>
