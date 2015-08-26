@@ -2,15 +2,11 @@ app.config(function($stateProvider) {
     $stateProvider.state('award', {
         url: '/award',
         templateUrl: 'js/award/award.html',
-        controller: 'AwardController',
         resolve: {
-            awards: (Award) =>
-                Award.getAwards()
+            awards: (Award) => Award.getAwards()
+        },
+        controller: ($scope, awards) => {
+            $scope.awards = awards;
         }
     });
-});
-
-app.controller('AwardController', function($scope, awards) {
-    console.log(awards);
-    $scope.awards = awards;
 });

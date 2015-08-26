@@ -38,7 +38,7 @@
                     </div>
                     <div ng-repeat="technology in project.technologies | limitTo:3">
                         <div class="col-sm-12 col-md-2">
-                            <button class="btn btn-view btn-sm" ui-sref="technology({id:technology._id})">{{technology.name}}</button>
+                            <button class="btn btn-view btn-sm" ui-sref="tech-projects({id:technology._id})">{{technology.name}}</button>
                         </div>
                     </div>
                 </div>

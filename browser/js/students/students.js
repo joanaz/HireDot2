@@ -1,199 +1,199 @@
-app.config(function($stateProvider) {
-  $stateProvider.state('students', {
-    url: '/students',
-    templateUrl: 'js/students/students.html',
-    controller: 'StudentsController',
-    resolve: {
-      students: (UsersFactory) =>
-        UsersFactory.getStudents(),
-      companies: (UsersFactory) =>
-        UsersFactory.getCompanies()
-    }
-  })
-});
+// app.config(function($stateProvider) {
+//   $stateProvider.state('students', {
+//     url: '/students',
+//     templateUrl: 'js/students/students.html',
+//     controller: 'StudentsController',
+//     resolve: {
+//       students: (UsersFactory) =>
+//         UsersFactory.getStudents(),
+//       companies: (UsersFactory) =>
+//         UsersFactory.getCompanies()
+//     }
+//   })
+// });
 
-app.controller('StudentsController', function($scope, students, companies, StudentsFactory) {
-  // console.log("students", students)
-  $scope.students = students.map(student => StudentsFactory.createPerson(student))
-    // $scope.students = students;
-  $scope.companies = companies.map(company => StudentsFactory.createPerson(company));
+// app.controller('StudentsController', function($scope, students, companies, StudentsFactory) {
+//   // console.log("students", students)
+//   $scope.students = students.map(student => StudentsFactory.createPerson(student))
+//     // $scope.students = students;
+//   $scope.companies = companies.map(company => StudentsFactory.createPerson(company));
 
-  $scope.students.forEach((student, index) => {
-    student.potentialCandidates = $scope.companies.slice()
-    student.sortableOptions = {
-      // placeholder: "app",
-      connectWith: ".student-" + index
-    }
-  });
+//   $scope.students.forEach((student, index) => {
+//     student.potentialCandidates = $scope.companies.slice()
+//     student.sortableOptions = {
+//       // placeholder: "app",
+//       connectWith: ".student-" + index
+//     }
+//   });
 
-  console.log($scope.students[0])
+//   console.log($scope.students[0])
 
-  $scope.submit = () => {
-    console.log($scope.companies[0].candidates)
-    console.log("studnet", $scope.students[4].candidates)
+//   $scope.submit = () => {
+//     console.log($scope.companies[0].candidates)
+//     console.log("studnet", $scope.students[4].candidates)
 
-    $scope.companies.forEach(company => {
-      company.candidates = []
-      $scope.students.forEach(student => {
-        if (student.candidates.some(candidate => candidate.name === company.name)) {
-          company.candidates.push(student)
-        }
-      })
-    })
-    console.log("after studnet", $scope.students[4].candidates)
+//     $scope.companies.forEach(company => {
+//       company.candidates = []
+//       $scope.students.forEach(student => {
+//         if (student.candidates.some(candidate => candidate.name === company.name)) {
+//           company.candidates.push(student)
+//         }
+//       })
+//     })
+//     console.log("after studnet", $scope.students[4].candidates)
 
-    console.log($scope.companies[0].candidates)
-  }
-
-
-  // for (let i = 0; i < $scope.students.length; i++) {
-  //   $scope.students[i].candidates = $scope.companies.slice()
-  // }
+//     console.log($scope.companies[0].candidates)
+//   }
 
 
-  // console.log($scope.companies[0])
-
-  // console.log($scope.companies[0].candidates[0])
-
-  $scope.sortingLog = []
-
-  $scope.logModels = () => {
-    // $scope.sortingLog = [];
-    for (let i = 0; i < $scope.students.length; i++) {
-      let logEntry = $scope.students[i].candidates.map(x => x.name).join(', ');
-      logEntry = 'student ' + $scope.students[i].name + ': ' + logEntry;
-      $scope.sortingLog.push(logEntry);
-    }
-    for (let i = 0; i < $scope.companies.length; i++) {
-      let logEntry = $scope.companies[i].candidates.map(x => x.name).join(', ');
-      logEntry = 'company ' + $scope.companies[i].name + ': ' + logEntry;
-      $scope.sortingLog.push(logEntry);
-    }
-  };
+//   // for (let i = 0; i < $scope.students.length; i++) {
+//   //   $scope.students[i].candidates = $scope.companies.slice()
+//   // }
 
 
-  $scope.match = () => {
+//   // console.log($scope.companies[0])
 
-    //smaller set has advantage
-    var smallerSet = $scope.companies
-    if ($scope.students.length <= $scope.companies.length)
-      smallerSet = $scope.students
+//   // console.log($scope.companies[0].candidates[0])
 
-    StudentsFactory.engageEveryone(smallerSet)
+//   $scope.sortingLog = []
 
-    $scope.sortingLog = smallerSet.map(user => user.name + " is engaged to " + user.fiance.name);
-
-    $scope.sortingLog.push("Stable = ", StudentsFactory.isStable($scope.students, $scope.companies) ? "Yes" : "No");
-
-    // $scope.companies[0].swapWith($scope.companies[1]);
-
-    // $scope.sortingLog.push("Stable = ", StudentsFactory.isStable($scope.students, $scope.companies) ? "Yes" : "No");
-  }
-
-  $scope.arrange = () => {
-    var numOfSlots = 3
-    StudentsFactory.arrangeEveryone(numOfSlots)
-      // $scope.sortingLogs = []
-  }
-})
+//   $scope.logModels = () => {
+//     // $scope.sortingLog = [];
+//     for (let i = 0; i < $scope.students.length; i++) {
+//       let logEntry = $scope.students[i].candidates.map(x => x.name).join(', ');
+//       logEntry = 'student ' + $scope.students[i].name + ': ' + logEntry;
+//       $scope.sortingLog.push(logEntry);
+//     }
+//     for (let i = 0; i < $scope.companies.length; i++) {
+//       let logEntry = $scope.companies[i].candidates.map(x => x.name).join(', ');
+//       logEntry = 'company ' + $scope.companies[i].name + ': ' + logEntry;
+//       $scope.sortingLog.push(logEntry);
+//     }
+//   };
 
 
-app.factory('StudentsFactory', () => {
-  class Person {
+//   $scope.match = () => {
 
-    constructor(user) {
-      this.name = user.name;
-      this.fiance = null;
-      this.candidates = user.candidates;
-      this.candidateIndex = 0;
-    }
+//     //smaller set has advantage
+//     var smallerSet = $scope.companies
+//     if ($scope.students.length <= $scope.companies.length)
+//       smallerSet = $scope.students
 
-    rank(p) {
-      for (let i = 0; i < this.candidates.length; i++)
-        if (this.candidates[i] === p) return i;
-      return this.candidates.length + 1;
-    }
+//     StudentsFactory.engageEveryone(smallerSet)
 
-    prefers(p) {
-      return this.rank(p) < this.rank(this.fiance);
-    }
+//     $scope.sortingLog = smallerSet.map(user => user.name + " is engaged to " + user.fiance.name);
 
-    nextCandidate() {
-      if (this.candidateIndex >= this.candidates.length) return null;
-      return this.candidates[this.candidateIndex++];
-    }
+//     $scope.sortingLog.push("Stable = ", StudentsFactory.isStable($scope.students, $scope.companies) ? "Yes" : "No");
 
-    engageTo(p) {
-      if (p.fiance) {
-        // console.log("engageTo",p.fiance.fiance.name)
-        // console.log("here")
+//     // $scope.companies[0].swapWith($scope.companies[1]);
 
-        p.fiance.fiance = null;
-      }
+//     // $scope.sortingLog.push("Stable = ", StudentsFactory.isStable($scope.students, $scope.companies) ? "Yes" : "No");
+//   }
 
-      p.fiance = this;
-      if (this.fiance) this.fiance.fiance = null;
-      this.fiance = p;
-      // console.log(this.name, this.fiance.name)
-    }
-
-    swapWith(p) {
-      console.log("%s & %s swap partners", this.name, p.name);
-      var thisFiance = this.fiance;
-      var pFiance = p.fiance;
-      this.engageTo(pFiance);
-      p.engageTo(thisFiance);
-    }
-  }
+//   $scope.arrange = () => {
+//     var numOfSlots = 3
+//     StudentsFactory.arrangeEveryone(numOfSlots)
+//       // $scope.sortingLogs = []
+//   }
+// })
 
 
-  return {
-    createPerson: (user) => {
-      var person = new Person(user)
-      return person
-    },
-    isStable: (guys, gals) => {
-      for (var i = 0; i < guys.length; i++)
-        for (var j = 0; j < gals.length; j++)
-          if (guys[i].prefers(gals[j]) && gals[j].prefers(guys[i]))
-            return false;
-      return true;
-    },
-    engageEveryone: (guys) => {
-      guys.forEach(guy => {
-        if (guy.fiance) {
-          guy.fiance.fiance = null
-          guy.fiance.candidateIndex = 0
-        }
-        guy.fiance = null;
-        guy.candidateIndex = 0;
-      })
+// app.factory('StudentsFactory', () => {
+//   class Person {
 
-      var done;
-      do {
-        done = true;
-        for (var i = 0; i < guys.length; i++) {
-          var guy = guys[i];
+//     constructor(user) {
+//       this.name = user.name;
+//       this.fiance = null;
+//       this.candidates = user.candidates;
+//       this.candidateIndex = 0;
+//     }
 
-          console.log(guy.name, guy.candidateIndex, guy.fiance)
+//     rank(p) {
+//       for (let i = 0; i < this.candidates.length; i++)
+//         if (this.candidates[i] === p) return i;
+//       return this.candidates.length + 1;
+//     }
 
-          if (!guy.fiance) {
+//     prefers(p) {
+//       return this.rank(p) < this.rank(this.fiance);
+//     }
 
-            done = false;
+//     nextCandidate() {
+//       if (this.candidateIndex >= this.candidates.length) return null;
+//       return this.candidates[this.candidateIndex++];
+//     }
 
-            var gal = guy.nextCandidate();
-            // console.log(gal.name)
-            if (!gal.fiance || gal.prefers(guy)) {
+//     engageTo(p) {
+//       if (p.fiance) {
+//         // console.log("engageTo",p.fiance.fiance.name)
+//         // console.log("here")
 
-              guy.engageTo(gal);
-              // console.log("engage", guy.name, gal.name)
-            }
-          }
-          // console.log(guy.name, guy.fiance.name)
-        }
-      } while (!done);
-    },
-    arrangeEveryone: (numOfSlots) => {},
-    saveCandidates: () => {}
-  }
-})
+//         p.fiance.fiance = null;
+//       }
+
+//       p.fiance = this;
+//       if (this.fiance) this.fiance.fiance = null;
+//       this.fiance = p;
+//       // console.log(this.name, this.fiance.name)
+//     }
+
+//     swapWith(p) {
+//       console.log("%s & %s swap partners", this.name, p.name);
+//       var thisFiance = this.fiance;
+//       var pFiance = p.fiance;
+//       this.engageTo(pFiance);
+//       p.engageTo(thisFiance);
+//     }
+//   }
+
+
+//   return {
+//     createPerson: (user) => {
+//       var person = new Person(user)
+//       return person
+//     },
+//     isStable: (guys, gals) => {
+//       for (var i = 0; i < guys.length; i++)
+//         for (var j = 0; j < gals.length; j++)
+//           if (guys[i].prefers(gals[j]) && gals[j].prefers(guys[i]))
+//             return false;
+//       return true;
+//     },
+//     engageEveryone: (guys) => {
+//       guys.forEach(guy => {
+//         if (guy.fiance) {
+//           guy.fiance.fiance = null
+//           guy.fiance.candidateIndex = 0
+//         }
+//         guy.fiance = null;
+//         guy.candidateIndex = 0;
+//       })
+
+//       var done;
+//       do {
+//         done = true;
+//         for (var i = 0; i < guys.length; i++) {
+//           var guy = guys[i];
+
+//           console.log(guy.name, guy.candidateIndex, guy.fiance)
+
+//           if (!guy.fiance) {
+
+//             done = false;
+
+//             var gal = guy.nextCandidate();
+//             // console.log(gal.name)
+//             if (!gal.fiance || gal.prefers(guy)) {
+
+//               guy.engageTo(gal);
+//               // console.log("engage", guy.name, gal.name)
+//             }
+//           }
+//           // console.log(guy.name, guy.fiance.name)
+//         }
+//       } while (!done);
+//     },
+//     arrangeEveryone: (numOfSlots) => {},
+//     saveCandidates: () => {}
+//   }
+// })

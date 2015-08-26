@@ -1,11 +1,11 @@
-<div class="col-md-3 regularFont bottom">
-    <div class="row">
-        <img src="{{award.photo}}" class="img-responsive" />
+<div class="col-xs-3">
+  <div class="panel panel-default bootcards-media studentCard initialFontSize" ui-sref="awarded-projects({id:award._id})">
+    <img src="{{award.photo}}" class="img-responsive" />
+    <div class="panel-heading">
+        <h3 class="panel-title">{{award.name}}</h3>
     </div>
-    <div class="row">
-        <h1>{{award.name}}</h1>
+    <div class="panel-body regularFont">
+        {{award.description}}
     </div>
-    <div class="row">
-        <p class="initialFontSize">{{award.description}}</p>
-    </div>
+  </div>
 </div>

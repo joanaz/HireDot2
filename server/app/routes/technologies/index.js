@@ -2,30 +2,30 @@ var router = require('express').Router();
 module.exports = router;
 var _ = require('lodash');
 var mongoose = require('mongoose');
-var Award = mongoose.model('Award');
+var Technology = mongoose.model('Technology');
 var Project = mongoose.model('Project');
 
 router.get('/', function(req, res, next) {
-    Award.find(req.query).exec()
-        .then(function(awards) {
-            res.json(awards);
+    Technology.find(req.query).exec()
+        .then(function(technologies) {
+            res.json(technologies);
         })
         .then(null, next);
 });
 
 router.post('/', function(req, res, next) {
-    Award.create(req.body)
-        .then(function(award) {
-            res.status(201).json(award);
+    Technology.create(req.body)
+        .then(function(technology) {
+            res.status(201).json(technology);
         })
         .then(null, next);
 });
 
 router.param('id', function(req, res, next, id) {
-    Award.findById(id).exec()
-        .then(function(award) {
-            if (!award) throw Error('Not Found');
-            req.award = award;
+    Technology.findById(id).exec()
+        .then(function(technology) {
+            if (!technology) throw Error('Not Found');
+            req.technology = technology;
             next();
         })
         .then(null, function(e) {
@@ -36,12 +36,12 @@ router.param('id', function(req, res, next, id) {
 });
 
 router.get('/:id', function(req, res) {
-    res.json(req.award);
+    res.json(req.technology);
 });
 
-router.get('/:id/projects', function(req, res) {
+router.get('/:id/projects', function(req, res, next) {
     Project.find({
-            awards: {
+            technologies: {
                 $elemMatch: {
                     $eq: req.params.id
                 }
@@ -52,19 +52,20 @@ router.get('/:id/projects', function(req, res) {
         .then(projects => {
             res.json(projects)
         })
+        .then(null, next);
 });
 
 router.put('/:id', function(req, res, next) {
-    _.extend(req.award, req.body);
-    req.award.save()
-        .then(function(award) {
-            res.json(award);
+    _.extend(req.technology, req.body);
+    req.technology.save()
+        .then(function(technology) {
+            res.json(technology);
         })
         .then(null, next);
 });
 
 router.delete('/:id', function(req, res, next) {
-    req.award.remove()
+    req.technology.remove()
         .then(function() {
             res.status(204).end();
         })

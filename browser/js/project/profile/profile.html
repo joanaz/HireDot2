@@ -17,7 +17,7 @@
                 <div class="row moreMarginTop centerText">
                     <div class=row ng-repeat="technology in project.technologies" ng-if="$index%2==0">
                         <div class="col-xs-6" ng-repeat="i in [$index,$index+1]" ng-if="project.technologies[i]!=null">
-                            <button class="btn btn-view tagButton regularFont" ui-sref="technology({id:project.technologies[i]._id})">
+                            <button class="btn btn-view tagButton regularFont" ui-sref="tech-projects({id:project.technologies[i]._id})">
                             {{project.technologies[i].name}}
                             </button>
                         </div>

@@ -37,7 +37,7 @@ router.param('id', function(req, res, next, id) {
         });
 });
 
-router.get('/:id', function(req, res) {
+router.get('/:id', function(req, res, next) {
     User.populate(req.user, {
         path: 'projects.technologies',
         model: 'Technology'
