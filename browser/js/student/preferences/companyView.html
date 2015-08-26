@@ -1,61 +1,53 @@
-<div class="container options valign-middle marginTop">
-    <div class="col-md-12 studentCard">
+<div class="marginTopBottom">
+    <div class="row moreMarginTop centerText">
+        <img class="img-circle img-responsive img-center companyViewPhoto" src="{{company.photo}}" href="{{company.website}}" target="_blank">
+    </div>
+    <div class="row moreMarginTop title" href="{{company.website}}" target="_blank">
+        <h1>{{company.fullName}}</h1>
+    </div>
+    <div class="row moreMarginTop">
+        <h2 class="regularFont">{{company.description}}</h2>
+    </div>
+    <div class="row moreMarginTop">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="row moreMarginTop centerText">
-                <img class="img-circle img-responsive img-center studentProfilePhoto" src="{{company.photo}}" href="{{company.website}}" target="_blank">
-            </div>
-            <div class="row moreMarginTop title" href="{{company.website}}" target="_blank">
-                <h1>{{company.name}}</h1>
-            </div>
-            <div class="row moreMarginTop">
-                <h2 class="regularFont">{{company.description}}</h2>
-            </div>
-            <div class="row moreMarginTop">
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="{{company.website}}" target="_blank">
-                        <span class="fa-stack fa-3x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
-                            </span>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <a href="{{company.angellist}}" target="_blank">
-                        <span class="fa-stack fa-3x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-angellist fa-stack-1x fa-inverse"></i>
-                            </span>
-                    </a>
-                </div>
-            </div>
-        <!-- </div> -->
-        <!-- <div class="col-sm-12 col-md-6 col-lg-6"> -->
-            <div class="row moreMarginTop title centerText">
-                <h2><i class="fa fa-briefcase twentyPixelsMarginRight"></i> Available Positions</h2>
-            </div>
-            <div class="row moreMarginTop title centerText">
-                <div class="col-md-12">
-                    <div class="col-md-6" ng-repeat="position in company.openPositions">
-                        <div href="{{position.url}}" target="_blank">
-                            <button class="btn btn-view jobButton moreMarginTop regularFont">
-                                {{position.title}}
-                            </button>
-                        </div>
-                    </div>
+            <a href="{{company.website}}" target="_blank">
+                <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <a href="{{company.angellist}}" target="_blank">
+                <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-angellist fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+        </div>
+    </div>
+    <div ng-show="company.openPositions.length >= 1">
+        <div class="row moreMarginTop title centerText">
+            <h2><i class="fa fa-briefcase twentyPixelsMarginRight"></i> Available Positions</h2>
+        </div>
+        <div class="row moreMarginTop title centerText">
+            <div class="col-md-12">
+                <div class="col-md-6" ng-repeat="position in company.openPositions">
+                    <button class="btn btn-view jobButton moreMarginTop regularFont" href="{{position.url}}" target="_blank">
+                        {{position.title}}
+                    </button>
                 </div>
             </div>
-            <div class="row moreMarginTop title centerText">
-                <h2><i class="fa fa-users twentyPixelsMarginRight"></i> Previous Hires</h2>
-            </div>
-            <div class="row moreMarginTop centerText">
-                <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="hire in company.hiredAlumni">
-                    <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{hire.photo}}">
-                    <h3 class="moreMarginTop regularFont" ui-sref="student-profile">{{hire.fullName}}</h3>
-                </div>
-                <!-- <div class="col-sm-12 col-md-6 col-lg-6">
-                    <img class="img-circle img-responsive img-center teamMemberPhoto" src="http://www.fullstackacademy.com/img/team/JF.jpg">
-                    <h3 class="marginTop regularFont"><a ui-sref="student-profile">Jimmy Clone</a></h3>
-                </div> -->
+        </div>
+    </div>
+    <div ng-show="company.hiredAlumni.length >= 1">
+        <div class="row moreMarginTop title centerText">
+            <h2><i class="fa fa-users twentyPixelsMarginRight"></i> Previous Hires</h2>
+        </div>
+        <div class="row moreMarginTop centerText">
+            <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="hire in company.hiredAlumni">
+                <img class="img-circle img-responsive img-center teamMemberPhoto" src="{{hire.photo}}">
+                <h3 class="moreMarginTop regularFont" ui-sref="student-profile">{{hire.fullName}}</h3>
             </div>
         </div>
     </div>
