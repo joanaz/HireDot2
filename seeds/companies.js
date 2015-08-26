@@ -23,7 +23,7 @@ module.exports = [{
   "participateHiringDay": true
 }, {
   "name": "Do Something",
-  "photo": "https://yt3.ggpht.com/-UOEmRH7BWMU/AAAAAAAAAAI/AAAAAAAAAAA/xbTo2c4KFjE/s900-c-k-no/photo.jpg",
+  "photo": "https://lh3.googleusercontent.com/-UOEmRH7BWMU/AAAAAAAAAAI/AAAAAAAAAAA/xbTo2c4KFjE/s0-c-k-no-ns/photo.jpg",
   "website": "https://www.dosomething.org/",
   "angellist": "https://angel.co/dosomething-org",
   "participateHiringDay": true
@@ -71,19 +71,19 @@ module.exports = [{
   "participateHiringDay": true
 }, {
   "name": "Accenture",
-  "photo": "http://www.crisp-research.com/wp-content/uploads/2014/01/accenture2.png",
+  "photo": "http://education-and-career.com/wp-content/uploads/2015/03/accenture2.png",
   "website": "https://www.accenture.com/us-en/careers",
   "angellist": "https://angel.co/accenture",
   "participateHiringDay": true
 }, {
   "name": "American Express",
-  "photo": "http://img1.wikia.nocookie.net/__cb20120526223909/logopedia/images/c/c2/American_Express_card_logo.png",
+  "photo": "http://2.bp.blogspot.com/-Aj00BsuZeUI/VAU1EqgY-MI/AAAAAAAANt0/PrSGPrP_QHk/s1600/Amex.png",
   "website": "https://careers.americanexpress.com/",
   "angellist": "https://angel.co/american-express",
   "participateHiringDay": true
 }, {
   "name": "Visa",
-  "photo": "https://yt3.ggpht.com/-Kp48LAJTzRY/AAAAAAAAAAI/AAAAAAAAAAA/xyAJ-blO9s8/s900-c-k-no/photo.jpg",
+  "photo": "https://pbs.twimg.com/profile_images/593186410535849984/gELngik-.jpg",
   "website": "http://usa.visa.com/careers/index.jsp?n=1",
   "angellist": "https://angel.co/visa",
   "participateHiringDay": true
