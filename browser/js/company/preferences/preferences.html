@@ -1,9 +1,38 @@
-<div class="container">
-  <h1>Preferences</h1>
+<div class="container options valign-middle">
+    <div class="col-md-12 studentCard">
+<div class="row centerText bottom">
+            <h2>Student Preferences</h2>
+            <h3 class="regularFont">Your <b>1st</b> choice goes on <b>top</b>.</h3>
+        </div>
+
+<div class="row centerText marginTopBottom">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="row centerText">
+                    <div ui-sortable ng-model="user.preferences">
+                        <div ng-repeat="studentCandidate in user.preferences" class="item">
+                            <a ui-sref="company-preferences.student-view({id:studentCandidate._id})" class="regularFont">
+                                {{studentCandidate.fullName}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <ui-view></ui-view>
+            </div>
+            <!-- </div> -->
+            <div class="row moreMarginTop centerText">
+                <div class='col-md-12'>
+                    <button class="btn btn-view moreMarginTop" ng-click="submit()">update preferences</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
   <!-- <ul> -->
     <!-- <li ng-repeat="student in students" class="row"> -->
       <!-- <h2>{{user.fullName}}</h2> -->
-<div class="row">
+<!-- <div class="row">
 <div class="col-md-4">
   <ul ui-sortable class="apps-container" ng-model="user.preferences">
     <li ng-repeat="studentCandidate in user.preferences" class="item">
@@ -14,7 +43,7 @@
   <div class='col-md-8'>
     <ui-view></ui-view>
   </div>
-  </div>
+  </div> -->
      <!--  <ul ui-sortable="student.sortableOptions" class="col-md-4 apps-container list student-{{$index}}" ng-model="student.potentialCandidates">
         <li ng-repeat="potentialCandidate in student.potentialCandidates" class="item">{{potentialCandidate.name}}</li>
       </ul> -->
@@ -28,7 +57,7 @@
     <!-- </li> -->
   <!-- </ul> -->
 
-  <button class="btn btn-view" ng-click="submit()">Update Preferences</button>
+  <!-- <button class="btn btn-view" ng-click="submit()">Update Preferences</button>-->
 
   <!-- <h1>Companies</h1>
   <div class="row">
@@ -56,4 +85,4 @@
   <!-- </li> -->
   <!-- </ul> -->
 
-</div>
+<!-- </div> -->

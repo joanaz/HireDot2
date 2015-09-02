@@ -33,7 +33,12 @@ app.factory('User', function($http) {
         saveTimeslots: (userId, timeslots) =>
             $http.put('/api/users/' + userId, {
                 timeslots: timeslots
-            })
+            }),
+        // changeCompanyPhoto: (userId, photo) => {
+        //     $http.put('/api/users/' + userId, {
+        //         photo: photo
+        //     })
+        // }
 
         // getAwards: () =>
 

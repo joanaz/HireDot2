@@ -50,17 +50,26 @@
                     </a>
                 </li>
                 <li ng-show="user && isAdmin">
-                    <a ui-sref="time-slots" rel="tooltip" tooltip="hello" title="Hiring Day">
+                    <a ui-sref="admin-time-slots" rel="tooltip" tooltip="hello" title="Hiring Day">Hiring Day</a>
+                </li>
+                <li ng-show="user && isStudent">
+                    <a ui-sref="user-time-slots" rel="tooltip" tooltip="hello" title="Hiring Day">Hiring Day</a>
+                </li>
+                <li ng-show="user && isCompany">
+                    <a ui-sref="user-time-slots" rel="tooltip" tooltip="hello" title="Hiring Day">Hiring Day</a>
+                </li>
+                <li ng-show="user && isAdmin">
+                    <a ui-sref="time-slots" rel="tooltip" tooltip="hello" title="Preferences">
                         <!--<i class="fa fa-briefcase marginRight"></i> Hiring Day -->Hello, {{user.firstName}}
                     </a>
                 </li>
                 <li ng-show="user && isStudent">
-                    <a ui-sref="student-preferences" rel="tooltip" tooltip="hello" title="Hiring Day">
+                    <a ui-sref="student-preferences" rel="tooltip" tooltip="hello" title="Preferences">
                         <!--<i class="fa fa-briefcase marginRight"></i> Hiring Day -->Hello, {{user.firstName}}
                     </a>
                 </li>
                 <li ng-show="user && isCompany">
-                    <a ui-sref="company-preferences" rel="tooltip" tooltip="hello" title="Hiring Day">
+                    <a ui-sref="company-preferences" rel="tooltip" tooltip="hello" title="Preferences">
                         <!--<i class="fa fa-briefcase marginRight"></i>Hiring Day-->Hello, {{user.firstName}}
                     </a>
                 </li>

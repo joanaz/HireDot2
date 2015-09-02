@@ -1,40 +1,5 @@
-<!-- Showing all matches for students and candidates as well as time slots -->
 <div class="container options valign-middle">
     <div class="marginTopBottom">
-        <h3 class="topBottomHeader">Students Preferences</h3>
-        <div class="row">
-            <table class="table table-striped table-hover studentCard small-table" ng-repeat="student in students">
-                <thead>
-                    <tr>
-                        <th>{{student.fullName}}</th>
-                    </tr>
-                </thead>
-                <tbody class="regularFont">
-                    <tr ng-repeat="candidate in student.preferences">
-                        <td>{{candidate.fullName}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="marginTopBottom">
-        <h3 class="topBottom">Companies Preferences</h3>
-        <div class="row">
-            <table class="table table-striped table-hover studentCard small-table" ng-repeat="company in companies">
-                <thead>
-                    <tr>
-                        <th>{{company.fullName}}</th>
-                    </tr>
-                </thead>
-                <tbody class="regularFont">
-                    <tr ng-repeat="candidate in company.preferences">
-                        <td>{{candidate.fullName}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <!-- <div class="marginTopBottom">
         <h3 class="topBottom">Time Slots for Companies</h3>
         <div class="row">
             <table class="table table-striped table-hover studentCard small-table" ng-repeat="company in companies">
@@ -71,5 +36,10 @@
                 </tbody>
             </table>
         </div>
-    </div> -->
+    </div>
+    <div class="row moreMarginTop centerText">
+                <div class='col-md-12'>
+                    <button class="btn btn-view moreMarginTop" ng-click="">Approve Timeslots</button>
+                </div>
+            </div>
 </div>

@@ -150,14 +150,22 @@ app.controller('TimeSlotsCtrl', function($scope, students, companies, User) {
 		else {
 			console.log("No conflict!")
 
-			// $scope.students.forEach(student => {
-			// 	let timeslots = student.timeslots.map(timeslot => timeslot._id)
-			// 	User.saveTimeslots(student._id, timeslots)
-			// })
-			// $scope.companies.forEach(company => {
-			// 	let timeslots = company.timeslots.map(timeslot => timeslot._id)
-			// 	User.saveTimeslots(company._id, timeslots)
-			// })
+			$scope.students.forEach(student => {
+				let timeslots = student.timeslots.map(timeslot => {
+						if (timeslot._id) return timeslot._id
+						else return null
+					})
+					// console.log(timeslots)
+				User.saveTimeslots(student._id, timeslots)
+			})
+
+			$scope.companies.forEach(company => {
+				let timeslots = company.timeslots.map(timeslot => {
+					if (timeslot._id) return timeslot._id
+					else return null
+				})
+				User.saveTimeslots(company._id, timeslots)
+			})
 		}
 	}
 

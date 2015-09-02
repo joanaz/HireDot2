@@ -63,7 +63,7 @@
                 <div class="col-md-12">
                     <div class="row moreMarginTop centerText">
                         <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="award in project.awards">
-                            <a ui-sref="award({id:award._id})">
+                            <a ui-sref="awarded-projects({id:award._id})">
                                 <img class="img-circle img-responsive img-center" src="{{award.photo}}">
                                 <p class="row moreMarginTop centerText regularFont initialFontSize">{{award.name}}</p>
                             </a>
